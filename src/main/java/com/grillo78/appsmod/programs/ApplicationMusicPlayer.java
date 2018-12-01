@@ -77,7 +77,7 @@ public class ApplicationMusicPlayer extends Application{
 				}
 			});
 			this.addComponent(volume);
-			progress = new MusicProgressBar(0, 150, 200, 16);
+			progress = new MusicProgressBar(0, 148, 362, 16);
 			this.addComponent(progress);
 			stopBtn = new Button(16, 0, Icons.STOP);
 			stopBtn.setClickListener((mouseX, mouseY, mouseButton)->{
@@ -93,7 +93,7 @@ public class ApplicationMusicPlayer extends Application{
 			});
 			stopBtn.setEnabled(false);
 			this.addComponent(stopBtn);
-			soundsList = new ItemList<String>(100, 0, 262, 15, false);
+			soundsList = new ItemList<String>(100, 0, 262, 10, false);
 			for (int i = 0; i!=dir.listFiles().length; i++) {
 				soundsList.addItem(Arrays.asList(dir.list()).get(i).toString());
 			}
