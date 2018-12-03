@@ -1,6 +1,7 @@
 package com.grillo78.appsmod;
 
 import com.grillo78.appsmod.programs.ApplicationMusicPlayer;
+import com.grillo78.appsmod.programs.ApplicationWeatherForecast;
 import com.grillo78.appsmod.programs.ApplicationWebBrowser;
 import com.mrcrayfish.device.api.ApplicationManager;
 
@@ -32,5 +33,6 @@ public class AppsMod
 	{
     	ApplicationManager.registerApplication(new ResourceLocation(Reference.MODID, "browser"), ApplicationWebBrowser.class);
     	ApplicationManager.registerApplication(new ResourceLocation(Reference.MODID, "minetunes"), ApplicationMusicPlayer.class);
+    	ApplicationManager.registerApplication(new ResourceLocation(Reference.MODID, "weather"), ApplicationWeatherForecast.class);
 	}
 }
