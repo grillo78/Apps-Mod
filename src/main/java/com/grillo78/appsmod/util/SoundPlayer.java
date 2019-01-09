@@ -16,7 +16,7 @@ public class SoundPlayer implements BasicPlayerListener{
 	  public float progress;
 	  public long duration;
 	  @SuppressWarnings("rawtypes")
-	private Map audioInfo;
+	  public Map audioInfo;
 	  public BasicPlayer player;
 	  
 	  public SoundPlayer()
@@ -38,6 +38,7 @@ public class SoundPlayer implements BasicPlayerListener{
 	  try
 	     { 
 	      // Open file, or URL or Stream (shoutcast, icecast) to play.
+		  
 	      control.open(new File(filename));
 
 	      // control.open(new URL("http://yourshoutcastserver.com:8000"));
@@ -101,8 +102,11 @@ public class SoundPlayer implements BasicPlayerListener{
 	  {
 	    // Pay attention to properties. It depends on underlying JavaSound SPI
 	    // MP3SPI provides mp3.equalizer.
-	    long x = (long) properties.get("mp3.position.microseconds");
-	    progress = (float)(((double)x/(double)duration));
+		if (audioInfo.get("audio.type")=="MP3") {
+		  long x = (long) properties.get("mp3.position.microseconds");
+		  progress = (float)(((double)x/(double)duration));	
+		}
+//		System.out.println(properties.toString());
 	  }
 
 	  /**
