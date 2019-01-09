@@ -81,11 +81,11 @@ public class WeatherForecastComponent extends Component{
 	      System.out.println(weather.get("main").getAsString());
 	      switch (units) {
 			case "Celsius":
-			    this.temp.setText("Temperature:"+main.get("temp").getAsString()+"º");
+			    this.temp.setText("Temperature:"+main.get("temp").getAsString()+"\u00b0"+"C");
 				break;
 
 			case "Farenheit":
-			    this.temp.setText("Temperature:"+main.get("temp").getAsString()+"F");
+			    this.temp.setText("Temperature:"+main.get("temp").getAsString()+"\u00b0"+"F");
 				break;
 			case "Kelvin":
 			    this.temp.setText("Temperature:"+main.get("temp").getAsString()+"K");

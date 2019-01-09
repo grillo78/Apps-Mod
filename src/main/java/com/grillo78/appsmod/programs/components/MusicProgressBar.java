@@ -26,7 +26,7 @@ public class MusicProgressBar extends Component{
 	
 	@Override
 	protected void handleMouseClick(int mouseX, int mouseY, int mouseButton) {
-		if(soundPlayer != null) {
+		if(soundPlayer != null && enabled) {
 			if (((mouseX >= xPosition) && (mouseY>=yPosition))&&((mouseX <= xPosition+MusicProgressBar.width)&&(mouseY <= yPosition+MusicProgressBar.height))) {
 				progress.setProgress((int) (((float)(MusicProgressBar.width-(xPosition+width-mouseX))/(float)MusicProgressBar.width)*100));
 				soundPlayer.processSeek(((double)(MusicProgressBar.width-(xPosition+width-mouseX))/(double)MusicProgressBar.width));

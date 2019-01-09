@@ -25,6 +25,7 @@ public class ApplicationMusicPlayer extends Application{
 	private static MusicProgressBar progress;
 	private static Button playBtn;
 	private static Button stopBtn;
+	private static Text progressBarAccesible;
 	
 	@Override
 	public void init(NBTTagCompound intent) {
@@ -78,7 +79,11 @@ public class ApplicationMusicPlayer extends Application{
 			});
 			this.addComponent(volume);
 			progress = new MusicProgressBar(0, 148, 362, 16);
+			progress.setEnabled(false);
 			this.addComponent(progress);
+			progressBarAccesible = new Text("Progress only work with MP3 files", 0, 148, 262);
+			progressBarAccesible.setVisible(false);
+			this.addComponent(progressBarAccesible);
 			stopBtn = new Button(16, 0, Icons.STOP);
 			stopBtn.setClickListener((mouseX, mouseY, mouseButton)->{
 				try {
@@ -106,6 +111,7 @@ public class ApplicationMusicPlayer extends Application{
 					}
 				}
 				soundPlayer = new SoundPlayer();
+				
 				soundPlayer.play(Arrays.asList(dir.listFiles()).get(soundsList.getSelectedIndex()).toString());
 				try {
 					soundPlayer.control.setGain(volume.getPercentage());
@@ -116,6 +122,8 @@ public class ApplicationMusicPlayer extends Application{
 				playBtn.setEnabled(true);
 				stopBtn.setEnabled(true);
 				playBtn.setIcon(Icons.PAUSE);
+				progress.setProgress(0);
+				progress.setEnabled(true);
 				progress.setSoundPlayer(soundPlayer);
 			});
 			this.addComponent(soundsList);
@@ -151,13 +159,22 @@ public class ApplicationMusicPlayer extends Application{
 	public void onTick() {
 		if (soundPlayer != null) {
 			if (!paused) {
-				progress.setProgress((int) (soundPlayer.progress*100));
+				if(soundPlayer.audioInfo.get("audio.type")=="MP3") {
+					progress.setProgress((int) (soundPlayer.progress*100));
+					progressBarAccesible.setVisible(false);
+				}
+				else {
+					progressBarAccesible.setVisible(true);
+					progress.setEnabled(false);
+				}
 				if (soundPlayer.player.getStatus() == 2) {
 					paused=true;
 					progress.setProgress(0);
+					progress.setEnabled(false);
 					playBtn.setIcon(Icons.PLAY);
 					playBtn.setEnabled(false);
 					stopBtn.setEnabled(false);
+					progressBarAccesible.setVisible(false);
 				}
 			}
 		}
