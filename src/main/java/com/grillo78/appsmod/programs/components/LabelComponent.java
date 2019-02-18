@@ -32,7 +32,7 @@ public class LabelComponent extends Component{
 
 	@Override
 	protected void init(Layout layout) {
-		addressBar = new AddressBarComponent(51, LabelComponent.top, width-51);
+		addressBar = new AddressBarComponent(51, LabelComponent.top, width-67);
 		addressBar.setPlaceholder("Enter Address");
 		addressBar.setKeyListener(c ->
         {
@@ -46,6 +46,24 @@ public class LabelComponent extends Component{
             return true;
         });
 		layout.addComponent(addressBar);
+		browserComp = new BrowserComponent(0, LabelComponent.top+16, browser, width, LabelComponent.height-92);
+		layout.addComponent(browserComp);
+		BookmarksComponent BookmakrsComp = new BookmarksComponent(width-50, 17, 50, browser);
+		layout.addComponent(BookmakrsComp);
+		Button BookmarksBtn = new Button(width-16, 0, Icons.BOOKMARK_ON);
+		BookmarksBtn.setClickListener((mouseX, mouseY, mouseButton) -> {
+			if (BookmakrsComp.isEnabled()) {
+				BookmakrsComp.setEnabled(false);
+				BookmakrsComp.setVisible(false);
+				browserComp.setEnabled(true);
+			}
+			else {
+				BookmakrsComp.setEnabled(true);
+				BookmakrsComp.setVisible(true);
+				browserComp.setEnabled(false);
+			}
+		});
+		layout.addComponent(BookmarksBtn);
 		refreshWebSite = new Button(17, LabelComponent.top, Icons.RELOAD);
 		refreshWebSite.setToolTip("Refresh", "Loads the entered address.");
 		refreshWebSite.setClickListener((mouseX, mouseY, mouseButton) -> browser.loadURL(browser.getURL()));
@@ -58,8 +76,7 @@ public class LabelComponent extends Component{
 		goForward.setToolTip("Forward", "Loads the next website.");
 		goForward.setClickListener((mouseX, mouseY, mouseButton) -> browser.goForward());
 		layout.addComponent(goForward);
-		browserComp = new BrowserComponent(0, LabelComponent.top+16, browser, width, LabelComponent.height-92);
-		layout.addComponent(browserComp);
+		super.init(layout);
 	}
 	
 	@Override

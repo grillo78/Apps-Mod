@@ -75,14 +75,15 @@ public class BrowserComponent extends Component{
 			browser.injectMouseWheel(mouseX-xPosition, mouseY-yPosition, 0, -10, 1);
 		}
 	}
-	
 	@Override
-	protected void renderOverlay(Laptop laptop, Minecraft mc, int mouseX, int mouseY, boolean windowActive) {
-		super.renderOverlay(laptop, mc, mouseX, mouseY, windowActive);
+	protected void render(Laptop laptop, Minecraft mc, int x, int y, int mouseX, int mouseY, boolean windowActive,
+			float partialTicks) {
 		GlStateManager.disableDepth();
 	    GlStateManager.enableTexture2D();
 	    GlStateManager.color(1.0f, 1.0f, 1.0f, 1.0f);
         browser.draw(xPosition, yPosition + BrowserComponent.height, xPosition + BrowserComponent.width, yPosition);
         GlStateManager.enableDepth();
+		super.render(laptop, mc, x, y, mouseX, mouseY, windowActive, partialTicks);
 	}
+	
 }

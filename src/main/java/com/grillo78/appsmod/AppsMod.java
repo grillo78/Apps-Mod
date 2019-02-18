@@ -1,11 +1,14 @@
 package com.grillo78.appsmod;
 
+import com.grillo78.appsmod.handler.PlayerEvents;
+import com.grillo78.appsmod.programs.ApplicationDiscord;
 import com.grillo78.appsmod.programs.ApplicationMusicPlayer;
 import com.grillo78.appsmod.programs.ApplicationWeatherForecast;
 import com.grillo78.appsmod.programs.ApplicationWebBrowser;
 import com.mrcrayfish.device.api.ApplicationManager;
 
 import net.minecraft.util.ResourceLocation;
+import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
@@ -26,6 +29,7 @@ public class AppsMod
     @EventHandler
     public void init(FMLInitializationEvent event)
     {
+    	MinecraftForge.EVENT_BUS.register(new PlayerEvents());
         registerApplications();
     }
     
@@ -34,5 +38,6 @@ public class AppsMod
     	ApplicationManager.registerApplication(new ResourceLocation(Reference.MODID, "browser"), ApplicationWebBrowser.class);
     	ApplicationManager.registerApplication(new ResourceLocation(Reference.MODID, "minetunes"), ApplicationMusicPlayer.class);
     	ApplicationManager.registerApplication(new ResourceLocation(Reference.MODID, "weather"), ApplicationWeatherForecast.class);
+    	ApplicationManager.registerApplication(new ResourceLocation(Reference.MODID, "discord"), ApplicationDiscord.class);
 	}
 }

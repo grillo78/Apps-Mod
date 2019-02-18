@@ -13,9 +13,10 @@ apply plugin: 'java'
 repositories {
 	maven { url "https://mrcrayfish.com/maven" }
 	maven { url "http://maven.teamdev.com/repository/products" }
+	maven { url "https://dl.bintray.com/dv8fromtheworld/maven" }
 }
 
-version = "1.4"
+version = "1.6.0"
 group = "com.grillo78.appsmod" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = "appsmod"
 
@@ -63,7 +64,8 @@ dependencies {
     // for more info...
     // http://www.gradle.org/docs/current/userguide/artifact_dependencies_tutorial.html
     // http://www.gradle.org/docs/current/userguide/dependency_management.html
-    
+    embed 'org.jsoup:jsoup:1.11.3'
+	//embed 'net.dv8tion:JDA-Client:0.2.0_9'
 	embed fileTree(dir: "lib", includes: ['*.jar'])
 	compile 'com.mrcrayfish:device-api:0.4.0-1.12.2'
 
