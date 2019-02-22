@@ -26,7 +26,6 @@ import com.mrcrayfish.device.api.app.component.ItemList;
 import com.mrcrayfish.device.api.app.component.TextField;
 import com.mrcrayfish.device.api.app.renderer.ListItemRenderer;
 import com.mrcrayfish.device.api.utils.RenderUtil;
-import com.mrcrayfish.device.core.Laptop;
 
 import net.dv8tion.jda.core.entities.ChannelType;
 import net.dv8tion.jda.core.entities.Guild;
@@ -291,7 +290,7 @@ public class ApplicationDiscord extends Application{
 			@Override
 			public void render(TextChannel e, Gui gui, Minecraft mc, int x, int y, int width, int height, boolean selected) {
 				Gui.drawRect(x, y, x+width, y+height, Color.LIGHT_GRAY.getRGB());
-				Laptop.fontRenderer.drawString(e.getName(), x, y, Color.GRAY.getRGB());
+				Minecraft.getMinecraft().fontRenderer.drawString(e.getName(), x, y, Color.GRAY.getRGB());
 			}
 		});
 		channels.addComponent(channelsItems);
@@ -304,7 +303,7 @@ public class ApplicationDiscord extends Application{
 
 			public void adjustString(String string, int width, int x, int y,int color) {
 				List<String> formattedString = new ArrayList<>();
-				FontRenderer fontRenderer = Laptop.fontRenderer;
+				FontRenderer fontRenderer = Minecraft.getMinecraft().fontRenderer;
 				if(fontRenderer.getStringWidth(string) > width)
 				{
 					formattedString = fontRenderer.listFormattedStringToWidth(string, width-8);
