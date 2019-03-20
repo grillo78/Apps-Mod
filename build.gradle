@@ -13,6 +13,7 @@ apply plugin: 'java'
 apply plugin: 'com.github.johnrengelman.shadow'
 //Only edit below this line, the above code adds and enables the necessary things for Forge to be setup.
 repositories {
+	mavenCentral()
 	maven { url "https://mrcrayfish.com/maven" }
 	maven { url "http://maven.teamdev.com/repository/products" }
 	jcenter()
@@ -47,7 +48,6 @@ shadowJar {
 	}
 	relocate 'org.apache', 'shadow.apache'
 	relocate 'org.slf4j', 'shadow.slf4j'
-	relocate 'org.json', 'shadow.json'
 	classifier '' // Replace the default JAR
 }
 
@@ -77,10 +77,6 @@ dependencies {
     // http://www.gradle.org/docs/current/userguide/artifact_dependencies_tutorial.html
     // http://www.gradle.org/docs/current/userguide/dependency_management.html
     compile 'org.jsoup:jsoup:1.11.3'
-	//compile 'com.google.apis:google-api-services-youtube:v3-rev206-1.25.0'
-	//compile ('net.dv8tion:JDA:3.8.3_460'){
-	//	exclude module: 'opus-java'
-	//}
 	compile fileTree(dir: "lib", includes: ['*.jar'])
 	compile 'com.mrcrayfish:device-api:0.4.0-1.12.2'
 
