@@ -11,6 +11,7 @@ import com.grillo78.appsmod.programs.ApplicationWeatherForecast;
 import com.grillo78.appsmod.programs.ApplicationWebBrowser;
 import com.grillo78.appsmod.proxy.CommonProxy;
 import com.grillo78.appsmod.tab.AppsModTab;
+import com.grillo78.appsmod.tileentity.TileEntityPrintedBlock;
 import com.grillo78.appsmod.tileentity.TileEntityThreeDPrinter;
 import com.mrcrayfish.device.api.ApplicationManager;
 
@@ -22,6 +23,7 @@ import net.minecraftforge.fml.common.Mod.EventHandler;
 import net.minecraftforge.fml.common.Mod.Instance;
 import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
+import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLServerStoppingEvent;
 import net.minecraftforge.fml.common.registry.GameRegistry;
@@ -43,6 +45,7 @@ public class AppsMod
     public void preInit(FMLPreInitializationEvent event)
     {
 		GameRegistry.registerTileEntity(TileEntityThreeDPrinter.class, new ResourceLocation(Reference.MODID,"tileEntity3DPrinter"));
+		GameRegistry.registerTileEntity(TileEntityPrintedBlock.class, new ResourceLocation(Reference.MODID, "tileEntityPrintedBlock"));
 		PROXY.onPreInit();
     }
 
@@ -54,8 +57,9 @@ public class AppsMod
     }
     
     @EventHandler
-    public void stopping(FMLServerStoppingEvent event) {
-    	
+    public void postInit(FMLPostInitializationEvent event)
+    {
+    	PROXY.initRenderers();
     }
     
     private void registerApplications()

@@ -34,9 +34,9 @@ public class BookmarksComponent extends Component{
 	private static Button addBtn;
 	private static Button goBtn;
 	
-	public BookmarksComponent(int left, int top, int width, IBrowser BrowserIn) {
+	public BookmarksComponent(int left, int top, int width, IBrowser browser2) {
 		super(left, top);
-		Browser = BrowserIn;
+		Browser = browser2;
 		this.width = width;
 	}
 	

@@ -8,6 +8,7 @@ import net.minecraft.client.gui.Gui;
 public abstract class MessageListRenderer<E> extends ListItemRenderer<E>
 {
 
+	@SuppressWarnings("unused")
 	private final int height;
 	
 	public MessageListRenderer(int height) {

@@ -159,7 +159,6 @@ public class ThreeDPrinterBlock extends BlockContainer implements IHasModel{
 
             if (tileentity instanceof TileEntityThreeDPrinter)
             {
-//            	playerIn.displayGUIChest((IInventory) tileentity);
             	playerIn.openGui(AppsMod.instance, 0, worldIn, pos.getX(), pos.getY(), pos.getZ());
                 AppsMod.log.debug("Opening GUI");
                 return true;
