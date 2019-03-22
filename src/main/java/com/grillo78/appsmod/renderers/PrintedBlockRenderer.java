@@ -1,5 +1,8 @@
 package com.grillo78.appsmod.renderers;
 
+import com.google.gson.JsonArray;
+import com.google.gson.JsonObject;
+import com.google.gson.JsonParser;
 import com.grillo78.appsmod.models.PrintedBlockModel;
 import com.grillo78.appsmod.tileentity.TileEntityPrintedBlock;
 
@@ -27,11 +30,25 @@ public class PrintedBlockRenderer extends TileEntitySpecialRenderer<TileEntityPr
 		GlStateManager.pushMatrix();
 		GlStateManager.translate(x , y , z);
 		Minecraft.getMinecraft().renderEngine.bindTexture(new ResourceLocation("minecraft", "textures/blocks/iron_block.png"));
-		ModelRenderer[] modelRenderer = te.getModelRenderer(model);
+		renderModel(te);
+		GlStateManager.popMatrix();
+		super.render(te, x, y, z, partialTicks, destroyStage, alpha);
+	}
+	
+	public static void renderModel(TileEntityPrintedBlock te) {
+		JsonParser jp = new JsonParser();
+		JsonArray elements = jp.parse(te.model).getAsJsonObject().get("elements").getAsJsonArray();
+		ModelRenderer[] modelRenderer = new ModelRenderer[elements.size()-1];
+		for(int i = 0; i < modelRenderer.length; i++) {
+			modelRenderer[i] = new ModelRenderer(model);
+			JsonObject actualElement = elements.get(i).getAsJsonObject();
+			int width = (actualElement.get("to").getAsJsonArray().get(0).getAsInt())-(actualElement.get("from").getAsJsonArray().get(0).getAsInt());
+			int height = (actualElement.get("to").getAsJsonArray().get(1).getAsInt())-(actualElement.get("from").getAsJsonArray().get(1).getAsInt());
+			int depth = (actualElement.get("to").getAsJsonArray().get(2).getAsInt())-(actualElement.get("from").getAsJsonArray().get(2).getAsInt());
+			modelRenderer[i].addBox(actualElement.get("from").getAsJsonArray().get(0).getAsInt(), actualElement.get("from").getAsJsonArray().get(1).getAsInt(), actualElement.get("from").getAsJsonArray().get(2).getAsInt(), width, height, depth);
+		}
 		for(int i=0; i < modelRenderer.length; i++) {
 			modelRenderer[i].render(0.0625F);
 		}
-		GlStateManager.popMatrix();
-		super.render(te, x, y, z, partialTicks, destroyStage, alpha);
 	}
 }

@@ -3,7 +3,6 @@ package com.grillo78.appsmod.renderers;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
-import com.grillo78.appsmod.AppsMod;
 import com.grillo78.appsmod.models.PrintedBlockModel;
 
 import net.minecraft.client.Minecraft;
@@ -13,7 +12,10 @@ import net.minecraft.client.renderer.tileentity.TileEntityItemStackRenderer;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.fml.relauncher.Side;
+import net.minecraftforge.fml.relauncher.SideOnly;
 
+@SideOnly(Side.CLIENT)
 public class PrintedItemRenderer extends TileEntityItemStackRenderer{
 
 	private static PrintedBlockModel model = new PrintedBlockModel();
@@ -24,10 +26,15 @@ public class PrintedItemRenderer extends TileEntityItemStackRenderer{
 	
 	@Override
 	public void renderByItem(ItemStack stack) {
-		AppsMod.log.info("Prueba");
 		GlStateManager.pushMatrix();
 		
 		Minecraft.getMinecraft().renderEngine.bindTexture(new ResourceLocation("minecraft", "textures/blocks/iron_block.png"));
+		renderModel(stack);
+		GlStateManager.popMatrix();
+		super.renderByItem(stack);
+	}
+	
+	public static void renderModel(ItemStack stack) {
 		JsonParser jp = new JsonParser();
 		JsonArray elements = jp.parse(stack.getTagCompound().getString("model")).getAsJsonObject().get("elements").getAsJsonArray();
 		ModelRenderer[] modelRenderer = new ModelRenderer[elements.size()-1];
@@ -42,7 +49,5 @@ public class PrintedItemRenderer extends TileEntityItemStackRenderer{
 		for(int i=0; i < modelRenderer.length; i++) {
 			modelRenderer[i].render(0.0625F);
 		}
-		GlStateManager.popMatrix();
-		super.renderByItem(stack);
 	}
 }

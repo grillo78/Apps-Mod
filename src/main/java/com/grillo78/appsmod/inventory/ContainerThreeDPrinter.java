@@ -1,5 +1,7 @@
 package com.grillo78.appsmod.inventory;
 
+import com.grillo78.appsmod.tileentity.TileEntityThreeDPrinter;
+
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.InventoryPlayer;
 import net.minecraft.inventory.Container;
@@ -11,10 +13,10 @@ import net.minecraft.tileentity.TileEntity;
 
 public class ContainerThreeDPrinter extends Container{
 
-	private IInventory inventory;
+	private TileEntityThreeDPrinter inventory;
 	
-	public ContainerThreeDPrinter(InventoryPlayer playerInventory, TileEntity threeDPrinterInventory) {
-		inventory = (IInventory) threeDPrinterInventory;
+	public ContainerThreeDPrinter(InventoryPlayer playerInventory, TileEntityThreeDPrinter threeDPrinterInventory) {
+		inventory = threeDPrinterInventory;
 		this.addSlotToContainer(new SlotPrinterFilament(inventory, 0, 56, 17));
 		this.addSlotToContainer(new SlotFurnaceOutput(playerInventory.player,inventory, 1, 116, 35));
 		

@@ -1,6 +1,5 @@
 package com.grillo78.appsmod.gui;
 
-import com.grillo78.appsmod.AppsMod;
 import com.grillo78.appsmod.Reference;
 import com.grillo78.appsmod.inventory.ContainerThreeDPrinter;
 import com.grillo78.appsmod.tileentity.TileEntityThreeDPrinter;
@@ -9,7 +8,6 @@ import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.inventory.GuiContainer;
 import net.minecraft.client.renderer.GlStateManager;
 import net.minecraft.entity.player.InventoryPlayer;
-import net.minecraft.inventory.IInventory;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
@@ -20,13 +18,12 @@ public class ThreeDPrinterUI extends GuiContainer{
 	private static final ResourceLocation PRINTER_GUI_TEXTURES = new ResourceLocation(Reference.MODID,"textures/gui/container/printer.png");
     /** The player inventory bound to this GUI. */
     private final InventoryPlayer playerInventory;
-    private final IInventory tilePrinter;
+    private final TileEntityThreeDPrinter tilePrinter;
     
 	public ThreeDPrinterUI(InventoryPlayer playerInv, TileEntityThreeDPrinter printerInv) {
 		super(new ContainerThreeDPrinter(playerInv, printerInv));
-		AppsMod.log.debug("Open GUI");
 		playerInventory = Minecraft.getMinecraft().player.inventory;
-		tilePrinter = new TileEntityThreeDPrinter();
+		tilePrinter = printerInv;
 	}
 
 	@Override
@@ -36,9 +33,10 @@ public class ThreeDPrinterUI extends GuiContainer{
         this.renderHoveredToolTip(mouseX, mouseY);
 	}
 	
-	protected void drawGuiContainerForegroundLayer(float partialTicks, int mouseX, int mouseY) {
+	protected void drawGuiContainerForegroundLayer(int mouseX, int mouseY) {
 		String s = this.tilePrinter.getDisplayName().getUnformattedText();
-        this.fontRenderer.drawString(s, this.xSize / 2 - this.fontRenderer.getStringWidth(s) / 2, 6, 4210752);
+		this.fontRenderer.drawString(s, this.xSize / 2 - this.fontRenderer.getStringWidth(s) / 2, 6, 4210752);
+        this.fontRenderer.drawString("Copy UUID:", 8, (ySize/2)-19, 4210752);
         this.fontRenderer.drawString(this.playerInventory.getDisplayName().getUnformattedText(), 8, this.ySize - 96 + 2, 4210752);
 	}
 
@@ -49,6 +47,19 @@ public class ThreeDPrinterUI extends GuiContainer{
         int i = (this.width - this.xSize) / 2;
         int j = (this.height - this.ySize) / 2;
         this.drawTexturedModalRect(i, j, 0, 0, this.xSize, this.ySize);
+        int k = this.getTempLeftScaled(13);
+        this.drawTexturedModalRect(i + 56, j + 36 + 6 - k, 176, 0, 14, k + 1);
     }
 	
+	private int getTempLeftScaled(int pixels)
+    {
+        int i = this.tilePrinter.getField(0);
+
+        if (i == 0)
+        {
+            i = 200;
+        }
+
+        return this.tilePrinter.getField(1) * pixels / i;
+    }
 }

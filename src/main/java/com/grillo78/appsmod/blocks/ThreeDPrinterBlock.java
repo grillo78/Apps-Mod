@@ -1,6 +1,7 @@
 package com.grillo78.appsmod.blocks;
 
 import java.util.Random;
+import java.util.UUID;
 
 import com.grillo78.appsmod.AppsMod;
 import com.grillo78.appsmod.init.ModBlocks;
@@ -159,6 +160,9 @@ public class ThreeDPrinterBlock extends BlockContainer implements IHasModel{
 
             if (tileentity instanceof TileEntityThreeDPrinter)
             {
+            	if(((TileEntityThreeDPrinter) tileentity).getUuid()==null) {
+            		((TileEntityThreeDPrinter) tileentity).setUuid(UUID.randomUUID());
+            	}
             	playerIn.openGui(AppsMod.instance, 0, worldIn, pos.getX(), pos.getY(), pos.getZ());
                 AppsMod.log.debug("Opening GUI");
                 return true;

@@ -25,7 +25,7 @@ public class CommonProxy implements IGuiHandler{
 		if (tileentity != null) {
 			if(ID==0) {
 				if (tileentity instanceof TileEntityThreeDPrinter) {
-					return new ContainerThreeDPrinter(player.inventory, tileentity);
+					return new ContainerThreeDPrinter(player.inventory, (TileEntityThreeDPrinter) tileentity);
 				}
 			}
 		}

@@ -1,6 +1,7 @@
 package com.grillo78.appsmod.tileentity;
 
-import com.grillo78.appsmod.AppsMod;
+import java.util.UUID;
+
 import com.grillo78.appsmod.Reference;
 import com.grillo78.appsmod.init.ModBlocks;
 import com.grillo78.appsmod.init.ModItems;
@@ -17,6 +18,8 @@ import net.minecraft.tileentity.TileEntityLockable;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.util.ITickable;
 import net.minecraft.util.NonNullList;
+import net.minecraft.util.math.BlockPos;
+import net.minecraft.world.World;
 
 public class TileEntityThreeDPrinter extends TileEntityLockable implements ITickable, ISidedInventory{
 
@@ -33,8 +36,29 @@ public class TileEntityThreeDPrinter extends TileEntityLockable implements ITick
           slotEnum.OUTPUT_SLOT.ordinal()};
     private NonNullList<ItemStack>  printerItemStackArray = NonNullList.<ItemStack>withSize(2, ItemStack.EMPTY);
     public boolean isPrinting = false;
-    private int cookTime;
-    private int totalCookTime;
+    public boolean isHot = false;
+    public boolean isHeating = false;
+    public boolean isCooling = false;
+    private int actualTemperature = 100;
+    private int maxTemperature = 200;
+    private int printTime;
+    private int totalPrintTime;
+    private UUID uuid;
+    
+    public UUID getUuid() {
+		return uuid;
+	}
+    
+    public void setUuid(UUID uuid) {
+		this.uuid = uuid;
+		World world = this.getWorld();
+		if(world != null) {
+			BlockPos pos = this.getPos();
+			 world.notifyBlockUpdate(pos, world.getBlockState(pos), world.getBlockState(pos), 3);
+			 world.scheduleBlockUpdate(pos, this.getBlockType(), 0, 0);
+			 this.markDirty();
+		}
+	}
     
 	@Override
 	public int getSizeInventory() {
@@ -124,20 +148,43 @@ public class TileEntityThreeDPrinter extends TileEntityLockable implements ITick
 
 	@Override
 	public int getField(int id) {
-		// TODO Auto-generated method stub
-		return id;
+		switch (id)
+        {
+            case 0:
+                return this.maxTemperature;
+            case 1:
+                return this.actualTemperature;
+            case 2:
+                return this.printTime;
+            case 3:
+                return this.totalPrintTime;
+            default:
+                return 0;
+        }
 	}
 
 	@Override
 	public void setField(int id, int value) {
-		// TODO Auto-generated method stub
+		switch (id)
+        {
+            case 0:
+                this.maxTemperature = value;
+                break;
+            case 1:
+                this.actualTemperature = value;
+                break;
+            case 2:
+                this.printTime = value;
+                break;
+            case 3:
+                this.totalPrintTime = value;
+        }
 		
 	}
 
 	@Override
 	public int getFieldCount() {
-		// TODO Auto-generated method stub
-		return 2;
+		return 4;
 	}
 
 	@Override
@@ -163,7 +210,6 @@ public class TileEntityThreeDPrinter extends TileEntityLockable implements ITick
 
 	@Override
 	public String getGuiID() {
-		// TODO Auto-generated method stub
 		return Reference.MODID+"threeDPrinter";
 	}
 
@@ -190,9 +236,8 @@ public class TileEntityThreeDPrinter extends TileEntityLockable implements ITick
 		if (getStackInSlot(0).getItem()==ModItems.FILAMENT) {
             isPrinting = true;
 			if(isPrinting) {
-				if(getStackInSlot(0).getItemDamage()!=100) {
+				if(getStackInSlot(0).getItemDamage()!=1000) {
 					getStackInSlot(0).setItemDamage(getStackInSlot(0).getItemDamage()+1);
-					AppsMod.log.info(getStackInSlot(0).getItemDamage());
 				}
 				else {
 					getStackInSlot(0).shrink(1);
@@ -387,12 +432,41 @@ public class TileEntityThreeDPrinter extends TileEntityLockable implements ITick
 		}
 	}
 
-	public int getCookTime() {
-		return cookTime;
+	@Override
+	public NBTTagCompound writeToNBT(NBTTagCompound compound) {
+		super.writeToNBT(compound);
+		if(uuid!=null) {
+			compound.setUniqueId("uuid", uuid);
+		}
+		return compound;
+	}
+	
+	@Override
+	public void readFromNBT(NBTTagCompound compound) {
+		super.readFromNBT(compound);
+		if (compound.hasKey("uuid")) {
+			uuid = compound.getUniqueId("uuid");
+		}
 	}
 
-	public void setCookTime(int cookTime) {
-		this.cookTime = cookTime;
+	@Override
+	public NBTTagCompound getUpdateTag() {
+		return this.writeToNBT(new NBTTagCompound());
+	}
+	
+	public int getTotalPrintTime() {
+		return totalPrintTime;
 	}
 
+	public void setTotalPrintTime(int totalPrintTime) {
+		this.totalPrintTime = totalPrintTime;
+	}
+
+	public int getPrintTime() {
+		return printTime;
+	}
+
+	public void setPrintTime(int printTime) {
+		this.printTime = printTime;
+	}
 }
