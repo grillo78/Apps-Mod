@@ -38,7 +38,7 @@ public class PrintedBlockRenderer extends TileEntitySpecialRenderer<TileEntityPr
 	public static void renderModel(TileEntityPrintedBlock te) {
 		JsonParser jp = new JsonParser();
 		JsonArray elements = jp.parse(te.model).getAsJsonObject().get("elements").getAsJsonArray();
-		ModelRenderer[] modelRenderer = new ModelRenderer[elements.size()-1];
+		ModelRenderer[] modelRenderer = new ModelRenderer[elements.size()];
 		for(int i = 0; i < modelRenderer.length; i++) {
 			modelRenderer[i] = new ModelRenderer(model);
 			JsonObject actualElement = elements.get(i).getAsJsonObject();

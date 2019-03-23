@@ -37,14 +37,14 @@ public class PrintedItemRenderer extends TileEntityItemStackRenderer{
 	public static void renderModel(ItemStack stack) {
 		JsonParser jp = new JsonParser();
 		JsonArray elements = jp.parse(stack.getTagCompound().getString("model")).getAsJsonObject().get("elements").getAsJsonArray();
-		ModelRenderer[] modelRenderer = new ModelRenderer[elements.size()-1];
+		ModelRenderer[] modelRenderer = new ModelRenderer[elements.size()];
 		for(int i = 0; i < modelRenderer.length; i++) {
 			modelRenderer[i] = new ModelRenderer(model);
 			JsonObject actualElement = elements.get(i).getAsJsonObject();
 			int width = (actualElement.get("to").getAsJsonArray().get(0).getAsInt())-(actualElement.get("from").getAsJsonArray().get(0).getAsInt());
 			int height = (actualElement.get("to").getAsJsonArray().get(1).getAsInt())-(actualElement.get("from").getAsJsonArray().get(1).getAsInt());
 			int depth = (actualElement.get("to").getAsJsonArray().get(2).getAsInt())-(actualElement.get("from").getAsJsonArray().get(2).getAsInt());
-			modelRenderer[i].addBox(actualElement.get("from").getAsJsonArray().get(0).getAsInt(), actualElement.get("from").getAsJsonArray().get(1).getAsInt(), actualElement.get("from").getAsJsonArray().get(2).getAsInt(), width, height, depth);
+			modelRenderer[i].addBox(actualElement.get("from").getAsJsonArray().get(0).getAsFloat(), actualElement.get("from").getAsJsonArray().get(1).getAsFloat(), actualElement.get("from").getAsJsonArray().get(2).getAsFloat(), width, height, depth);
 		}
 		for(int i=0; i < modelRenderer.length; i++) {
 			modelRenderer[i].render(0.0625F);
