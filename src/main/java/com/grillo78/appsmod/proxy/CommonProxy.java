@@ -3,7 +3,6 @@ package com.grillo78.appsmod.proxy;
 import com.grillo78.appsmod.AppsMod;
 import com.grillo78.appsmod.gui.ThreeDPrinterUI;
 import com.grillo78.appsmod.inventory.ContainerThreeDPrinter;
-import com.grillo78.appsmod.tileentity.TileEntityThreeDPrinter;
 import com.grillo78.appsmod.tileentity.TileEntityThreeDPrinterDevice;
 
 import net.minecraft.entity.player.EntityPlayer;

@@ -4,7 +4,11 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 
+import javax.annotation.Nullable;
+
+import com.google.gson.JsonElement;
 import com.google.gson.JsonIOException;
+import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
 import com.google.gson.JsonSyntaxException;
 import com.grillo78.appsmod.AppsMod;
@@ -26,7 +30,7 @@ public class ApplicationPrintIt extends Application{
 	private static File actualFolder;
 	
 	@Override
-	public void init(NBTTagCompound nbt) {
+	public void init(@Nullable NBTTagCompound nbt) {
 		this.setDefaultWidth(362);
 		this.setDefaultHeight(240);
 		Layout main = new Layout(0, 0, 362, 164);
@@ -35,6 +39,22 @@ public class ApplicationPrintIt extends Application{
 		
 		//Main init
 		printBtn = new Button(362-34, 164-16, "Print");
+		printBtn.setClickListener((mouseX, mouseY, mouseButton) ->
+		{
+			if(mouseButton == 0)
+			{
+				try {
+					JsonParser jp = new JsonParser();
+					JsonElement root = jp.parse(new FileReader(selectedFile));
+					JsonObject rootobj = root.getAsJsonObject();
+					PrintDialog dialog = new PrintDialog(rootobj.toString());
+					openDialog(dialog);
+				} catch (JsonIOException | JsonSyntaxException | FileNotFoundException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+			}
+		});
 		printBtn.setEnabled(false);
 		main.addComponent(printBtn);
 		Button loadBtn = new Button(0, 0, Icons.IMPORT);

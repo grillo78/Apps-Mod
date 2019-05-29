@@ -13,7 +13,9 @@ import com.grillo78.appsmod.proxy.CommonProxy;
 import com.grillo78.appsmod.tab.AppsModTab;
 import com.grillo78.appsmod.tileentity.TileEntityPrintedBlock;
 import com.grillo78.appsmod.tileentity.TileEntityThreeDPrinterDevice;
+import com.grillo78.appsmod.util.TaskPrint;
 import com.mrcrayfish.device.api.ApplicationManager;
+import com.mrcrayfish.device.api.task.TaskManager;
 
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.util.ResourceLocation;
@@ -68,5 +70,7 @@ public class AppsMod
     	ApplicationManager.registerApplication(new ResourceLocation(Reference.MODID, "weather"), ApplicationWeatherForecast.class);
     	ApplicationManager.registerApplication(new ResourceLocation(Reference.MODID, "discord"), ApplicationDiscord.class);
     	ApplicationManager.registerApplication(new ResourceLocation(Reference.MODID, "printit"), ApplicationPrintIt.class);
+    	
+    	TaskManager.registerTask(TaskPrint.class);
 	}
 }

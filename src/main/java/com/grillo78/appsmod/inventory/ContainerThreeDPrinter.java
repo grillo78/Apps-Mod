@@ -1,6 +1,5 @@
 package com.grillo78.appsmod.inventory;
 
-import com.grillo78.appsmod.tileentity.TileEntityThreeDPrinter;
 import com.grillo78.appsmod.tileentity.TileEntityThreeDPrinterDevice;
 
 import net.minecraft.entity.player.EntityPlayer;

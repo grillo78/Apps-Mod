@@ -17,6 +17,7 @@ public class RegistryHandler {
 	@SubscribeEvent
     public static void onItemRegister(RegistryEvent.Register<Item> event)
     {
+		AppsMod.log.info("Registring Items from Apps Mod");
         event.getRegistry().registerAll(ModItems.ITEMS.toArray(new Item[0]));
     }
 

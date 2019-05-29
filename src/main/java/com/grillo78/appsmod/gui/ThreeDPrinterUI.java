@@ -2,7 +2,6 @@ package com.grillo78.appsmod.gui;
 
 import com.grillo78.appsmod.Reference;
 import com.grillo78.appsmod.inventory.ContainerThreeDPrinter;
-import com.grillo78.appsmod.tileentity.TileEntityThreeDPrinter;
 import com.grillo78.appsmod.tileentity.TileEntityThreeDPrinterDevice;
 
 import net.minecraft.client.Minecraft;
