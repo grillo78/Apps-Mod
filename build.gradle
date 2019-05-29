@@ -16,6 +16,16 @@ repositories {
 	mavenCentral()
 	maven { url "https://mrcrayfish.com/maven" }
 	maven { url "http://maven.teamdev.com/repository/products" }
+	maven {
+        // location of the maven that hosts JEI files
+        name = "Progwml6 maven"
+        url = "http://dvs1.progwml6.com/files/maven"
+    }
+    maven {
+        // location of a maven mirror for JEI files, as a fallback
+        name = "ModMaven"
+        url = "modmaven.k-4u.nl"
+    }
 	jcenter()
 }
 
@@ -56,26 +66,7 @@ reobf {
 }
 
 dependencies {
-    // you may put jars on which you depend on in ./libss
-    // or you may define them like so..
-    //compile "some.group:artifact:version:classifier"
-    //compile "some.group:artifact:version"
-      
-    // real examples
-    //compile 'com.mod-buildcraft:buildcraft:6.0.8:dev'  // adds buildcraft to the dev env
-    //compile 'com.googlecode.efficient-java-matrix-libsrary:ejml:0.24' // adds ejml to the dev env
-
-    // the 'provided' configuration is for optional dependencies that exist at compile-time but might not at runtime.
-    //provided 'com.mod-buildcraft:buildcraft:6.0.8:dev'
-
-    // the deobf configurations:  'deobfCompile' and 'deobfProvided' are the same as the normal compile and provided,
-    // except that these dependencies get remapped to your current MCP mappings
-    //deobfCompile 'com.mod-buildcraft:buildcraft:6.0.8:dev'
-    //deobfProvided 'com.mod-buildcraft:buildcraft:6.0.8:dev'
-
-    // for more info...
-    // http://www.gradle.org/docs/current/userguide/artifact_dependencies_tutorial.html
-    // http://www.gradle.org/docs/current/userguide/dependency_management.html
+    runtime "mezz.jei:jei_1.12.2:4.9.1.179"
     compile 'org.jsoup:jsoup:1.11.3'
 	compile fileTree(dir: "lib", includes: ['*.jar'])
 	compile 'com.mrcrayfish:device-api:0.4.0-1.12.2'

@@ -13,7 +13,7 @@ public class FilamentItem extends Item{
 		this.setUnlocalizedName(name);
 		this.setRegistryName(name);
 		this.setNoRepair();
-		this.setMaxDamage(1000);
+		this.setMaxDamage(10);
 		
 		ModItems.ITEMS.add(this);
 	}

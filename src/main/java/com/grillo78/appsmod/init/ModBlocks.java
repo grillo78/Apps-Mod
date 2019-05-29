@@ -14,5 +14,5 @@ public class ModBlocks {
 	public static final List<Block> BLOCKS = new ArrayList<Block>();
 	
 	public static final Block THREEDPRINTER = new ThreeDPrinterDeviceBlock("ThreeDPrinter", Material.ANVIL);
-	public static final Block PRINTEDBLOCK = new PrintedBlock(Material.GLASS, "PrintedBlock");
+	public static final Block PRINTEDBLOCK = new PrintedBlock(Material.GRASS, "PrintedBlock");
 }

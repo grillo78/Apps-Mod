@@ -201,7 +201,7 @@ public class TileEntityThreeDPrinterDevice extends TileEntityNetworkDevice.Color
 	public void update() {
 		if (getStackInSlot(0).getItem()==ModItems.FILAMENT) {
 			if(isPrinting) {
-				if(getStackInSlot(0).getItemDamage()!=1000) {
+				if(getStackInSlot(0).getItemDamage()!=10) {
 					getStackInSlot(0).setItemDamage(getStackInSlot(0).getItemDamage()+1);
 				}
 				else {
