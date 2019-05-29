@@ -1,6 +1,6 @@
 {
-	"parent": "appsmod:item/threedprinter",
-	"textures": {
-        "1": "blocks/wool_colored_red"
-	}
+    "parent": "appsmod:item/threedprinter",
+    "textures": {
+        "1": "blocks/wool_colored_pink"
+    }
 }
