@@ -3,9 +3,9 @@ package com.grillo78.appsmod.blocks;
 import com.grillo78.appsmod.AppsMod;
 import com.grillo78.appsmod.init.ModBlocks;
 import com.grillo78.appsmod.init.ModItems;
+import com.grillo78.appsmod.items.ItemColoredDevicesCustom;
 import com.grillo78.appsmod.tileentity.TileEntityThreeDPrinterDevice;
 import com.mrcrayfish.device.block.BlockDevice;
-import com.mrcrayfish.device.item.ItemColoredDevice;
 
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
@@ -28,11 +28,11 @@ public class ThreeDPrinterDeviceBlock extends BlockDevice.Colored{
 		setCreativeTab(AppsMod.appsModTab);
 
 		ModBlocks.BLOCKS.add(this);
-		ItemColoredDevice item = new ItemColoredDevice(this);
+		ItemColoredDevicesCustom item = new ItemColoredDevicesCustom(this);
 		item.setRegistryName(this.getRegistryName());
 		ModItems.ITEMS.add(item);
 	}
-
+	
 	@Override
 	public boolean isOpaqueCube(IBlockState state) {
 		return false;

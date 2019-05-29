@@ -104,6 +104,7 @@ public class PrintDialog extends Dialog{
 					{
 						TaskPrint task = new TaskPrint(Laptop.getPos(), networkDevice, modelString);
 						TaskManager.sendTask(task);
+						this.close();
 					}
 				}
 			});
