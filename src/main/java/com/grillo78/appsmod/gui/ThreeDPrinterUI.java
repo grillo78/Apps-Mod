@@ -3,6 +3,7 @@ package com.grillo78.appsmod.gui;
 import com.grillo78.appsmod.Reference;
 import com.grillo78.appsmod.inventory.ContainerThreeDPrinter;
 import com.grillo78.appsmod.tileentity.TileEntityThreeDPrinter;
+import com.grillo78.appsmod.tileentity.TileEntityThreeDPrinterDevice;
 
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.inventory.GuiContainer;
@@ -18,9 +19,9 @@ public class ThreeDPrinterUI extends GuiContainer{
 	private static final ResourceLocation PRINTER_GUI_TEXTURES = new ResourceLocation(Reference.MODID,"textures/gui/container/printer.png");
     /** The player inventory bound to this GUI. */
     private final InventoryPlayer playerInventory;
-    private final TileEntityThreeDPrinter tilePrinter;
+    private final TileEntityThreeDPrinterDevice tilePrinter;
     
-	public ThreeDPrinterUI(InventoryPlayer playerInv, TileEntityThreeDPrinter printerInv) {
+	public ThreeDPrinterUI(InventoryPlayer playerInv, TileEntityThreeDPrinterDevice printerInv) {
 		super(new ContainerThreeDPrinter(playerInv, printerInv));
 		playerInventory = Minecraft.getMinecraft().player.inventory;
 		tilePrinter = printerInv;

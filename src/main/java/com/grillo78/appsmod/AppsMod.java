@@ -12,7 +12,7 @@ import com.grillo78.appsmod.programs.ApplicationWebBrowser;
 import com.grillo78.appsmod.proxy.CommonProxy;
 import com.grillo78.appsmod.tab.AppsModTab;
 import com.grillo78.appsmod.tileentity.TileEntityPrintedBlock;
-import com.grillo78.appsmod.tileentity.TileEntityThreeDPrinter;
+import com.grillo78.appsmod.tileentity.TileEntityThreeDPrinterDevice;
 import com.mrcrayfish.device.api.ApplicationManager;
 
 import net.minecraft.creativetab.CreativeTabs;
@@ -25,7 +25,6 @@ import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
-import net.minecraftforge.fml.common.event.FMLServerStoppingEvent;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
 @Mod(modid = Reference.MODID, name = Reference.NAME, version = Reference.VERSION, dependencies = "required-after:cdm@[0.4.0,);required-after:mcef@[0.9.0,)")
@@ -44,7 +43,7 @@ public class AppsMod
 	@EventHandler
     public void preInit(FMLPreInitializationEvent event)
     {
-		GameRegistry.registerTileEntity(TileEntityThreeDPrinter.class, new ResourceLocation(Reference.MODID,"tileEntity3DPrinter"));
+		GameRegistry.registerTileEntity(TileEntityThreeDPrinterDevice.class, new ResourceLocation(Reference.MODID,"tileEntity3DPrinter"));
 		GameRegistry.registerTileEntity(TileEntityPrintedBlock.class, new ResourceLocation(Reference.MODID, "tileEntityPrintedBlock"));
 		PROXY.onPreInit();
     }

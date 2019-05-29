@@ -1,21 +1,20 @@
 package com.grillo78.appsmod.inventory;
 
 import com.grillo78.appsmod.tileentity.TileEntityThreeDPrinter;
+import com.grillo78.appsmod.tileentity.TileEntityThreeDPrinterDevice;
 
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.InventoryPlayer;
 import net.minecraft.inventory.Container;
-import net.minecraft.inventory.IInventory;
 import net.minecraft.inventory.Slot;
 import net.minecraft.inventory.SlotFurnaceOutput;
 import net.minecraft.item.ItemStack;
-import net.minecraft.tileentity.TileEntity;
 
 public class ContainerThreeDPrinter extends Container{
 
-	private TileEntityThreeDPrinter inventory;
+	private TileEntityThreeDPrinterDevice inventory;
 	
-	public ContainerThreeDPrinter(InventoryPlayer playerInventory, TileEntityThreeDPrinter threeDPrinterInventory) {
+	public ContainerThreeDPrinter(InventoryPlayer playerInventory, TileEntityThreeDPrinterDevice threeDPrinterInventory) {
 		inventory = threeDPrinterInventory;
 		this.addSlotToContainer(new SlotPrinterFilament(inventory, 0, 56, 17));
 		this.addSlotToContainer(new SlotFurnaceOutput(playerInventory.player,inventory, 1, 116, 35));

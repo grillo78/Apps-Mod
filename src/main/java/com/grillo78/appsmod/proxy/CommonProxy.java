@@ -4,6 +4,7 @@ import com.grillo78.appsmod.AppsMod;
 import com.grillo78.appsmod.gui.ThreeDPrinterUI;
 import com.grillo78.appsmod.inventory.ContainerThreeDPrinter;
 import com.grillo78.appsmod.tileentity.TileEntityThreeDPrinter;
+import com.grillo78.appsmod.tileentity.TileEntityThreeDPrinterDevice;
 
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.tileentity.TileEntity;
@@ -24,8 +25,8 @@ public class CommonProxy implements IGuiHandler{
 		TileEntity tileentity = world.getTileEntity(pos);
 		if (tileentity != null) {
 			if(ID==0) {
-				if (tileentity instanceof TileEntityThreeDPrinter) {
-					return new ContainerThreeDPrinter(player.inventory, (TileEntityThreeDPrinter) tileentity);
+				if (tileentity instanceof TileEntityThreeDPrinterDevice) {
+					return new ContainerThreeDPrinter(player.inventory, (TileEntityThreeDPrinterDevice) tileentity);
 				}
 			}
 		}
@@ -38,8 +39,8 @@ public class CommonProxy implements IGuiHandler{
 		TileEntity tileentity = world.getTileEntity(pos);
 		if (tileentity != null) {
 			if(ID==0) {
-				if (tileentity instanceof TileEntityThreeDPrinter) {
-					return new ThreeDPrinterUI(player.inventory, (TileEntityThreeDPrinter) tileentity);
+				if (tileentity instanceof TileEntityThreeDPrinterDevice) {
+					return new ThreeDPrinterUI(player.inventory, (TileEntityThreeDPrinterDevice) tileentity);
 				}
 			}
 		}

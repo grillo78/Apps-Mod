@@ -5,7 +5,6 @@ import java.util.UUID;
 import com.grillo78.appsmod.Reference;
 import com.grillo78.appsmod.init.ModBlocks;
 import com.grillo78.appsmod.init.ModItems;
-import com.grillo78.appsmod.inventory.ContainerThreeDPrinter;
 
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.InventoryPlayer;
@@ -205,7 +204,8 @@ public class TileEntityThreeDPrinter extends TileEntityLockable implements ITick
 
 	@Override
 	public Container createContainer(InventoryPlayer playerInventory, EntityPlayer playerIn) {
-		return new ContainerThreeDPrinter(playerInventory, this);
+//		return new ContainerThreeDPrinter(playerInventory, this);
+		return null;
 	}
 
 	@Override
