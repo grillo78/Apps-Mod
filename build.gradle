@@ -29,7 +29,7 @@ repositories {
 	jcenter()
 }
 
-version = "1.6.2"
+version = "1.7.0"
 group = "com.grillo78.appsmod" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = "appsmod"
 

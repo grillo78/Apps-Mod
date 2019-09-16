@@ -2,10 +2,10 @@ Unsupposrted library path: C:\Users\Guillermo\Desktop\Mods minecraft\Modding\App
 Unsupposrted library path: C:\Users\Guillermo\Desktop\Mods minecraft\Modding\Apps-Mod\build\resources\api
 Symbol range map extraction starting
 Processing 41 files
-startProcessing "com/grillo78/appsmod/AppsMod.java" md5: ffdfdd5917c6d89de68152f26c436eec
+startProcessing "com/grillo78/appsmod/AppsMod.java" md5: 098593fb74fa9e0af6b768dd3ed51d63
 endProcessing "com/grillo78/appsmod/AppsMod.java"
 
-startProcessing "com/grillo78/appsmod/Reference.java" md5: b93bc935423a8af406554fe74c1c6b7f
+startProcessing "com/grillo78/appsmod/Reference.java" md5: 571a2acec232da32921239c736e662f0
 endProcessing "com/grillo78/appsmod/Reference.java"
 
 startProcessing "com/grillo78/appsmod/blocks/PrintedBlock.java" md5: 6c743f9da03ade7a9dd9940cffb42b42

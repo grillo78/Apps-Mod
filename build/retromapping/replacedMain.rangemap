@@ -2,7 +2,7 @@ Unsupposrted library path: C:\Users\Guillermo\Desktop\Mods minecraft\Modding\App
 Unsupposrted library path: C:\Users\Guillermo\Desktop\Mods minecraft\Modding\Apps-Mod\build\resources\api
 Symbol range map extraction starting
 Processing 41 files
-startProcessing "com/grillo78/appsmod/AppsMod.java" md5: ffdfdd5917c6d89de68152f26c436eec
+startProcessing "com/grillo78/appsmod/AppsMod.java" md5: 098593fb74fa9e0af6b768dd3ed51d63
 @|com/grillo78/appsmod/AppsMod.java|8|28|com.grillo78.appsmod|package|com.grillo78.appsmod|(file)
 Class Start: com.grillo78.appsmod.AppsMod
    @|com/grillo78/appsmod/AppsMod.java|1446|1449|Mod|class|net.minecraftforge.fml.common.Mod|false
@@ -16,109 +16,109 @@ Class Start: com.grillo78.appsmod.AppsMod
    @|com/grillo78/appsmod/AppsMod.java|1508|1517|Reference|class|com.grillo78.appsmod.Reference|false
    @|com/grillo78/appsmod/AppsMod.java|1518|1525|VERSION|field|com.grillo78.appsmod.Reference|VERSION
    @|com/grillo78/appsmod/AppsMod.java|1527|1539|dependencies|method|net.minecraftforge.fml.common.Mod|dependencies|()Ljava/lang/String;
-   @|com/grillo78/appsmod/AppsMod.java|1615|1622|AppsMod|class|com.grillo78.appsmod.AppsMod|false
-   @|com/grillo78/appsmod/AppsMod.java|1647|1659|CreativeTabs|class|net.minecraft.creativetab.CreativeTabs|false
-   @|com/grillo78/appsmod/AppsMod.java|1647|1659|CreativeTabs|class|net.minecraft.creativetab.CreativeTabs|false
-   @|com/grillo78/appsmod/AppsMod.java|1660|1670|appsModTab|field|com.grillo78.appsmod.AppsMod|appsModTab|
-   @|com/grillo78/appsmod/AppsMod.java|1677|1687|AppsModTab|class|com.grillo78.appsmod.tab.AppsModTab|false
-   @|com/grillo78/appsmod/AppsMod.java|1722|1728|Logger|class|org.apache.logging.log4j.Logger|false
-   @|com/grillo78/appsmod/AppsMod.java|1722|1728|Logger|class|org.apache.logging.log4j.Logger|false
-   @|com/grillo78/appsmod/AppsMod.java|1729|1732|log|field|com.grillo78.appsmod.AppsMod|log|
-   @|com/grillo78/appsmod/AppsMod.java|1735|1745|LogManager|class|org.apache.logging.log4j.LogManager|false
-   @|com/grillo78/appsmod/AppsMod.java|1746|1755|getLogger|method|org.apache.logging.log4j.LogManager|getLogger|(Ljava/lang/String;)Lorg/apache/logging/log4j/Logger;
-   @|com/grillo78/appsmod/AppsMod.java|1756|1765|Reference|class|com.grillo78.appsmod.Reference|false
-   @|com/grillo78/appsmod/AppsMod.java|1766|1771|MODID|field|com.grillo78.appsmod.Reference|MODID
-   @|com/grillo78/appsmod/AppsMod.java|1822|1829|AppsMod|class|com.grillo78.appsmod.AppsMod|false
-   @|com/grillo78/appsmod/AppsMod.java|1778|1786|Instance|class|net.minecraftforge.fml.common.Mod.Instance|false
-   @|com/grillo78/appsmod/AppsMod.java|1787|1796|Reference|class|com.grillo78.appsmod.Reference|false
-   @|com/grillo78/appsmod/AppsMod.java|1797|1802|MODID|field|com.grillo78.appsmod.Reference|MODID
-   @|com/grillo78/appsmod/AppsMod.java|1822|1829|AppsMod|class|com.grillo78.appsmod.AppsMod|false
-   @|com/grillo78/appsmod/AppsMod.java|1830|1838|instance|field|com.grillo78.appsmod.AppsMod|instance|
-   @|com/grillo78/appsmod/AppsMod.java|1984|1995|CommonProxy|class|com.grillo78.appsmod.proxy.CommonProxy|false
-   @|com/grillo78/appsmod/AppsMod.java|1850|1860|SidedProxy|class|net.minecraftforge.fml.common.SidedProxy|false
-   @|com/grillo78/appsmod/AppsMod.java|1861|1871|serverSide|method|net.minecraftforge.fml.common.SidedProxy|serverSide|()Ljava/lang/String;
-   @|com/grillo78/appsmod/AppsMod.java|1913|1923|clientSide|method|net.minecraftforge.fml.common.SidedProxy|clientSide|()Ljava/lang/String;
-   @|com/grillo78/appsmod/AppsMod.java|1984|1995|CommonProxy|class|com.grillo78.appsmod.proxy.CommonProxy|false
-   @|com/grillo78/appsmod/AppsMod.java|1996|2001|PROXY|field|com.grillo78.appsmod.AppsMod|PROXY|
+   @|com/grillo78/appsmod/AppsMod.java|1616|1623|AppsMod|class|com.grillo78.appsmod.AppsMod|false
+   @|com/grillo78/appsmod/AppsMod.java|1648|1660|CreativeTabs|class|net.minecraft.creativetab.CreativeTabs|false
+   @|com/grillo78/appsmod/AppsMod.java|1648|1660|CreativeTabs|class|net.minecraft.creativetab.CreativeTabs|false
+   @|com/grillo78/appsmod/AppsMod.java|1661|1671|appsModTab|field|com.grillo78.appsmod.AppsMod|appsModTab|
+   @|com/grillo78/appsmod/AppsMod.java|1678|1688|AppsModTab|class|com.grillo78.appsmod.tab.AppsModTab|false
+   @|com/grillo78/appsmod/AppsMod.java|1723|1729|Logger|class|org.apache.logging.log4j.Logger|false
+   @|com/grillo78/appsmod/AppsMod.java|1723|1729|Logger|class|org.apache.logging.log4j.Logger|false
+   @|com/grillo78/appsmod/AppsMod.java|1730|1733|log|field|com.grillo78.appsmod.AppsMod|log|
+   @|com/grillo78/appsmod/AppsMod.java|1736|1746|LogManager|class|org.apache.logging.log4j.LogManager|false
+   @|com/grillo78/appsmod/AppsMod.java|1747|1756|getLogger|method|org.apache.logging.log4j.LogManager|getLogger|(Ljava/lang/String;)Lorg/apache/logging/log4j/Logger;
+   @|com/grillo78/appsmod/AppsMod.java|1757|1766|Reference|class|com.grillo78.appsmod.Reference|false
+   @|com/grillo78/appsmod/AppsMod.java|1767|1772|MODID|field|com.grillo78.appsmod.Reference|MODID
+   @|com/grillo78/appsmod/AppsMod.java|1823|1830|AppsMod|class|com.grillo78.appsmod.AppsMod|false
+   @|com/grillo78/appsmod/AppsMod.java|1779|1787|Instance|class|net.minecraftforge.fml.common.Mod.Instance|false
+   @|com/grillo78/appsmod/AppsMod.java|1788|1797|Reference|class|com.grillo78.appsmod.Reference|false
+   @|com/grillo78/appsmod/AppsMod.java|1798|1803|MODID|field|com.grillo78.appsmod.Reference|MODID
+   @|com/grillo78/appsmod/AppsMod.java|1823|1830|AppsMod|class|com.grillo78.appsmod.AppsMod|false
+   @|com/grillo78/appsmod/AppsMod.java|1831|1839|instance|field|com.grillo78.appsmod.AppsMod|instance|
+   @|com/grillo78/appsmod/AppsMod.java|1985|1996|CommonProxy|class|com.grillo78.appsmod.proxy.CommonProxy|false
+   @|com/grillo78/appsmod/AppsMod.java|1851|1861|SidedProxy|class|net.minecraftforge.fml.common.SidedProxy|false
+   @|com/grillo78/appsmod/AppsMod.java|1862|1872|serverSide|method|net.minecraftforge.fml.common.SidedProxy|serverSide|()Ljava/lang/String;
+   @|com/grillo78/appsmod/AppsMod.java|1914|1924|clientSide|method|net.minecraftforge.fml.common.SidedProxy|clientSide|()Ljava/lang/String;
+   @|com/grillo78/appsmod/AppsMod.java|1985|1996|CommonProxy|class|com.grillo78.appsmod.proxy.CommonProxy|false
+   @|com/grillo78/appsmod/AppsMod.java|1997|2002|PROXY|field|com.grillo78.appsmod.AppsMod|PROXY|
    Method Start: preInit(Lnet/minecraftforge/fml/common/event/FMLPreInitializationEvent;)V
-      @|com/grillo78/appsmod/AppsMod.java|2069|2074|event|param|com.grillo78.appsmod.AppsMod|preInit|(Lnet/minecraftforge/fml/common/event/FMLPreInitializationEvent;)V|event|0
-      @|com/grillo78/appsmod/AppsMod.java|2006|2018|EventHandler|class|net.minecraftforge.fml.common.Mod.EventHandler|false
-      @|com/grillo78/appsmod/AppsMod.java|2035|2042|preInit|method|com.grillo78.appsmod.AppsMod|preInit|(Lnet/minecraftforge/fml/common/event/FMLPreInitializationEvent;)V
-      @|com/grillo78/appsmod/AppsMod.java|2043|2068|FMLPreInitializationEvent|class|net.minecraftforge.fml.common.event.FMLPreInitializationEvent|false
-      @|com/grillo78/appsmod/AppsMod.java|2084|2096|GameRegistry|class|net.minecraftforge.fml.common.registry.GameRegistry|false
-      @|com/grillo78/appsmod/AppsMod.java|2097|2115|registerTileEntity|method|net.minecraftforge.fml.common.registry.GameRegistry|registerTileEntity|(Ljava/lang/Class;Lnet/minecraft/util/ResourceLocation;)V
-      @|com/grillo78/appsmod/AppsMod.java|2116|2145|TileEntityThreeDPrinterDevice|class|com.grillo78.appsmod.tileentity.TileEntityThreeDPrinterDevice|false
-      @|com/grillo78/appsmod/AppsMod.java|2157|2173|ResourceLocation|class|net.minecraft.util.ResourceLocation|false
-      @|com/grillo78/appsmod/AppsMod.java|2174|2183|Reference|class|com.grillo78.appsmod.Reference|false
-      @|com/grillo78/appsmod/AppsMod.java|2184|2189|MODID|field|com.grillo78.appsmod.Reference|MODID
-      @|com/grillo78/appsmod/AppsMod.java|2217|2229|GameRegistry|class|net.minecraftforge.fml.common.registry.GameRegistry|false
-      @|com/grillo78/appsmod/AppsMod.java|2230|2248|registerTileEntity|method|net.minecraftforge.fml.common.registry.GameRegistry|registerTileEntity|(Ljava/lang/Class;Lnet/minecraft/util/ResourceLocation;)V
-      @|com/grillo78/appsmod/AppsMod.java|2249|2271|TileEntityPrintedBlock|class|com.grillo78.appsmod.tileentity.TileEntityPrintedBlock|false
-      @|com/grillo78/appsmod/AppsMod.java|2283|2299|ResourceLocation|class|net.minecraft.util.ResourceLocation|false
-      @|com/grillo78/appsmod/AppsMod.java|2300|2309|Reference|class|com.grillo78.appsmod.Reference|false
-      @|com/grillo78/appsmod/AppsMod.java|2310|2315|MODID|field|com.grillo78.appsmod.Reference|MODID
-      @|com/grillo78/appsmod/AppsMod.java|2347|2352|PROXY|field|com.grillo78.appsmod.AppsMod|PROXY
-      @|com/grillo78/appsmod/AppsMod.java|2353|2362|onPreInit|method|com.grillo78.appsmod.proxy.CommonProxy|onPreInit|()V
+      @|com/grillo78/appsmod/AppsMod.java|2070|2075|event|param|com.grillo78.appsmod.AppsMod|preInit|(Lnet/minecraftforge/fml/common/event/FMLPreInitializationEvent;)V|event|0
+      @|com/grillo78/appsmod/AppsMod.java|2007|2019|EventHandler|class|net.minecraftforge.fml.common.Mod.EventHandler|false
+      @|com/grillo78/appsmod/AppsMod.java|2036|2043|preInit|method|com.grillo78.appsmod.AppsMod|preInit|(Lnet/minecraftforge/fml/common/event/FMLPreInitializationEvent;)V
+      @|com/grillo78/appsmod/AppsMod.java|2044|2069|FMLPreInitializationEvent|class|net.minecraftforge.fml.common.event.FMLPreInitializationEvent|false
+      @|com/grillo78/appsmod/AppsMod.java|2085|2097|GameRegistry|class|net.minecraftforge.fml.common.registry.GameRegistry|false
+      @|com/grillo78/appsmod/AppsMod.java|2098|2116|registerTileEntity|method|net.minecraftforge.fml.common.registry.GameRegistry|registerTileEntity|(Ljava/lang/Class;Lnet/minecraft/util/ResourceLocation;)V
+      @|com/grillo78/appsmod/AppsMod.java|2117|2146|TileEntityThreeDPrinterDevice|class|com.grillo78.appsmod.tileentity.TileEntityThreeDPrinterDevice|false
+      @|com/grillo78/appsmod/AppsMod.java|2158|2174|ResourceLocation|class|net.minecraft.util.ResourceLocation|false
+      @|com/grillo78/appsmod/AppsMod.java|2175|2184|Reference|class|com.grillo78.appsmod.Reference|false
+      @|com/grillo78/appsmod/AppsMod.java|2185|2190|MODID|field|com.grillo78.appsmod.Reference|MODID
+      @|com/grillo78/appsmod/AppsMod.java|2218|2230|GameRegistry|class|net.minecraftforge.fml.common.registry.GameRegistry|false
+      @|com/grillo78/appsmod/AppsMod.java|2231|2249|registerTileEntity|method|net.minecraftforge.fml.common.registry.GameRegistry|registerTileEntity|(Ljava/lang/Class;Lnet/minecraft/util/ResourceLocation;)V
+      @|com/grillo78/appsmod/AppsMod.java|2250|2272|TileEntityPrintedBlock|class|com.grillo78.appsmod.tileentity.TileEntityPrintedBlock|false
+      @|com/grillo78/appsmod/AppsMod.java|2284|2300|ResourceLocation|class|net.minecraft.util.ResourceLocation|false
+      @|com/grillo78/appsmod/AppsMod.java|2301|2310|Reference|class|com.grillo78.appsmod.Reference|false
+      @|com/grillo78/appsmod/AppsMod.java|2311|2316|MODID|field|com.grillo78.appsmod.Reference|MODID
+      @|com/grillo78/appsmod/AppsMod.java|2348|2353|PROXY|field|com.grillo78.appsmod.AppsMod|PROXY
+      @|com/grillo78/appsmod/AppsMod.java|2354|2363|onPreInit|method|com.grillo78.appsmod.proxy.CommonProxy|onPreInit|()V
    Method End: preInit(Lnet/minecraftforge/fml/common/event/FMLPreInitializationEvent;)V
    Method Start: init(Lnet/minecraftforge/fml/common/event/FMLInitializationEvent;)V
-      @|com/grillo78/appsmod/AppsMod.java|2435|2440|event|param|com.grillo78.appsmod.AppsMod|init|(Lnet/minecraftforge/fml/common/event/FMLInitializationEvent;)V|event|0
-      @|com/grillo78/appsmod/AppsMod.java|2378|2390|EventHandler|class|net.minecraftforge.fml.common.Mod.EventHandler|false
-      @|com/grillo78/appsmod/AppsMod.java|2407|2411|init|method|com.grillo78.appsmod.AppsMod|init|(Lnet/minecraftforge/fml/common/event/FMLInitializationEvent;)V
-      @|com/grillo78/appsmod/AppsMod.java|2412|2434|FMLInitializationEvent|class|net.minecraftforge.fml.common.event.FMLInitializationEvent|false
-      @|com/grillo78/appsmod/AppsMod.java|2453|2467|MinecraftForge|class|net.minecraftforge.common.MinecraftForge|false
-      @|com/grillo78/appsmod/AppsMod.java|2468|2477|EVENT_BUS|field|net.minecraftforge.common.MinecraftForge|EVENT_BUS
-      @|com/grillo78/appsmod/AppsMod.java|2478|2486|register|method|net.minecraftforge.fml.common.eventhandler.EventBus|register|(Ljava/lang/Object;)V
-      @|com/grillo78/appsmod/AppsMod.java|2491|2503|PlayerEvents|class|com.grillo78.appsmod.handler.PlayerEvents|false
-      @|com/grillo78/appsmod/AppsMod.java|2516|2536|registerApplications|method|com.grillo78.appsmod.AppsMod|registerApplications|()V
+      @|com/grillo78/appsmod/AppsMod.java|2436|2441|event|param|com.grillo78.appsmod.AppsMod|init|(Lnet/minecraftforge/fml/common/event/FMLInitializationEvent;)V|event|0
+      @|com/grillo78/appsmod/AppsMod.java|2379|2391|EventHandler|class|net.minecraftforge.fml.common.Mod.EventHandler|false
+      @|com/grillo78/appsmod/AppsMod.java|2408|2412|init|method|com.grillo78.appsmod.AppsMod|init|(Lnet/minecraftforge/fml/common/event/FMLInitializationEvent;)V
+      @|com/grillo78/appsmod/AppsMod.java|2413|2435|FMLInitializationEvent|class|net.minecraftforge.fml.common.event.FMLInitializationEvent|false
+      @|com/grillo78/appsmod/AppsMod.java|2454|2468|MinecraftForge|class|net.minecraftforge.common.MinecraftForge|false
+      @|com/grillo78/appsmod/AppsMod.java|2469|2478|EVENT_BUS|field|net.minecraftforge.common.MinecraftForge|EVENT_BUS
+      @|com/grillo78/appsmod/AppsMod.java|2479|2487|register|method|net.minecraftforge.fml.common.eventhandler.EventBus|register|(Ljava/lang/Object;)V
+      @|com/grillo78/appsmod/AppsMod.java|2492|2504|PlayerEvents|class|com.grillo78.appsmod.handler.PlayerEvents|false
+      @|com/grillo78/appsmod/AppsMod.java|2517|2537|registerApplications|method|com.grillo78.appsmod.AppsMod|registerApplications|()V
    Method End: init(Lnet/minecraftforge/fml/common/event/FMLInitializationEvent;)V
    Method Start: postInit(Lnet/minecraftforge/fml/common/event/FMLPostInitializationEvent;)V
-      @|com/grillo78/appsmod/AppsMod.java|2621|2626|event|param|com.grillo78.appsmod.AppsMod|postInit|(Lnet/minecraftforge/fml/common/event/FMLPostInitializationEvent;)V|event|0
-      @|com/grillo78/appsmod/AppsMod.java|2556|2568|EventHandler|class|net.minecraftforge.fml.common.Mod.EventHandler|false
-      @|com/grillo78/appsmod/AppsMod.java|2585|2593|postInit|method|com.grillo78.appsmod.AppsMod|postInit|(Lnet/minecraftforge/fml/common/event/FMLPostInitializationEvent;)V
-      @|com/grillo78/appsmod/AppsMod.java|2594|2620|FMLPostInitializationEvent|class|net.minecraftforge.fml.common.event.FMLPostInitializationEvent|false
-      @|com/grillo78/appsmod/AppsMod.java|2639|2644|PROXY|field|com.grillo78.appsmod.AppsMod|PROXY
-      @|com/grillo78/appsmod/AppsMod.java|2645|2658|initRenderers|method|com.grillo78.appsmod.proxy.CommonProxy|initRenderers|()V
+      @|com/grillo78/appsmod/AppsMod.java|2622|2627|event|param|com.grillo78.appsmod.AppsMod|postInit|(Lnet/minecraftforge/fml/common/event/FMLPostInitializationEvent;)V|event|0
+      @|com/grillo78/appsmod/AppsMod.java|2557|2569|EventHandler|class|net.minecraftforge.fml.common.Mod.EventHandler|false
+      @|com/grillo78/appsmod/AppsMod.java|2586|2594|postInit|method|com.grillo78.appsmod.AppsMod|postInit|(Lnet/minecraftforge/fml/common/event/FMLPostInitializationEvent;)V
+      @|com/grillo78/appsmod/AppsMod.java|2595|2621|FMLPostInitializationEvent|class|net.minecraftforge.fml.common.event.FMLPostInitializationEvent|false
+      @|com/grillo78/appsmod/AppsMod.java|2640|2645|PROXY|field|com.grillo78.appsmod.AppsMod|PROXY
+      @|com/grillo78/appsmod/AppsMod.java|2646|2659|initRenderers|method|com.grillo78.appsmod.proxy.CommonProxy|initRenderers|()V
    Method End: postInit(Lnet/minecraftforge/fml/common/event/FMLPostInitializationEvent;)V
    Method Start: registerApplications()V
-      @|com/grillo78/appsmod/AppsMod.java|2690|2710|registerApplications|method|com.grillo78.appsmod.AppsMod|registerApplications|()V
-      @|com/grillo78/appsmod/AppsMod.java|2721|2739|ApplicationManager|class|com.mrcrayfish.device.api.ApplicationManager|false
-      @|com/grillo78/appsmod/AppsMod.java|2740|2759|registerApplication|method|com.mrcrayfish.device.api.ApplicationManager|registerApplication|(Lnet/minecraft/util/ResourceLocation;Ljava/lang/Class;)Lcom/mrcrayfish/device/api/app/Application;
-      @|com/grillo78/appsmod/AppsMod.java|2764|2780|ResourceLocation|class|net.minecraft.util.ResourceLocation|false
-      @|com/grillo78/appsmod/AppsMod.java|2781|2790|Reference|class|com.grillo78.appsmod.Reference|false
-      @|com/grillo78/appsmod/AppsMod.java|2791|2796|MODID|field|com.grillo78.appsmod.Reference|MODID
-      @|com/grillo78/appsmod/AppsMod.java|2810|2831|ApplicationWebBrowser|class|com.grillo78.appsmod.programs.ApplicationWebBrowser|false
-      @|com/grillo78/appsmod/AppsMod.java|2845|2863|ApplicationManager|class|com.mrcrayfish.device.api.ApplicationManager|false
-      @|com/grillo78/appsmod/AppsMod.java|2864|2883|registerApplication|method|com.mrcrayfish.device.api.ApplicationManager|registerApplication|(Lnet/minecraft/util/ResourceLocation;Ljava/lang/Class;)Lcom/mrcrayfish/device/api/app/Application;
-      @|com/grillo78/appsmod/AppsMod.java|2888|2904|ResourceLocation|class|net.minecraft.util.ResourceLocation|false
-      @|com/grillo78/appsmod/AppsMod.java|2905|2914|Reference|class|com.grillo78.appsmod.Reference|false
-      @|com/grillo78/appsmod/AppsMod.java|2915|2920|MODID|field|com.grillo78.appsmod.Reference|MODID
-      @|com/grillo78/appsmod/AppsMod.java|2936|2958|ApplicationMusicPlayer|class|com.grillo78.appsmod.programs.ApplicationMusicPlayer|false
-      @|com/grillo78/appsmod/AppsMod.java|2972|2990|ApplicationManager|class|com.mrcrayfish.device.api.ApplicationManager|false
-      @|com/grillo78/appsmod/AppsMod.java|2991|3010|registerApplication|method|com.mrcrayfish.device.api.ApplicationManager|registerApplication|(Lnet/minecraft/util/ResourceLocation;Ljava/lang/Class;)Lcom/mrcrayfish/device/api/app/Application;
-      @|com/grillo78/appsmod/AppsMod.java|3015|3031|ResourceLocation|class|net.minecraft.util.ResourceLocation|false
-      @|com/grillo78/appsmod/AppsMod.java|3032|3041|Reference|class|com.grillo78.appsmod.Reference|false
-      @|com/grillo78/appsmod/AppsMod.java|3042|3047|MODID|field|com.grillo78.appsmod.Reference|MODID
-      @|com/grillo78/appsmod/AppsMod.java|3061|3087|ApplicationWeatherForecast|class|com.grillo78.appsmod.programs.ApplicationWeatherForecast|false
-      @|com/grillo78/appsmod/AppsMod.java|3101|3119|ApplicationManager|class|com.mrcrayfish.device.api.ApplicationManager|false
-      @|com/grillo78/appsmod/AppsMod.java|3120|3139|registerApplication|method|com.mrcrayfish.device.api.ApplicationManager|registerApplication|(Lnet/minecraft/util/ResourceLocation;Ljava/lang/Class;)Lcom/mrcrayfish/device/api/app/Application;
-      @|com/grillo78/appsmod/AppsMod.java|3144|3160|ResourceLocation|class|net.minecraft.util.ResourceLocation|false
-      @|com/grillo78/appsmod/AppsMod.java|3161|3170|Reference|class|com.grillo78.appsmod.Reference|false
-      @|com/grillo78/appsmod/AppsMod.java|3171|3176|MODID|field|com.grillo78.appsmod.Reference|MODID
-      @|com/grillo78/appsmod/AppsMod.java|3190|3208|ApplicationDiscord|class|com.grillo78.appsmod.programs.ApplicationDiscord|false
-      @|com/grillo78/appsmod/AppsMod.java|3222|3240|ApplicationManager|class|com.mrcrayfish.device.api.ApplicationManager|false
-      @|com/grillo78/appsmod/AppsMod.java|3241|3260|registerApplication|method|com.mrcrayfish.device.api.ApplicationManager|registerApplication|(Lnet/minecraft/util/ResourceLocation;Ljava/lang/Class;)Lcom/mrcrayfish/device/api/app/Application;
-      @|com/grillo78/appsmod/AppsMod.java|3265|3281|ResourceLocation|class|net.minecraft.util.ResourceLocation|false
-      @|com/grillo78/appsmod/AppsMod.java|3282|3291|Reference|class|com.grillo78.appsmod.Reference|false
-      @|com/grillo78/appsmod/AppsMod.java|3292|3297|MODID|field|com.grillo78.appsmod.Reference|MODID
-      @|com/grillo78/appsmod/AppsMod.java|3311|3329|ApplicationPrintIt|class|com.grillo78.appsmod.programs.ApplicationPrintIt|false
-      @|com/grillo78/appsmod/AppsMod.java|3349|3360|TaskManager|class|com.mrcrayfish.device.api.task.TaskManager|false
-      @|com/grillo78/appsmod/AppsMod.java|3361|3373|registerTask|method|com.mrcrayfish.device.api.task.TaskManager|registerTask|(Ljava/lang/Class;)V
-      @|com/grillo78/appsmod/AppsMod.java|3374|3383|TaskPrint|class|com.grillo78.appsmod.util.TaskPrint|false
+      @|com/grillo78/appsmod/AppsMod.java|2691|2711|registerApplications|method|com.grillo78.appsmod.AppsMod|registerApplications|()V
+      @|com/grillo78/appsmod/AppsMod.java|2722|2740|ApplicationManager|class|com.mrcrayfish.device.api.ApplicationManager|false
+      @|com/grillo78/appsmod/AppsMod.java|2741|2760|registerApplication|method|com.mrcrayfish.device.api.ApplicationManager|registerApplication|(Lnet/minecraft/util/ResourceLocation;Ljava/lang/Class;)Lcom/mrcrayfish/device/api/app/Application;
+      @|com/grillo78/appsmod/AppsMod.java|2765|2781|ResourceLocation|class|net.minecraft.util.ResourceLocation|false
+      @|com/grillo78/appsmod/AppsMod.java|2782|2791|Reference|class|com.grillo78.appsmod.Reference|false
+      @|com/grillo78/appsmod/AppsMod.java|2792|2797|MODID|field|com.grillo78.appsmod.Reference|MODID
+      @|com/grillo78/appsmod/AppsMod.java|2811|2832|ApplicationWebBrowser|class|com.grillo78.appsmod.programs.ApplicationWebBrowser|false
+      @|com/grillo78/appsmod/AppsMod.java|2846|2864|ApplicationManager|class|com.mrcrayfish.device.api.ApplicationManager|false
+      @|com/grillo78/appsmod/AppsMod.java|2865|2884|registerApplication|method|com.mrcrayfish.device.api.ApplicationManager|registerApplication|(Lnet/minecraft/util/ResourceLocation;Ljava/lang/Class;)Lcom/mrcrayfish/device/api/app/Application;
+      @|com/grillo78/appsmod/AppsMod.java|2889|2905|ResourceLocation|class|net.minecraft.util.ResourceLocation|false
+      @|com/grillo78/appsmod/AppsMod.java|2906|2915|Reference|class|com.grillo78.appsmod.Reference|false
+      @|com/grillo78/appsmod/AppsMod.java|2916|2921|MODID|field|com.grillo78.appsmod.Reference|MODID
+      @|com/grillo78/appsmod/AppsMod.java|2937|2959|ApplicationMusicPlayer|class|com.grillo78.appsmod.programs.ApplicationMusicPlayer|false
+      @|com/grillo78/appsmod/AppsMod.java|2973|2991|ApplicationManager|class|com.mrcrayfish.device.api.ApplicationManager|false
+      @|com/grillo78/appsmod/AppsMod.java|2992|3011|registerApplication|method|com.mrcrayfish.device.api.ApplicationManager|registerApplication|(Lnet/minecraft/util/ResourceLocation;Ljava/lang/Class;)Lcom/mrcrayfish/device/api/app/Application;
+      @|com/grillo78/appsmod/AppsMod.java|3016|3032|ResourceLocation|class|net.minecraft.util.ResourceLocation|false
+      @|com/grillo78/appsmod/AppsMod.java|3033|3042|Reference|class|com.grillo78.appsmod.Reference|false
+      @|com/grillo78/appsmod/AppsMod.java|3043|3048|MODID|field|com.grillo78.appsmod.Reference|MODID
+      @|com/grillo78/appsmod/AppsMod.java|3062|3088|ApplicationWeatherForecast|class|com.grillo78.appsmod.programs.ApplicationWeatherForecast|false
+      @|com/grillo78/appsmod/AppsMod.java|3102|3120|ApplicationManager|class|com.mrcrayfish.device.api.ApplicationManager|false
+      @|com/grillo78/appsmod/AppsMod.java|3121|3140|registerApplication|method|com.mrcrayfish.device.api.ApplicationManager|registerApplication|(Lnet/minecraft/util/ResourceLocation;Ljava/lang/Class;)Lcom/mrcrayfish/device/api/app/Application;
+      @|com/grillo78/appsmod/AppsMod.java|3145|3161|ResourceLocation|class|net.minecraft.util.ResourceLocation|false
+      @|com/grillo78/appsmod/AppsMod.java|3162|3171|Reference|class|com.grillo78.appsmod.Reference|false
+      @|com/grillo78/appsmod/AppsMod.java|3172|3177|MODID|field|com.grillo78.appsmod.Reference|MODID
+      @|com/grillo78/appsmod/AppsMod.java|3191|3209|ApplicationDiscord|class|com.grillo78.appsmod.programs.ApplicationDiscord|false
+      @|com/grillo78/appsmod/AppsMod.java|3223|3241|ApplicationManager|class|com.mrcrayfish.device.api.ApplicationManager|false
+      @|com/grillo78/appsmod/AppsMod.java|3242|3261|registerApplication|method|com.mrcrayfish.device.api.ApplicationManager|registerApplication|(Lnet/minecraft/util/ResourceLocation;Ljava/lang/Class;)Lcom/mrcrayfish/device/api/app/Application;
+      @|com/grillo78/appsmod/AppsMod.java|3266|3282|ResourceLocation|class|net.minecraft.util.ResourceLocation|false
+      @|com/grillo78/appsmod/AppsMod.java|3283|3292|Reference|class|com.grillo78.appsmod.Reference|false
+      @|com/grillo78/appsmod/AppsMod.java|3293|3298|MODID|field|com.grillo78.appsmod.Reference|MODID
+      @|com/grillo78/appsmod/AppsMod.java|3312|3330|ApplicationPrintIt|class|com.grillo78.appsmod.programs.ApplicationPrintIt|false
+      @|com/grillo78/appsmod/AppsMod.java|3350|3361|TaskManager|class|com.mrcrayfish.device.api.task.TaskManager|false
+      @|com/grillo78/appsmod/AppsMod.java|3362|3374|registerTask|method|com.mrcrayfish.device.api.task.TaskManager|registerTask|(Ljava/lang/Class;)V
+      @|com/grillo78/appsmod/AppsMod.java|3375|3384|TaskPrint|class|com.grillo78.appsmod.util.TaskPrint|false
    Method End: registerApplications()V
 Class End  : com.grillo78.appsmod.AppsMod
 endProcessing "com/grillo78/appsmod/AppsMod.java"
 
-startProcessing "com/grillo78/appsmod/Reference.java" md5: b93bc935423a8af406554fe74c1c6b7f
+startProcessing "com/grillo78/appsmod/Reference.java" md5: 571a2acec232da32921239c736e662f0
 @|com/grillo78/appsmod/Reference.java|8|28|com.grillo78.appsmod|package|com.grillo78.appsmod|(file)
 Class Start: com.grillo78.appsmod.Reference
    @|com/grillo78/appsmod/Reference.java|46|55|Reference|class|com.grillo78.appsmod.Reference|false
