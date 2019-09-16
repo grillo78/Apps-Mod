@@ -1,0 +1,988 @@
+Processing 41 files
+Start Processing: com/grillo78/appsmod/AppsMod.java
+Import: org.apache.logging.log4j.LogManager
+Import: org.apache.logging.log4j.Logger
+Import: com.grillo78.appsmod.handler.PlayerEvents
+Import: com.grillo78.appsmod.programs.ApplicationDiscord
+Import: com.grillo78.appsmod.programs.ApplicationMusicPlayer
+Import: com.grillo78.appsmod.programs.ApplicationPrintIt
+Import: com.grillo78.appsmod.programs.ApplicationWeatherForecast
+Import: com.grillo78.appsmod.programs.ApplicationWebBrowser
+Import: com.grillo78.appsmod.proxy.CommonProxy
+Import: com.grillo78.appsmod.tab.AppsModTab
+Import: com.grillo78.appsmod.tileentity.TileEntityPrintedBlock
+Import: com.grillo78.appsmod.tileentity.TileEntityThreeDPrinterDevice
+Import: com.grillo78.appsmod.util.TaskPrint
+Import: com.mrcrayfish.device.api.ApplicationManager
+Import: com.mrcrayfish.device.api.task.TaskManager
+Import: net.minecraft.creativetab.CreativeTabs
+Import: net.minecraft.util.ResourceLocation
+Import: net.minecraftforge.common.MinecraftForge
+Import: net.minecraftforge.fml.common.Mod
+Import: net.minecraftforge.fml.common.Mod.EventHandler
+Import: net.minecraftforge.fml.common.Mod.Instance
+Import: net.minecraftforge.fml.common.SidedProxy
+Import: net.minecraftforge.fml.common.event.FMLInitializationEvent
+Import: net.minecraftforge.fml.common.event.FMLPostInitializationEvent
+Import: net.minecraftforge.fml.common.event.FMLPreInitializationEvent
+Import: net.minecraftforge.fml.common.registry.GameRegistry
+End  Processing: com/grillo78/appsmod/AppsMod.java
+
+Start Processing: com/grillo78/appsmod/Reference.java
+End  Processing: com/grillo78/appsmod/Reference.java
+
+Start Processing: com/grillo78/appsmod/blocks/PrintedBlock.java
+Rename field net/minecraft/block/BlockDirectional/FACING[1507,1513]::FACING->field_176387_N
+FOUND CONSTR method com/grillo78/appsmod/blocks/PrintedBlock/PrintedBlock (Lnet/minecraft/block/material/Material;Ljava/lang/String;)V com/grillo78/appsmod/blocks/PrintedBlock
+Rename method net/minecraft/block/Block/setUnlocalizedName (Ljava/lang/String;)Lnet/minecraft/block/Block;[1609,1627]::setUnlocalizedName->func_149663_c
+Rename method net/minecraft/block/Block/setHardness (F)Lnet/minecraft/block/Block;[1659,1670]::setHardness->func_149711_c
+Rename method net/minecraft/block/Block/setDefaultState (Lnet/minecraft/block/state/IBlockState;)V[1714,1729]::setDefaultState->func_180632_j
+Rename field net/minecraft/block/Block/blockState[1733,1743]::blockState->field_176227_L
+Rename method net/minecraft/block/state/BlockStateContainer/getBaseState ()Lnet/minecraft/block/state/IBlockState;[1748,1760]::getBaseState->func_177621_b
+Rename method net/minecraft/block/state/IBlockState/withProperty (Lnet/minecraft/block/properties/IProperty;Ljava/lang/Comparable;)Lnet/minecraft/block/state/IBlockState;[1764,1776]::withProperty->func_177226_a
+Rename method net/minecraft/block/Block/onBlockPlacedBy (Lnet/minecraft/world/World;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/block/state/IBlockState;Lnet/minecraft/entity/EntityLivingBase;Lnet/minecraft/item/ItemStack;)V[1958,1973]::onBlockPlacedBy->func_180633_a
+Rename method net/minecraft/block/Block/onBlockPlacedBy (Lnet/minecraft/world/World;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/block/state/IBlockState;Lnet/minecraft/entity/EntityLivingBase;Lnet/minecraft/item/ItemStack;)V[2077,2092]::onBlockPlacedBy->func_180633_a
+Rename method net/minecraft/world/World/setBlockState (Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/block/state/IBlockState;I)Z[2139,2152]::setBlockState->func_180501_a
+Rename method net/minecraft/block/state/IBlockState/withProperty (Lnet/minecraft/block/properties/IProperty;Ljava/lang/Comparable;)Lnet/minecraft/block/state/IBlockState;[2164,2176]::withProperty->func_177226_a
+Rename method net/minecraft/entity/Entity/getHorizontalFacing ()Lnet/minecraft/util/EnumFacing;[2193,2212]::getHorizontalFacing->func_174811_aO
+Rename method net/minecraft/util/EnumFacing/getOpposite ()Lnet/minecraft/util/EnumFacing;[2210,2221]::getOpposite->func_176734_d
+Rename method net/minecraft/world/IBlockAccess/getTileEntity (Lnet/minecraft/util/math/BlockPos;)Lnet/minecraft/tileentity/TileEntity;[2267,2280]::getTileEntity->func_175625_s
+Rename method net/minecraft/item/ItemStack/getTagCompound ()Lnet/minecraft/nbt/NBTTagCompound;[2347,2361]::getTagCompound->func_77978_p
+Rename method net/minecraft/nbt/NBTTagCompound/hasKey (Ljava/lang/String;)Z[2362,2368]::hasKey->func_74764_b
+Rename method net/minecraft/item/ItemStack/getTagCompound ()Lnet/minecraft/nbt/NBTTagCompound;[2444,2458]::getTagCompound->func_77978_p
+Rename method net/minecraft/nbt/NBTTagCompound/getString (Ljava/lang/String;)Ljava/lang/String;[2459,2468]::getString->func_74779_i
+Rename method net/minecraft/block/Block/withRotation (Lnet/minecraft/block/state/IBlockState;Lnet/minecraft/util/Rotation;)Lnet/minecraft/block/state/IBlockState;[2528,2540]::withRotation->func_185499_a
+Rename method net/minecraft/block/state/IBlockState/withProperty (Lnet/minecraft/block/properties/IProperty;Ljava/lang/Comparable;)Lnet/minecraft/block/state/IBlockState;[2595,2607]::withProperty->func_177226_a
+Rename method net/minecraft/util/Rotation/rotate (Lnet/minecraft/util/EnumFacing;)Lnet/minecraft/util/EnumFacing;[2621,2627]::rotate->func_185831_a
+Rename method net/minecraft/block/state/IBlockState/getValue (Lnet/minecraft/block/properties/IProperty;)Ljava/lang/Comparable;[2653,2661]::getValue->func_177229_b
+Rename method net/minecraft/block/Block/withMirror (Lnet/minecraft/block/state/IBlockState;Lnet/minecraft/util/Mirror;)Lnet/minecraft/block/state/IBlockState;[2718,2728]::withMirror->func_185471_a
+Rename method net/minecraft/block/state/IBlockProperties/withRotation (Lnet/minecraft/util/Rotation;)Lnet/minecraft/block/state/IBlockState;[2789,2801]::withRotation->func_185907_a
+Rename method net/minecraft/util/Mirror/toRotation (Lnet/minecraft/util/EnumFacing;)Lnet/minecraft/util/Rotation;[2812,2822]::toRotation->func_185800_a
+Rename method net/minecraft/block/state/IBlockState/getValue (Lnet/minecraft/block/properties/IProperty;)Ljava/lang/Comparable;[2844,2852]::getValue->func_177229_b
+Rename method net/minecraft/block/Block/createBlockState ()Lnet/minecraft/block/state/BlockStateContainer;[2920,2936]::createBlockState->func_180661_e
+Rename method net/minecraft/block/Block/getStateFromMeta (I)Lnet/minecraft/block/state/IBlockState;[3048,3064]::getStateFromMeta->func_176203_a
+Rename method net/minecraft/util/EnumFacing/getFront (I)Lnet/minecraft/util/EnumFacing;[3111,3119]::getFront->func_82600_a
+Rename method net/minecraft/util/EnumFacing/getAxis ()Lnet/minecraft/util/EnumFacing$Axis;[3144,3151]::getAxis->func_176740_k
+New Key: class net/minecraft/util/EnumFacing
+Rename method net/minecraft/block/Block/getDefaultState ()Lnet/minecraft/block/state/IBlockState;[3224,3239]::getDefaultState->func_176223_P
+Rename method net/minecraft/block/state/IBlockState/withProperty (Lnet/minecraft/block/properties/IProperty;Ljava/lang/Comparable;)Lnet/minecraft/block/state/IBlockState;[3240,3252]::withProperty->func_177226_a
+Rename method net/minecraft/block/Block/getMetaFromState (Lnet/minecraft/block/state/IBlockState;)I[3303,3319]::getMetaFromState->func_176201_c
+Rename method net/minecraft/block/state/IBlockState/getValue (Lnet/minecraft/block/properties/IProperty;)Ljava/lang/Comparable;[3370,3378]::getValue->func_177229_b
+Rename method net/minecraft/util/EnumFacing/getIndex ()I[3393,3401]::getIndex->func_176745_a
+Rename method net/minecraft/block/Block/getItemDropped (Lnet/minecraft/block/state/IBlockState;Ljava/util/Random;I)Lnet/minecraft/item/Item;[3446,3460]::getItemDropped->func_180660_a
+Rename field net/minecraft/item/ItemStack/EMPTY[3530,3535]::EMPTY->field_190927_a
+Rename method net/minecraft/item/ItemStack/getItem ()Lnet/minecraft/item/Item;[3545,3552]::getItem->func_77973_b
+Rename method net/minecraft/block/Block/breakBlock (Lnet/minecraft/world/World;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/block/state/IBlockState;)V[3585,3595]::breakBlock->func_180663_b
+Rename method net/minecraft/world/IBlockAccess/getTileEntity (Lnet/minecraft/util/math/BlockPos;)Lnet/minecraft/tileentity/TileEntity;[3695,3708]::getTileEntity->func_175625_s
+Rename method net/minecraft/item/Item/getItemFromBlock (Lnet/minecraft/block/Block;)Lnet/minecraft/item/Item;[3931,3947]::getItemFromBlock->func_150898_a
+Rename method net/minecraft/nbt/NBTTagCompound/setString (Ljava/lang/String;Ljava/lang/String;)V[4099,4108]::setString->func_74778_a
+Rename method net/minecraft/item/ItemStack/setTagCompound (Lnet/minecraft/nbt/NBTTagCompound;)V[4169,4183]::setTagCompound->func_77982_d
+Rename method net/minecraft/block/Block/spawnAsEntity (Lnet/minecraft/world/World;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/item/ItemStack;)V[4213,4226]::spawnAsEntity->func_180635_a
+Rename method net/minecraft/block/Block/breakBlock (Lnet/minecraft/world/World;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/block/state/IBlockState;)V[4296,4306]::breakBlock->func_180663_b
+Rename method net/minecraft/block/Block/hasTileEntity ()Z[4371,4384]::hasTileEntity->func_149716_u
+Rename method net/minecraft/block/ITileEntityProvider/createNewTileEntity (Lnet/minecraft/world/World;I)Lnet/minecraft/tileentity/TileEntity;[4444,4463]::createNewTileEntity->func_149915_a
+Rename method net/minecraft/block/Block/isFullCube (Lnet/minecraft/block/state/IBlockState;)Z[4561,4571]::isFullCube->func_149686_d
+Rename method net/minecraft/block/Block/isOpaqueCube (Lnet/minecraft/block/state/IBlockState;)Z[4649,4661]::isOpaqueCube->func_149662_c
+Rename method net/minecraft/block/Block/isTranslucent (Lnet/minecraft/block/state/IBlockState;)Z[4737,4750]::isTranslucent->func_149751_l
+Rename method net/minecraft/block/Block/getBlockLayer ()Lnet/minecraft/util/BlockRenderLayer;[4833,4846]::getBlockLayer->func_180664_k
+Rename method net/minecraft/block/Block/getRenderType (Lnet/minecraft/block/state/IBlockState;)Lnet/minecraft/util/EnumBlockRenderType;[4937,4950]::getRenderType->func_149645_b
+Rename method net/minecraft/item/Item/getItemFromBlock (Lnet/minecraft/block/Block;)Lnet/minecraft/item/Item;[5158,5174]::getItemFromBlock->func_150898_a
+Import: java.util.Random
+Adding 28 imports
+        com.grillo78.appsmod.init.ModBlocks
+        com.grillo78.appsmod.init.ModItems
+        com.grillo78.appsmod.tileentity.TileEntityPrintedBlock
+        com.grillo78.appsmod.util.IHasModel
+        net.minecraft.block.BlockContainer
+        net.minecraft.block.BlockDirectional
+        net.minecraft.block.material.Material
+        net.minecraft.block.properties.IProperty
+        net.minecraft.block.properties.PropertyDirection
+        net.minecraft.block.state.BlockStateContainer
+        net.minecraft.block.state.IBlockState
+        net.minecraft.client.renderer.block.model.ModelResourceLocation
+        net.minecraft.entity.EntityLivingBase
+        net.minecraft.item.Item
+        net.minecraft.item.ItemBlock
+        net.minecraft.item.ItemStack
+        net.minecraft.nbt.NBTTagCompound
+        net.minecraft.tileentity.TileEntity
+        net.minecraft.util.BlockRenderLayer
+        net.minecraft.util.EnumBlockRenderType
+        net.minecraft.util.EnumFacing
+        net.minecraft.util.Mirror
+        net.minecraft.util.Rotation
+        net.minecraft.util.math.BlockPos
+        net.minecraft.world.World
+        net.minecraftforge.client.model.ModelLoader
+        net.minecraftforge.fml.relauncher.Side
+        net.minecraftforge.fml.relauncher.SideOnly
+End  Processing: com/grillo78/appsmod/blocks/PrintedBlock.java
+
+Start Processing: com/grillo78/appsmod/blocks/ThreeDPrinterDeviceBlock.java
+New Key: class com/mrcrayfish/device/block/BlockDevice
+FOUND CONSTR method com/grillo78/appsmod/blocks/ThreeDPrinterDeviceBlock/ThreeDPrinterDeviceBlock (Ljava/lang/String;Lnet/minecraft/block/material/Material;)V com/grillo78/appsmod/blocks/ThreeDPrinterDeviceBlock
+Rename method net/minecraft/block/Block/setUnlocalizedName (Ljava/lang/String;)Lnet/minecraft/block/Block;[906,924]::setUnlocalizedName->func_149663_c
+Rename method net/minecraft/block/Block/setHardness (F)Lnet/minecraft/block/Block;[956,967]::setHardness->func_149711_c
+Rename method net/minecraft/block/Block/setCreativeTab (Lnet/minecraft/creativetab/CreativeTabs;)Lnet/minecraft/block/Block;[977,991]::setCreativeTab->func_149647_a
+Rename method net/minecraft/block/Block/isOpaqueCube (Lnet/minecraft/block/state/IBlockState;)Z[1230,1242]::isOpaqueCube->func_149662_c
+Rename method net/minecraft/block/Block/getBlockLayer ()Lnet/minecraft/util/BlockRenderLayer;[1327,1340]::getBlockLayer->func_180664_k
+Rename method net/minecraft/block/Block/isTranslucent (Lnet/minecraft/block/state/IBlockState;)Z[1416,1429]::isTranslucent->func_149751_l
+Rename method net/minecraft/block/Block/onBlockActivated (Lnet/minecraft/world/World;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/block/state/IBlockState;Lnet/minecraft/entity/player/EntityPlayer;Lnet/minecraft/util/EnumHand;Lnet/minecraft/util/EnumFacing;FFF)Z[1503,1519]::onBlockActivated->func_180639_a
+Rename field net/minecraft/world/World/isRemote[1679,1687]::isRemote->field_72995_K
+Rename method net/minecraft/world/IBlockAccess/getTileEntity (Lnet/minecraft/util/math/BlockPos;)Lnet/minecraft/tileentity/TileEntity;[1812,1825]::getTileEntity->func_175625_s
+Rename method net/minecraft/util/math/Vec3i/getX ()I[1984,1988]::getX->func_177958_n
+Rename method net/minecraft/util/math/Vec3i/getY ()I[2005,2009]::getY->func_177956_o
+Rename method net/minecraft/util/math/Vec3i/getZ ()I[2026,2030]::getZ->func_177952_p
+Import: com.grillo78.appsmod.AppsMod
+Import: com.grillo78.appsmod.init.ModBlocks
+Import: com.grillo78.appsmod.init.ModItems
+Import: com.grillo78.appsmod.items.ItemColoredDevicesCustom
+Import: com.grillo78.appsmod.tileentity.TileEntityThreeDPrinterDevice
+Import: com.mrcrayfish.device.block.BlockDevice
+Adding 9 imports
+        net.minecraft.block.material.Material
+        net.minecraft.block.state.IBlockState
+        net.minecraft.entity.player.EntityPlayer
+        net.minecraft.tileentity.TileEntity
+        net.minecraft.util.BlockRenderLayer
+        net.minecraft.util.EnumFacing
+        net.minecraft.util.EnumHand
+        net.minecraft.util.math.BlockPos
+        net.minecraft.world.World
+End  Processing: com/grillo78/appsmod/blocks/ThreeDPrinterDeviceBlock.java
+
+Start Processing: com/grillo78/appsmod/gui/ThreeDPrinterUI.java
+FOUND CONSTR method com/grillo78/appsmod/gui/ThreeDPrinterUI/ThreeDPrinterUI (Lnet/minecraft/entity/player/InventoryPlayer;Lcom/grillo78/appsmod/tileentity/TileEntityThreeDPrinterDevice;)V com/grillo78/appsmod/gui/ThreeDPrinterUI
+Rename method net/minecraft/client/Minecraft/getMinecraft ()Lnet/minecraft/client/Minecraft;[1140,1152]::getMinecraft->func_71410_x
+Rename field net/minecraft/client/Minecraft/player[1155,1161]::player->field_71439_g
+Rename field net/minecraft/entity/player/EntityPlayer/inventory[1169,1178]::inventory->field_71071_by
+Rename method net/minecraft/client/gui/GuiScreen/drawScreen (IIF)V[1246,1256]::drawScreen->func_73863_a
+Rename method net/minecraft/client/gui/GuiScreen/drawDefaultBackground ()V[1313,1334]::drawDefaultBackground->func_146276_q_
+Rename method net/minecraft/client/gui/GuiScreen/drawScreen (IIF)V[1346,1356]::drawScreen->func_73863_a
+Rename method net/minecraft/client/gui/inventory/GuiContainer/renderHoveredToolTip (II)V[1404,1424]::renderHoveredToolTip->func_191948_b
+Rename method net/minecraft/client/gui/inventory/GuiContainer/drawGuiContainerForegroundLayer (II)V[1459,1490]::drawGuiContainerForegroundLayer->func_146979_b
+Rename method net/minecraft/tileentity/TileEntity/getDisplayName ()Lnet/minecraft/util/text/ITextComponent;[1530,1544]::getDisplayName->func_145748_c_
+Rename method net/minecraft/util/text/ITextComponent/getUnformattedText ()Ljava/lang/String;[1547,1565]::getUnformattedText->func_150260_c
+Rename field net/minecraft/client/gui/GuiScreen/fontRenderer[1572,1584]::fontRenderer->field_146289_q
+Rename method net/minecraft/client/gui/FontRenderer/drawString (Ljava/lang/String;III)I[1587,1597]::drawString->func_78276_b
+Rename field net/minecraft/client/gui/inventory/GuiContainer/xSize[1608,1613]::xSize->field_146999_f
+Rename field net/minecraft/client/gui/GuiScreen/fontRenderer[1634,1646]::fontRenderer->field_146289_q
+Rename method net/minecraft/client/gui/FontRenderer/getStringWidth (Ljava/lang/String;)I[1649,1663]::getStringWidth->func_78256_a
+Rename field net/minecraft/client/gui/GuiScreen/fontRenderer[1697,1709]::fontRenderer->field_146289_q
+Rename method net/minecraft/client/gui/FontRenderer/drawString (Ljava/lang/String;III)I[1712,1722]::drawString->func_78276_b
+Rename field net/minecraft/client/gui/inventory/GuiContainer/ySize[1743,1748]::ySize->field_147000_g
+Rename field net/minecraft/client/gui/GuiScreen/fontRenderer[1789,1801]::fontRenderer->field_146289_q
+Rename method net/minecraft/client/gui/FontRenderer/drawString (Ljava/lang/String;III)I[1804,1814]::drawString->func_78276_b
+Rename method net/minecraft/world/IWorldNameable/getDisplayName ()Lnet/minecraft/util/text/ITextComponent;[1838,1852]::getDisplayName->func_145748_c_
+Rename method net/minecraft/util/text/ITextComponent/getUnformattedText ()Ljava/lang/String;[1855,1873]::getUnformattedText->func_150260_c
+Rename field net/minecraft/client/gui/inventory/GuiContainer/ySize[1880,1885]::ySize->field_147000_g
+Rename method net/minecraft/client/gui/inventory/GuiContainer/drawGuiContainerBackgroundLayer (FII)V[1938,1969]::drawGuiContainerBackgroundLayer->func_146976_a
+Rename method net/minecraft/client/renderer/GlStateManager/color (FFFF)V[2027,2032]::color->func_179131_c
+Rename field net/minecraft/client/gui/GuiScreen/mc[2080,2082]::mc->field_146297_k
+Rename method net/minecraft/client/Minecraft/getTextureManager ()Lnet/minecraft/client/renderer/texture/TextureManager;[2095,2112]::getTextureManager->func_110434_K
+Rename method net/minecraft/client/renderer/texture/TextureManager/bindTexture (Lnet/minecraft/util/ResourceLocation;)V[2111,2122]::bindTexture->func_110577_a
+Rename field net/minecraft/client/gui/GuiScreen/width[2171,2176]::width->field_146294_l
+Rename field net/minecraft/client/gui/inventory/GuiContainer/xSize[2193,2198]::xSize->field_146999_f
+Rename field net/minecraft/client/gui/GuiScreen/height[2237,2243]::height->field_146295_m
+Rename field net/minecraft/client/gui/inventory/GuiContainer/ySize[2259,2264]::ySize->field_147000_g
+Rename method net/minecraft/client/gui/Gui/drawTexturedModalRect (IIIIII)V[2294,2315]::drawTexturedModalRect->func_73729_b
+Rename field net/minecraft/client/gui/inventory/GuiContainer/xSize[2324,2329]::xSize->field_146999_f
+Rename field net/minecraft/client/gui/inventory/GuiContainer/ySize[2345,2350]::ySize->field_147000_g
+Rename method net/minecraft/client/gui/Gui/drawTexturedModalRect (IIIIII)V[2421,2442]::drawTexturedModalRect->func_73729_b
+Rename method net/minecraft/inventory/IInventory/getField (I)I[2573,2581]::getField->func_174887_a_
+Rename method net/minecraft/inventory/IInventory/getField (I)I[2694,2702]::getField->func_174887_a_
+Import: com.grillo78.appsmod.Reference
+Import: com.grillo78.appsmod.inventory.ContainerThreeDPrinter
+Import: com.grillo78.appsmod.tileentity.TileEntityThreeDPrinterDevice
+Adding 7 imports
+        net.minecraft.client.Minecraft
+        net.minecraft.client.gui.inventory.GuiContainer
+        net.minecraft.client.renderer.GlStateManager
+        net.minecraft.entity.player.InventoryPlayer
+        net.minecraft.util.ResourceLocation
+        net.minecraftforge.fml.relauncher.Side
+        net.minecraftforge.fml.relauncher.SideOnly
+End  Processing: com/grillo78/appsmod/gui/ThreeDPrinterUI.java
+
+Start Processing: com/grillo78/appsmod/handler/DiscordEventHandler.java
+FOUND CONSTR method com/grillo78/appsmod/handler/DiscordEventHandler/DiscordEventHandler (Lcom/mrcrayfish/device/api/app/component/ItemList;Lcom/mrcrayfish/device/api/app/component/ItemList;Lcom/mrcrayfish/device/api/app/component/Button;)V com/grillo78/appsmod/handler/DiscordEventHandler
+Rename method net/minecraft/client/gui/Gui/drawRect (IIIII)V[3429,3437]::drawRect->func_73734_a
+Rename method net/minecraft/client/renderer/GlStateManager/enableAlpha ()V[3649,3660]::enableAlpha->func_179141_d
+Rename method net/minecraft/client/renderer/GlStateManager/enableBlend ()V[3687,3698]::enableBlend->func_179147_l
+Rename method net/minecraft/client/renderer/GlStateManager/bindTexture (I)V[3725,3736]::bindTexture->func_179144_i
+Rename method net/minecraft/client/renderer/texture/ITextureObject/getGlTextureId ()I[3747,3761]::getGlTextureId->func_110552_b
+Rename method net/minecraft/client/renderer/GlStateManager/deleteTexture (I)V[3878,3891]::deleteTexture->func_179150_h
+Rename method net/minecraft/client/renderer/texture/ITextureObject/getGlTextureId ()I[3900,3914]::getGlTextureId->func_110552_b
+Import: java.awt.Color
+Import: java.awt.image.BufferedImage
+Import: java.io.File
+Import: java.io.FileNotFoundException
+Import: java.io.FileReader
+Import: java.io.FileWriter
+Import: java.io.IOException
+Import: java.io.Writer
+Import: java.net.HttpURLConnection
+Import: java.net.URL
+Import: java.util.ArrayList
+Import: java.util.List
+Adding 34 imports
+        com.google.gson.Gson
+        com.google.gson.GsonBuilder
+        com.google.gson.JsonIOException
+        com.google.gson.JsonObject
+        com.google.gson.JsonParser
+        com.google.gson.JsonSyntaxException
+        com.grillo78.appsmod.renderers.IconsListRenderer
+        com.mrcrayfish.device.api.app.component.Button
+        com.mrcrayfish.device.api.app.component.ItemList
+        com.mrcrayfish.device.api.utils.RenderUtil
+        javax.imageio.ImageIO
+        javax.security.auth.login.LoginException
+        net.dv8tion.jda.core.AccountType
+        net.dv8tion.jda.core.JDA
+        net.dv8tion.jda.core.JDABuilder
+        net.dv8tion.jda.core.Permission
+        net.dv8tion.jda.core.entities.ChannelType
+        net.dv8tion.jda.core.entities.Guild
+        net.dv8tion.jda.core.entities.Message
+        net.dv8tion.jda.core.entities.MessageChannel
+        net.dv8tion.jda.core.entities.PrivateChannel
+        net.dv8tion.jda.core.entities.TextChannel
+        net.dv8tion.jda.core.events.ReadyEvent
+        net.dv8tion.jda.core.events.message.MessageReceivedEvent
+        net.dv8tion.jda.core.hooks.EventListener
+        net.dv8tion.jda.core.hooks.ListenerAdapter
+        net.minecraft.client.Minecraft
+        net.minecraft.client.gui.Gui
+        net.minecraft.client.renderer.GlStateManager
+        net.minecraft.client.renderer.texture.DynamicTexture
+        org.json.JSONObject
+        org.jsoup.Connection
+        org.jsoup.Connection.Method
+        org.jsoup.Jsoup
+End  Processing: com/grillo78/appsmod/handler/DiscordEventHandler.java
+
+Start Processing: com/grillo78/appsmod/handler/PlayerEvents.java
+Rename method net/minecraft/util/text/Style/setColor (Lnet/minecraft/util/text/TextFormatting;)Lnet/minecraft/util/text/Style;[822,830]::setColor->func_150238_a
+Rename method net/minecraft/util/text/Style/setClickEvent (Lnet/minecraft/util/text/event/ClickEvent;)Lnet/minecraft/util/text/Style;[901,914]::setClickEvent->func_150241_a
+New Key: class net/minecraft/util/text/event/ClickEvent
+Rename method net/minecraft/util/text/Style/setColor (Lnet/minecraft/util/text/TextFormatting;)Lnet/minecraft/util/text/Style;[989,997]::setColor->func_150238_a
+Rename method net/minecraft/util/text/ITextComponent/setStyle (Lnet/minecraft/util/text/Style;)Lnet/minecraft/util/text/ITextComponent;[1038,1046]::setStyle->func_150255_a
+Rename method net/minecraft/util/text/ITextComponent/setStyle (Lnet/minecraft/util/text/Style;)Lnet/minecraft/util/text/ITextComponent;[1072,1080]::setStyle->func_150255_a
+Rename method net/minecraft/command/ICommandSender/sendMessage (Lnet/minecraft/util/text/ITextComponent;)V[1109,1120]::sendMessage->func_145747_a
+Rename method net/minecraft/command/ICommandSender/sendMessage (Lnet/minecraft/util/text/ITextComponent;)V[1148,1159]::sendMessage->func_145747_a
+Import: net.minecraft.entity.player.EntityPlayer
+Import: net.minecraft.util.text.Style
+Import: net.minecraft.util.text.TextComponentString
+Import: net.minecraft.util.text.TextFormatting
+Import: net.minecraft.util.text.event.ClickEvent
+Import: net.minecraftforge.fml.common.eventhandler.SubscribeEvent
+Import: net.minecraftforge.fml.common.gameevent.PlayerEvent.PlayerLoggedInEvent
+End  Processing: com/grillo78/appsmod/handler/PlayerEvents.java
+
+Start Processing: com/grillo78/appsmod/handler/RegistryHandler.java
+New Key: class net/minecraftforge/event/RegistryEvent
+New Key: class net/minecraftforge/event/RegistryEvent
+Import: com.grillo78.appsmod.AppsMod
+Import: com.grillo78.appsmod.init.ModBlocks
+Import: com.grillo78.appsmod.init.ModItems
+Import: com.grillo78.appsmod.util.IHasModel
+Adding 6 imports
+        net.minecraft.block.Block
+        net.minecraft.item.Item
+        net.minecraftforge.client.event.ModelRegistryEvent
+        net.minecraftforge.event.RegistryEvent
+        net.minecraftforge.fml.common.Mod.EventBusSubscriber
+        net.minecraftforge.fml.common.eventhandler.SubscribeEvent
+End  Processing: com/grillo78/appsmod/handler/RegistryHandler.java
+
+Start Processing: com/grillo78/appsmod/init/ModBlocks.java
+Rename field net/minecraft/block/material/Material/ANVIL[487,492]::ANVIL->field_151574_g
+Rename field net/minecraft/block/material/Material/GRASS[573,578]::GRASS->field_151577_b
+Import: java.util.ArrayList
+Import: java.util.List
+Adding 4 imports
+        com.grillo78.appsmod.blocks.PrintedBlock
+        com.grillo78.appsmod.blocks.ThreeDPrinterDeviceBlock
+        net.minecraft.block.Block
+        net.minecraft.block.material.Material
+End  Processing: com/grillo78/appsmod/init/ModBlocks.java
+
+Start Processing: com/grillo78/appsmod/init/ModItems.java
+Import: java.util.ArrayList
+Import: java.util.List
+Adding 2 imports
+        com.grillo78.appsmod.items.FilamentItem
+        net.minecraft.item.Item
+End  Processing: com/grillo78/appsmod/init/ModItems.java
+
+Start Processing: com/grillo78/appsmod/inventory/ContainerThreeDPrinter.java
+FOUND CONSTR method com/grillo78/appsmod/inventory/ContainerThreeDPrinter/ContainerThreeDPrinter (Lnet/minecraft/entity/player/InventoryPlayer;Lcom/grillo78/appsmod/tileentity/TileEntityThreeDPrinterDevice;)V com/grillo78/appsmod/inventory/ContainerThreeDPrinter
+Rename method net/minecraft/inventory/Container/addSlotToContainer (Lnet/minecraft/inventory/Slot;)Lnet/minecraft/inventory/Slot;[670,688]::addSlotToContainer->func_75146_a
+Rename method net/minecraft/inventory/Container/addSlotToContainer (Lnet/minecraft/inventory/Slot;)Lnet/minecraft/inventory/Slot;[739,757]::addSlotToContainer->func_75146_a
+Rename field net/minecraft/entity/player/InventoryPlayer/player[790,796]::player->field_70458_d
+Rename method net/minecraft/inventory/Container/addSlotToContainer (Lnet/minecraft/inventory/Slot;)Lnet/minecraft/inventory/Slot;[953,971]::addSlotToContainer->func_75146_a
+Rename method net/minecraft/inventory/Container/addSlotToContainer (Lnet/minecraft/inventory/Slot;)Lnet/minecraft/inventory/Slot;[1128,1146]::addSlotToContainer->func_75146_a
+Rename method net/minecraft/inventory/Container/canInteractWith (Lnet/minecraft/entity/player/EntityPlayer;)Z[1236,1251]::canInteractWith->func_75145_c
+Rename method net/minecraft/inventory/Container/transferStackInSlot (Lnet/minecraft/entity/player/EntityPlayer;I)Lnet/minecraft/item/ItemStack;[1327,1346]::transferStackInSlot->func_82846_b
+Rename field net/minecraft/item/ItemStack/EMPTY[1413,1418]::EMPTY->field_190927_a
+Rename field net/minecraft/inventory/Container/inventorySlots[1455,1469]::inventorySlots->field_75151_b
+Rename field net/minecraft/inventory/Container/inventorySlots[1514,1528]::inventorySlots->field_75151_b
+Rename method net/minecraft/inventory/Slot/getHasStack ()Z[1577,1588]::getHasStack->func_75216_d
+Rename method net/minecraft/inventory/Slot/getStack ()Lnet/minecraft/item/ItemStack;[1633,1641]::getStack->func_75211_c
+Rename method net/minecraft/item/ItemStack/copy ()Lnet/minecraft/item/ItemStack;[1684,1688]::copy->func_77946_l
+Rename method net/minecraft/inventory/Container/mergeItemStack (Lnet/minecraft/item/ItemStack;IIZ)Z[1768,1782]::mergeItemStack->func_75135_a
+Rename field net/minecraft/inventory/Container/inventorySlots[1807,1821]::inventorySlots->field_75151_b
+Rename field net/minecraft/item/ItemStack/EMPTY[1876,1881]::EMPTY->field_190927_a
+Rename method net/minecraft/inventory/Container/mergeItemStack (Lnet/minecraft/item/ItemStack;IIZ)Z[1941,1955]::mergeItemStack->func_75135_a
+Rename field net/minecraft/item/ItemStack/EMPTY[2022,2027]::EMPTY->field_190927_a
+Rename method net/minecraft/item/ItemStack/getCount ()I[2080,2088]::getCount->func_190916_E
+Rename method net/minecraft/inventory/Slot/putStack (Lnet/minecraft/item/ItemStack;)V[2126,2134]::putStack->func_75215_d
+Rename field net/minecraft/item/ItemStack/EMPTY[2149,2154]::EMPTY->field_190927_a
+Rename method net/minecraft/inventory/Slot/onSlotChanged ()V[2210,2223]::onSlotChanged->func_75218_e
+Import: com.grillo78.appsmod.tileentity.TileEntityThreeDPrinterDevice
+Adding 6 imports
+        net.minecraft.entity.player.EntityPlayer
+        net.minecraft.entity.player.InventoryPlayer
+        net.minecraft.inventory.Container
+        net.minecraft.inventory.Slot
+        net.minecraft.inventory.SlotFurnaceOutput
+        net.minecraft.item.ItemStack
+End  Processing: com/grillo78/appsmod/inventory/ContainerThreeDPrinter.java
+
+Start Processing: com/grillo78/appsmod/inventory/SlotPrinterFilament.java
+FOUND CONSTR method com/grillo78/appsmod/inventory/SlotPrinterFilament/SlotPrinterFilament (Lnet/minecraft/inventory/IInventory;III)V com/grillo78/appsmod/inventory/SlotPrinterFilament
+Rename method net/minecraft/inventory/Slot/isItemValid (Lnet/minecraft/item/ItemStack;)Z[443,454]::isItemValid->func_75214_a
+Rename method net/minecraft/item/ItemStack/getItem ()Lnet/minecraft/item/Item;[491,498]::getItem->func_77973_b
+Import: com.grillo78.appsmod.init.ModItems
+Adding 3 imports
+        net.minecraft.inventory.IInventory
+        net.minecraft.inventory.Slot
+        net.minecraft.item.ItemStack
+End  Processing: com/grillo78/appsmod/inventory/SlotPrinterFilament.java
+
+Start Processing: com/grillo78/appsmod/items/FilamentItem.java
+FOUND CONSTR method com/grillo78/appsmod/items/FilamentItem/FilamentItem (Ljava/lang/String;)V com/grillo78/appsmod/items/FilamentItem
+Rename method net/minecraft/item/Item/setCreativeTab (Lnet/minecraft/creativetab/CreativeTabs;)Lnet/minecraft/item/Item;[245,259]::setCreativeTab->func_77637_a
+Rename method net/minecraft/item/Item/setMaxStackSize (I)Lnet/minecraft/item/Item;[287,302]::setMaxStackSize->func_77625_d
+Rename method net/minecraft/item/Item/setUnlocalizedName (Ljava/lang/String;)Lnet/minecraft/item/Item;[312,330]::setUnlocalizedName->func_77655_b
+Rename method net/minecraft/item/Item/setMaxDamage (I)Lnet/minecraft/item/Item;[394,406]::setMaxDamage->func_77656_e
+Import: com.grillo78.appsmod.AppsMod
+Import: com.grillo78.appsmod.init.ModItems
+Adding 1 imports
+        net.minecraft.item.Item
+End  Processing: com/grillo78/appsmod/items/FilamentItem.java
+
+Start Processing: com/grillo78/appsmod/items/ItemColoredDevicesCustom.java
+FOUND CONSTR method com/grillo78/appsmod/items/ItemColoredDevicesCustom/ItemColoredDevicesCustom (Lnet/minecraft/block/Block;)V com/grillo78/appsmod/items/ItemColoredDevicesCustom
+Rename method net/minecraft/util/NonNullList/create ()Lnet/minecraft/util/NonNullList;[564,570]::create->func_191196_a
+Rename method net/minecraft/item/Item/getUnlocalizedName ()Ljava/lang/String;[719,737]::getUnlocalizedName->func_77658_a
+Rename method net/minecraft/util/IStringSerializable/getName ()Ljava/lang/String;[761,768]::getName->func_176610_l
+Import: com.grillo78.appsmod.Reference
+Import: com.mrcrayfish.device.item.ItemColoredDevice
+Adding 4 imports
+        net.minecraft.block.Block
+        net.minecraft.item.EnumDyeColor
+        net.minecraft.util.NonNullList
+        net.minecraft.util.ResourceLocation
+End  Processing: com/grillo78/appsmod/items/ItemColoredDevicesCustom.java
+
+Start Processing: com/grillo78/appsmod/models/PrintedBlockModel.java
+FOUND CONSTR method com/grillo78/appsmod/models/PrintedBlockModel/PrintedBlockModel ()V com/grillo78/appsmod/models/PrintedBlockModel
+Rename method net/minecraft/client/Minecraft/getMinecraft ()Lnet/minecraft/client/Minecraft;[779,791]::getMinecraft->func_71410_x
+Rename method net/minecraft/client/renderer/block/model/IBakedModel/getQuads (Lnet/minecraft/block/state/IBlockState;Lnet/minecraft/util/EnumFacing;J)Ljava/util/List;[838,846]::getQuads->func_188616_a
+Rename method net/minecraft/client/renderer/block/model/IBakedModel/isAmbientOcclusion ()Z[990,1008]::isAmbientOcclusion->func_177555_b
+Rename method net/minecraft/client/renderer/block/model/IBakedModel/isGui3d ()Z[1098,1105]::isGui3d->func_177556_c
+Rename method net/minecraft/client/renderer/block/model/IBakedModel/isBuiltInRenderer ()Z[1205,1222]::isBuiltInRenderer->func_188618_c
+Rename method net/minecraft/client/renderer/block/model/IBakedModel/getParticleTexture ()Lnet/minecraft/client/renderer/texture/TextureAtlasSprite;[1323,1341]::getParticleTexture->func_177554_e
+Rename method net/minecraft/client/renderer/block/model/IBakedModel/getOverrides ()Lnet/minecraft/client/renderer/block/model/ItemOverrideList;[1439,1451]::getOverrides->func_188617_f
+Rename field net/minecraft/client/renderer/block/model/ItemOverrideList/NONE[1522,1526]::NONE->field_188022_a
+Import: java.util.List
+Adding 10 imports
+        net.minecraft.block.state.IBlockState
+        net.minecraft.client.Minecraft
+        net.minecraft.client.model.ModelBase
+        net.minecraft.client.renderer.block.model.BakedQuad
+        net.minecraft.client.renderer.block.model.IBakedModel
+        net.minecraft.client.renderer.block.model.ItemOverrideList
+        net.minecraft.client.renderer.texture.TextureAtlasSprite
+        net.minecraft.util.EnumFacing
+        net.minecraftforge.fml.relauncher.Side
+        net.minecraftforge.fml.relauncher.SideOnly
+End  Processing: com/grillo78/appsmod/models/PrintedBlockModel.java
+
+Start Processing: com/grillo78/appsmod/programs/ApplicationDiscord.java
+Rename method net/minecraft/client/gui/Gui/drawRect (IIIII)V[4382,4390]::drawRect->func_73734_a
+Rename method net/minecraft/client/renderer/GlStateManager/enableAlpha ()V[4605,4616]::enableAlpha->func_179141_d
+Rename method net/minecraft/client/renderer/GlStateManager/enableBlend ()V[4644,4655]::enableBlend->func_179147_l
+Rename method net/minecraft/client/renderer/GlStateManager/bindTexture (I)V[4683,4694]::bindTexture->func_179144_i
+Rename method net/minecraft/client/renderer/texture/ITextureObject/getGlTextureId ()I[4705,4719]::getGlTextureId->func_110552_b
+Rename method net/minecraft/client/renderer/GlStateManager/deleteTexture (I)V[4838,4851]::deleteTexture->func_179150_h
+Rename method net/minecraft/client/renderer/texture/ITextureObject/getGlTextureId ()I[4860,4874]::getGlTextureId->func_110552_b
+Rename method net/minecraft/client/gui/Gui/drawRect (IIIII)V[6830,6838]::drawRect->func_73734_a
+Rename method net/minecraft/client/renderer/GlStateManager/enableAlpha ()V[7077,7088]::enableAlpha->func_179141_d
+Rename method net/minecraft/client/renderer/GlStateManager/enableBlend ()V[7116,7127]::enableBlend->func_179147_l
+Rename method net/minecraft/client/renderer/GlStateManager/bindTexture (I)V[7155,7166]::bindTexture->func_179144_i
+Rename method net/minecraft/client/renderer/texture/ITextureObject/getGlTextureId ()I[7177,7191]::getGlTextureId->func_110552_b
+Rename method net/minecraft/client/renderer/GlStateManager/deleteTexture (I)V[7310,7323]::deleteTexture->func_179150_h
+Rename method net/minecraft/client/renderer/texture/ITextureObject/getGlTextureId ()I[7332,7346]::getGlTextureId->func_110552_b
+Rename method net/minecraft/client/gui/Gui/drawRect (IIIII)V[9322,9330]::drawRect->func_73734_a
+Rename method net/minecraft/client/renderer/GlStateManager/enableAlpha ()V[9548,9559]::enableAlpha->func_179141_d
+Rename method net/minecraft/client/renderer/GlStateManager/enableBlend ()V[9588,9599]::enableBlend->func_179147_l
+Rename method net/minecraft/client/renderer/GlStateManager/bindTexture (I)V[9628,9639]::bindTexture->func_179144_i
+Rename method net/minecraft/client/renderer/texture/ITextureObject/getGlTextureId ()I[9650,9664]::getGlTextureId->func_110552_b
+Rename method net/minecraft/client/renderer/GlStateManager/deleteTexture (I)V[9785,9798]::deleteTexture->func_179150_h
+Rename method net/minecraft/client/renderer/texture/ITextureObject/getGlTextureId ()I[9807,9821]::getGlTextureId->func_110552_b
+Rename method net/minecraft/client/gui/Gui/drawRect (IIIII)V[11302,11310]::drawRect->func_73734_a
+Rename method net/minecraft/client/renderer/GlStateManager/enableAlpha ()V[11555,11566]::enableAlpha->func_179141_d
+Rename method net/minecraft/client/renderer/GlStateManager/enableBlend ()V[11596,11607]::enableBlend->func_179147_l
+Rename method net/minecraft/client/renderer/GlStateManager/bindTexture (I)V[11637,11648]::bindTexture->func_179144_i
+Rename method net/minecraft/client/renderer/texture/ITextureObject/getGlTextureId ()I[11659,11673]::getGlTextureId->func_110552_b
+Rename method net/minecraft/client/renderer/GlStateManager/deleteTexture (I)V[11796,11809]::deleteTexture->func_179150_h
+Rename method net/minecraft/client/renderer/texture/ITextureObject/getGlTextureId ()I[11818,11832]::getGlTextureId->func_110552_b
+Rename method net/minecraft/client/gui/Gui/drawRect (IIIII)V[12647,12655]::drawRect->func_73734_a
+Rename method net/minecraft/client/Minecraft/getMinecraft ()Lnet/minecraft/client/Minecraft;[12728,12740]::getMinecraft->func_71410_x
+Rename field net/minecraft/client/Minecraft/fontRenderer[12743,12755]::fontRenderer->field_71466_p
+Rename method net/minecraft/client/gui/FontRenderer/drawString (Ljava/lang/String;III)I[12757,12767]::drawString->func_78276_b
+Rename method net/minecraft/client/Minecraft/getMinecraft ()Lnet/minecraft/client/Minecraft;[13210,13222]::getMinecraft->func_71410_x
+Rename field net/minecraft/client/Minecraft/fontRenderer[13225,13237]::fontRenderer->field_71466_p
+Rename method net/minecraft/client/gui/FontRenderer/getStringWidth (Ljava/lang/String;)I[13261,13275]::getStringWidth->func_78256_a
+Rename method net/minecraft/client/gui/FontRenderer/listFormattedStringToWidth (Ljava/lang/String;I)Ljava/util/List;[13335,13361]::listFormattedStringToWidth->func_78271_c
+Rename method net/minecraft/client/gui/FontRenderer/drawString (Ljava/lang/String;III)I[13439,13449]::drawString->func_78276_b
+Rename method net/minecraft/client/gui/FontRenderer/drawString (Ljava/lang/String;III)I[13540,13550]::drawString->func_78276_b
+Rename method net/minecraft/client/gui/Gui/drawRect (IIIII)V[13736,13744]::drawRect->func_73734_a
+Import: java.awt.Color
+Import: java.awt.image.BufferedImage
+Import: java.io.File
+Import: java.io.FileNotFoundException
+Import: java.io.IOException
+Import: java.net.HttpURLConnection
+Import: java.net.URL
+Import: java.util.ArrayList
+Import: java.util.List
+Adding 27 imports
+        com.google.gson.JsonIOException
+        com.google.gson.JsonSyntaxException
+        com.grillo78.appsmod.handler.DiscordEventHandler
+        com.grillo78.appsmod.renderers.IconsListRenderer
+        com.grillo78.appsmod.renderers.MessageListRenderer
+        com.mrcrayfish.device.api.app.Application
+        com.mrcrayfish.device.api.app.Icons
+        com.mrcrayfish.device.api.app.Layout
+        com.mrcrayfish.device.api.app.component.Button
+        com.mrcrayfish.device.api.app.component.ItemList
+        com.mrcrayfish.device.api.app.component.TextField
+        com.mrcrayfish.device.api.app.renderer.ListItemRenderer
+        com.mrcrayfish.device.api.utils.RenderUtil
+        javax.imageio.ImageIO
+        javax.security.auth.login.LoginException
+        net.dv8tion.jda.core.entities.ChannelType
+        net.dv8tion.jda.core.entities.Guild
+        net.dv8tion.jda.core.entities.Message
+        net.dv8tion.jda.core.entities.MessageChannel
+        net.dv8tion.jda.core.entities.PrivateChannel
+        net.dv8tion.jda.core.entities.TextChannel
+        net.minecraft.client.Minecraft
+        net.minecraft.client.gui.FontRenderer
+        net.minecraft.client.gui.Gui
+        net.minecraft.client.renderer.GlStateManager
+        net.minecraft.client.renderer.texture.DynamicTexture
+        net.minecraft.nbt.NBTTagCompound
+End  Processing: com/grillo78/appsmod/programs/ApplicationDiscord.java
+
+Start Processing: com/grillo78/appsmod/programs/ApplicationMusicPlayer.java
+Import: java.io.File
+Import: java.util.Arrays
+Adding 11 imports
+        com.grillo78.appsmod.programs.components.MusicProgressBar
+        com.grillo78.appsmod.util.SoundPlayer
+        com.mrcrayfish.device.api.app.Application
+        com.mrcrayfish.device.api.app.Icons
+        com.mrcrayfish.device.api.app.component.Button
+        com.mrcrayfish.device.api.app.component.ItemList
+        com.mrcrayfish.device.api.app.component.Slider
+        com.mrcrayfish.device.api.app.component.Text
+        com.mrcrayfish.device.api.app.listener.SlideListener
+        javazoom.jlgui.basicplayer.BasicPlayerException
+        net.minecraft.nbt.NBTTagCompound
+End  Processing: com/grillo78/appsmod/programs/ApplicationMusicPlayer.java
+
+Start Processing: com/grillo78/appsmod/programs/ApplicationPrintIt.java
+Rename method net/minecraft/client/Minecraft/getMinecraft ()Lnet/minecraft/client/Minecraft;[2594,2606]::getMinecraft->func_71410_x
+Rename field net/minecraft/client/Minecraft/mcDataDir[2609,2618]::mcDataDir->field_71412_D
+Import: java.io.File
+Import: java.io.FileNotFoundException
+Import: java.io.FileReader
+Adding 13 imports
+        com.google.gson.JsonIOException
+        com.google.gson.JsonParser
+        com.google.gson.JsonSyntaxException
+        com.grillo78.appsmod.AppsMod
+        com.mrcrayfish.device.api.app.Application
+        com.mrcrayfish.device.api.app.Icons
+        com.mrcrayfish.device.api.app.Layout
+        com.mrcrayfish.device.api.app.component.Button
+        com.mrcrayfish.device.api.app.component.ItemList
+        com.mrcrayfish.device.api.app.component.Text
+        javax.annotation.Nullable
+        net.minecraft.client.Minecraft
+        net.minecraft.nbt.NBTTagCompound
+End  Processing: com/grillo78/appsmod/programs/ApplicationPrintIt.java
+
+Start Processing: com/grillo78/appsmod/programs/ApplicationWeatherForecast.java
+Import: com.grillo78.appsmod.programs.components.WeatherForecastComponent
+Import: com.mrcrayfish.device.api.app.Application
+Adding 1 imports
+        net.minecraft.nbt.NBTTagCompound
+End  Processing: com/grillo78/appsmod/programs/ApplicationWeatherForecast.java
+
+Start Processing: com/grillo78/appsmod/programs/ApplicationWebBrowser.java
+Import: com.grillo78.appsmod.programs.components.LabelComponent
+Import: com.mrcrayfish.device.api.app.Application
+Import: net.minecraft.nbt.NBTTagCompound
+End  Processing: com/grillo78/appsmod/programs/ApplicationWebBrowser.java
+
+Start Processing: com/grillo78/appsmod/programs/PrintDialog.java
+FOUND CONSTR method com/grillo78/appsmod/programs/PrintDialog/PrintDialog (Ljava/io/File;)V com/grillo78/appsmod/programs/PrintDialog
+Rename method net/minecraft/client/gui/Gui/drawRect (IIIII)V[2572,2580]::drawRect->func_73734_a
+Rename method net/minecraft/util/math/Vec3i/distanceSqToCenter (DDD)D[3260,3278]::distanceSqToCenter->func_177957_d
+Rename method net/minecraft/util/math/Vec3i/getX ()I[3279,3283]::getX->func_177958_n
+Rename method net/minecraft/util/math/Vec3i/getY ()I[3307,3311]::getY->func_177956_o
+Rename method net/minecraft/util/math/Vec3i/getZ ()I[3335,3339]::getZ->func_177952_p
+Rename method net/minecraft/util/math/Vec3i/distanceSqToCenter (DDD)D[3429,3447]::distanceSqToCenter->func_177957_d
+Rename method net/minecraft/util/math/Vec3i/getX ()I[3448,3452]::getX->func_177958_n
+Rename method net/minecraft/util/math/Vec3i/getY ()I[3476,3480]::getY->func_177956_o
+Rename method net/minecraft/util/math/Vec3i/getZ ()I[3504,3508]::getZ->func_177952_p
+Rename method net/minecraft/nbt/NBTTagCompound/getTagList (Ljava/lang/String;I)Lnet/minecraft/nbt/NBTTagList;[4881,4891]::getTagList->func_150295_c
+New Key: class net/minecraftforge/common/util/Constants
+Rename method net/minecraft/nbt/NBTTagList/tagCount ()I[4975,4983]::tagCount->func_74745_c
+Rename method net/minecraft/nbt/NBTTagList/getCompoundTagAt (I)Lnet/minecraft/nbt/NBTTagCompound;[5056,5072]::getCompoundTagAt->func_150305_b
+Import: java.io.File
+Adding 22 imports
+        com.grillo78.appsmod.tileentity.TileEntityThreeDPrinterDevice
+        com.grillo78.appsmod.util.TaskPrint
+        com.mrcrayfish.device.api.app.Dialog
+        com.mrcrayfish.device.api.app.Icons
+        com.mrcrayfish.device.api.app.Layout
+        com.mrcrayfish.device.api.app.component.Button
+        com.mrcrayfish.device.api.app.component.ItemList
+        com.mrcrayfish.device.api.app.component.Label
+        com.mrcrayfish.device.api.app.renderer.ListItemRenderer
+        com.mrcrayfish.device.api.task.Task
+        com.mrcrayfish.device.api.task.TaskManager
+        com.mrcrayfish.device.api.utils.RenderUtil
+        com.mrcrayfish.device.core.Laptop
+        com.mrcrayfish.device.core.network.NetworkDevice
+        com.mrcrayfish.device.core.network.task.TaskGetDevices
+        com.mrcrayfish.device.programs.system.object.ColorScheme
+        net.minecraft.client.Minecraft
+        net.minecraft.client.gui.Gui
+        net.minecraft.nbt.NBTTagCompound
+        net.minecraft.nbt.NBTTagList
+        net.minecraft.util.math.BlockPos
+        net.minecraftforge.common.util.Constants
+End  Processing: com/grillo78/appsmod/programs/PrintDialog.java
+
+Start Processing: com/grillo78/appsmod/programs/components/AddressBarComponent.java
+FOUND CONSTR method com/grillo78/appsmod/programs/components/AddressBarComponent/AddressBarComponent (III)V com/grillo78/appsmod/programs/components/AddressBarComponent
+Import: com.mrcrayfish.device.api.app.component.TextField
+End  Processing: com/grillo78/appsmod/programs/components/AddressBarComponent.java
+
+Start Processing: com/grillo78/appsmod/programs/components/BookmarksComponent.java
+FOUND CONSTR method com/grillo78/appsmod/programs/components/BookmarksComponent/BookmarksComponent (IIILnet/montoyo/mcef/api/IBrowser;)V com/grillo78/appsmod/programs/components/BookmarksComponent
+Import: java.io.File
+Import: java.io.FileReader
+Import: java.io.FileWriter
+Import: java.io.IOException
+Import: java.io.Writer
+Adding 14 imports
+        com.google.gson.Gson
+        com.google.gson.GsonBuilder
+        com.google.gson.JsonElement
+        com.google.gson.JsonObject
+        com.google.gson.JsonParser
+        com.mrcrayfish.device.api.app.Component
+        com.mrcrayfish.device.api.app.Icons
+        com.mrcrayfish.device.api.app.Layout
+        com.mrcrayfish.device.api.app.component.Button
+        com.mrcrayfish.device.api.app.component.ItemList
+        net.montoyo.mcef.api.IBrowser
+        org.apache.commons.io.FileUtils
+        org.jsoup.Jsoup
+        org.jsoup.nodes.Document
+End  Processing: com/grillo78/appsmod/programs/components/BookmarksComponent.java
+
+Start Processing: com/grillo78/appsmod/programs/components/BrowserComponent.java
+FOUND CONSTR method com/grillo78/appsmod/programs/components/BrowserComponent/BrowserComponent (IILnet/montoyo/mcef/api/IBrowser;II)V com/grillo78/appsmod/programs/components/BrowserComponent
+Rename method net/minecraft/client/renderer/GlStateManager/disableDepth ()V[2807,2819]::disableDepth->func_179097_i
+Rename method net/minecraft/client/renderer/GlStateManager/enableTexture2D ()V[2845,2860]::enableTexture2D->func_179098_w
+Rename method net/minecraft/client/renderer/GlStateManager/color (FFFF)V[2883,2888]::color->func_179131_c
+Rename method net/minecraft/client/renderer/GlStateManager/enableDepth ()V[3064,3075]::enableDepth->func_179126_j
+Import: org.lwjgl.input.Keyboard
+Adding 5 imports
+        com.mrcrayfish.device.api.app.Component
+        com.mrcrayfish.device.core.Laptop
+        net.minecraft.client.Minecraft
+        net.minecraft.client.renderer.GlStateManager
+        net.montoyo.mcef.api.IBrowser
+End  Processing: com/grillo78/appsmod/programs/components/BrowserComponent.java
+
+Start Processing: com/grillo78/appsmod/programs/components/LabelComponent.java
+FOUND CONSTR method com/grillo78/appsmod/programs/components/LabelComponent/LabelComponent (IIII)V com/grillo78/appsmod/programs/components/LabelComponent
+Import: com.mrcrayfish.device.api.app.Component
+Import: com.mrcrayfish.device.api.app.Icons
+Import: com.mrcrayfish.device.api.app.Layout
+Import: com.mrcrayfish.device.api.app.component.Button
+Adding 3 imports
+        net.montoyo.mcef.MCEF
+        net.montoyo.mcef.api.IBrowser
+        net.montoyo.mcef.api.MCEFApi
+End  Processing: com/grillo78/appsmod/programs/components/LabelComponent.java
+
+Start Processing: com/grillo78/appsmod/programs/components/MessagesBox.java
+FOUND CONSTR method com/grillo78/appsmod/programs/components/MessagesBox/MessagesBox (IIII)V com/grillo78/appsmod/programs/components/MessagesBox
+Import: com.mrcrayfish.device.api.app.component.ItemList
+End  Processing: com/grillo78/appsmod/programs/components/MessagesBox.java
+
+Start Processing: com/grillo78/appsmod/programs/components/MusicProgressBar.java
+FOUND CONSTR method com/grillo78/appsmod/programs/components/MusicProgressBar/MusicProgressBar (IIII)V com/grillo78/appsmod/programs/components/MusicProgressBar
+Import: com.grillo78.appsmod.util.SoundPlayer
+Import: com.mrcrayfish.device.api.app.Component
+Import: com.mrcrayfish.device.api.app.Layout
+Import: com.mrcrayfish.device.api.app.component.ProgressBar
+End  Processing: com/grillo78/appsmod/programs/components/MusicProgressBar.java
+
+Start Processing: com/grillo78/appsmod/programs/components/WeatherForecastComponent.java
+FOUND CONSTR method com/grillo78/appsmod/programs/components/WeatherForecastComponent/WeatherForecastComponent (III)V com/grillo78/appsmod/programs/components/WeatherForecastComponent
+New Key: class com/mrcrayfish/device/api/app/component/ComboBox
+New Key: class com/mrcrayfish/device/api/app/component/ComboBox
+Import: java.io.IOException
+Import: java.io.InputStream
+Import: java.io.InputStreamReader
+Import: java.net.HttpURLConnection
+Import: java.net.URL
+Import: java.net.URLConnection
+Adding 12 imports
+        com.google.gson.JsonArray
+        com.google.gson.JsonElement
+        com.google.gson.JsonObject
+        com.google.gson.JsonParser
+        com.mrcrayfish.device.api.app.Component
+        com.mrcrayfish.device.api.app.Icons
+        com.mrcrayfish.device.api.app.Layout
+        com.mrcrayfish.device.api.app.component.Button
+        com.mrcrayfish.device.api.app.component.ComboBox
+        com.mrcrayfish.device.api.app.component.Image
+        com.mrcrayfish.device.api.app.component.Text
+        com.mrcrayfish.device.api.app.component.TextField
+End  Processing: com/grillo78/appsmod/programs/components/WeatherForecastComponent.java
+
+Start Processing: com/grillo78/appsmod/proxy/ClientProxy.java
+New Key: class net/minecraftforge/fml/common/Mod
+Rename method net/minecraft/item/Item/getItemFromBlock (Lnet/minecraft/block/Block;)Lnet/minecraft/item/Item;[1907,1923]::getItemFromBlock->func_150898_a
+Rename method net/minecraft/item/Item/getItemFromBlock (Lnet/minecraft/block/Block;)Lnet/minecraft/item/Item;[1964,1980]::getItemFromBlock->func_150898_a
+Rename method net/minecraft/item/Item/getUnlocalizedName ()Ljava/lang/String;[2197,2215]::getUnlocalizedName->func_77658_a
+Import: com.grillo78.appsmod.Reference
+Import: com.grillo78.appsmod.init.ModBlocks
+Import: com.grillo78.appsmod.init.ModItems
+Import: com.grillo78.appsmod.renderers.PrintedBlockRenderer
+Import: com.grillo78.appsmod.renderers.PrintedItemRenderer
+Import: com.grillo78.appsmod.tileentity.TileEntityPrintedBlock
+Import: com.mrcrayfish.device.item.SubItems
+Adding 11 imports
+        net.minecraft.client.renderer.block.model.ModelResourceLocation
+        net.minecraft.item.Item
+        net.minecraft.util.NonNullList
+        net.minecraft.util.ResourceLocation
+        net.minecraftforge.client.event.ModelRegistryEvent
+        net.minecraftforge.client.model.ModelLoader
+        net.minecraftforge.fml.client.registry.ClientRegistry
+        net.minecraftforge.fml.common.Mod
+        net.minecraftforge.fml.common.eventhandler.SubscribeEvent
+        net.minecraftforge.fml.relauncher.Side
+        net.minecraftforge.fml.relauncher.SideOnly
+End  Processing: com/grillo78/appsmod/proxy/ClientProxy.java
+
+Start Processing: com/grillo78/appsmod/proxy/CommonProxy.java
+Rename method net/minecraft/world/IBlockAccess/getTileEntity (Lnet/minecraft/util/math/BlockPos;)Lnet/minecraft/tileentity/TileEntity;[904,917]::getTileEntity->func_175625_s
+Rename field net/minecraft/entity/player/EntityPlayer/inventory[1080,1089]::inventory->field_71071_by
+Rename method net/minecraft/world/IBlockAccess/getTileEntity (Lnet/minecraft/util/math/BlockPos;)Lnet/minecraft/tileentity/TileEntity;[1368,1381]::getTileEntity->func_175625_s
+Rename field net/minecraft/entity/player/EntityPlayer/inventory[1537,1546]::inventory->field_71071_by
+Import: com.grillo78.appsmod.AppsMod
+Import: com.grillo78.appsmod.gui.ThreeDPrinterUI
+Import: com.grillo78.appsmod.inventory.ContainerThreeDPrinter
+Import: com.grillo78.appsmod.tileentity.TileEntityThreeDPrinterDevice
+Adding 6 imports
+        net.minecraft.entity.player.EntityPlayer
+        net.minecraft.tileentity.TileEntity
+        net.minecraft.util.math.BlockPos
+        net.minecraft.world.World
+        net.minecraftforge.fml.common.network.IGuiHandler
+        net.minecraftforge.fml.common.network.NetworkRegistry
+End  Processing: com/grillo78/appsmod/proxy/CommonProxy.java
+
+Start Processing: com/grillo78/appsmod/renderers/IconsListRenderer.java
+FOUND CONSTR method com/grillo78/appsmod/renderers/IconsListRenderer/IconsListRenderer (ILjava/util/List;Ljava/util/List;)V com/grillo78/appsmod/renderers/IconsListRenderer
+Import: java.awt.image.BufferedImage
+Import: java.util.List
+Adding 3 imports
+        com.mrcrayfish.device.api.app.renderer.ListItemRenderer
+        net.minecraft.client.Minecraft
+        net.minecraft.client.gui.Gui
+End  Processing: com/grillo78/appsmod/renderers/IconsListRenderer.java
+
+Start Processing: com/grillo78/appsmod/renderers/MessageListRenderer.java
+FOUND CONSTR method com/grillo78/appsmod/renderers/MessageListRenderer/MessageListRenderer (I)V com/grillo78/appsmod/renderers/MessageListRenderer
+Import: com.mrcrayfish.device.api.app.renderer.ListItemRenderer
+Adding 2 imports
+        net.minecraft.client.Minecraft
+        net.minecraft.client.gui.Gui
+End  Processing: com/grillo78/appsmod/renderers/MessageListRenderer.java
+
+Start Processing: com/grillo78/appsmod/renderers/PrintedBlockRenderer.java
+FOUND CONSTR method com/grillo78/appsmod/renderers/PrintedBlockRenderer/PrintedBlockRenderer ()V com/grillo78/appsmod/renderers/PrintedBlockRenderer
+Rename method net/minecraft/client/renderer/tileentity/TileEntitySpecialRenderer/render (Lnet/minecraft/tileentity/TileEntity;DDDFIF)V[1594,1600]::render->func_192841_a
+Rename method net/minecraft/client/Minecraft/getMinecraft ()Lnet/minecraft/client/Minecraft;[1735,1747]::getMinecraft->func_71410_x
+Rename field net/minecraft/client/Minecraft/renderEngine[1750,1762]::renderEngine->field_71446_o
+Rename method net/minecraft/client/renderer/texture/TextureManager/bindTexture (Lnet/minecraft/util/ResourceLocation;)V[1764,1775]::bindTexture->func_110577_a
+Rename method net/minecraft/client/renderer/GlStateManager/pushMatrix ()V[1861,1871]::pushMatrix->func_179094_E
+Rename method net/minecraft/client/renderer/GlStateManager/pushAttrib ()V[1896,1906]::pushAttrib->func_179123_a
+Rename method net/minecraft/client/renderer/GlStateManager/translate (DDD)V[1969,1978]::translate->func_179137_b
+Rename method net/minecraft/client/renderer/GlStateManager/enableBlend ()V[2361,2372]::enableBlend->func_179147_l
+Rename method net/minecraft/client/renderer/GlStateManager/blendFunc (Lnet/minecraft/client/renderer/GlStateManager$SourceFactor;Lnet/minecraft/client/renderer/GlStateManager$DestFactor;)V[2396,2405]::blendFunc->func_187401_a
+Rename method net/minecraft/client/renderer/GlStateManager/scale (FFF)V[2864,2869]::scale->func_179152_a
+Rename method net/minecraft/client/Minecraft/getMinecraft ()Lnet/minecraft/client/Minecraft;[2921,2933]::getMinecraft->func_71410_x
+Rename field net/minecraft/client/Minecraft/renderEngine[2936,2948]::renderEngine->field_71446_o
+Rename method net/minecraft/client/renderer/texture/TextureManager/deleteTexture (Lnet/minecraft/util/ResourceLocation;)V[2950,2963]::deleteTexture->func_147645_c
+Rename method net/minecraft/client/renderer/GlStateManager/disableBlend ()V[2992,3004]::disableBlend->func_179084_k
+Rename method net/minecraft/client/renderer/GlStateManager/popAttrib ()V[3027,3036]::popAttrib->func_179099_b
+Rename method net/minecraft/client/renderer/GlStateManager/popMatrix ()V[3062,3071]::popMatrix->func_179121_F
+Rename method net/minecraft/client/renderer/tileentity/TileEntitySpecialRenderer/render (Lnet/minecraft/tileentity/TileEntity;DDDFIF)V[3088,3094]::render->func_192841_a
+Rename method net/minecraft/client/model/ModelRenderer/addBox (FFFIII)Lnet/minecraft/client/model/ModelRenderer;[4010,4016]::addBox->func_78789_a
+Rename method net/minecraft/client/model/ModelRenderer/render (F)V[4316,4322]::render->func_78785_a
+Import: com.google.gson.JsonArray
+Import: com.google.gson.JsonObject
+Import: com.google.gson.JsonParser
+Import: com.grillo78.appsmod.models.PrintedBlockModel
+Import: com.grillo78.appsmod.tileentity.TileEntityPrintedBlock
+Adding 10 imports
+        net.minecraft.client.Minecraft
+        net.minecraft.client.model.ModelRenderer
+        net.minecraft.client.renderer.GlStateManager
+        net.minecraft.client.renderer.GlStateManager.DestFactor
+        net.minecraft.client.renderer.GlStateManager.SourceFactor
+        net.minecraft.client.renderer.tileentity.TileEntitySpecialRenderer
+        net.minecraft.util.ResourceLocation
+        net.minecraftforge.common.MinecraftForge
+        net.minecraftforge.fml.relauncher.Side
+        net.minecraftforge.fml.relauncher.SideOnly
+End  Processing: com/grillo78/appsmod/renderers/PrintedBlockRenderer.java
+
+Start Processing: com/grillo78/appsmod/renderers/PrintedItemRenderer.java
+FOUND CONSTR method com/grillo78/appsmod/renderers/PrintedItemRenderer/PrintedItemRenderer ()V com/grillo78/appsmod/renderers/PrintedItemRenderer
+Rename method net/minecraft/client/renderer/tileentity/TileEntityItemStackRenderer/renderByItem (Lnet/minecraft/item/ItemStack;)V[1273,1285]::renderByItem->func_179022_a
+Rename method net/minecraft/client/renderer/GlStateManager/pushMatrix ()V[1324,1334]::pushMatrix->func_179094_E
+Rename method net/minecraft/client/Minecraft/getMinecraft ()Lnet/minecraft/client/Minecraft;[1358,1370]::getMinecraft->func_71410_x
+Rename field net/minecraft/client/Minecraft/renderEngine[1373,1385]::renderEngine->field_71446_o
+Rename method net/minecraft/client/renderer/texture/TextureManager/bindTexture (Lnet/minecraft/util/ResourceLocation;)V[1387,1398]::bindTexture->func_110577_a
+Rename method net/minecraft/client/Minecraft/getMinecraft ()Lnet/minecraft/client/Minecraft;[1447,1459]::getMinecraft->func_71410_x
+Rename field net/minecraft/client/Minecraft/renderEngine[1462,1474]::renderEngine->field_71446_o
+Rename method net/minecraft/client/renderer/texture/TextureManager/deleteTexture (Lnet/minecraft/util/ResourceLocation;)V[1476,1489]::deleteTexture->func_147645_c
+Rename method net/minecraft/client/renderer/GlStateManager/popMatrix ()V[1518,1527]::popMatrix->func_179121_F
+Rename method net/minecraft/client/renderer/tileentity/TileEntityItemStackRenderer/renderByItem (Lnet/minecraft/item/ItemStack;)V[1544,1556]::renderByItem->func_179022_a
+Rename method net/minecraft/item/ItemStack/hasTagCompound ()Z[1630,1644]::hasTagCompound->func_77942_o
+Rename method net/minecraft/item/ItemStack/getTagCompound ()Lnet/minecraft/nbt/NBTTagCompound;[1661,1675]::getTagCompound->func_77978_p
+Rename method net/minecraft/nbt/NBTTagCompound/hasKey (Ljava/lang/String;)Z[1676,1682]::hasKey->func_74764_b
+Rename method net/minecraft/item/ItemStack/getTagCompound ()Lnet/minecraft/nbt/NBTTagCompound;[1732,1746]::getTagCompound->func_77978_p
+Rename method net/minecraft/nbt/NBTTagCompound/getString (Ljava/lang/String;)Ljava/lang/String;[1747,1756]::getString->func_74779_i
+Rename method net/minecraft/client/model/ModelRenderer/addBox (FFFIII)Lnet/minecraft/client/model/ModelRenderer;[2517,2523]::addBox->func_78789_a
+Rename method net/minecraft/client/model/ModelRenderer/render (F)V[2826,2832]::render->func_78785_a
+Import: com.google.gson.JsonArray
+Import: com.google.gson.JsonObject
+Import: com.google.gson.JsonParser
+Import: com.grillo78.appsmod.models.PrintedBlockModel
+Adding 9 imports
+        net.minecraft.client.Minecraft
+        net.minecraft.client.model.ModelRenderer
+        net.minecraft.client.renderer.GlStateManager
+        net.minecraft.client.renderer.tileentity.TileEntityItemStackRenderer
+        net.minecraft.item.ItemStack
+        net.minecraft.util.ResourceLocation
+        net.minecraftforge.common.MinecraftForge
+        net.minecraftforge.fml.relauncher.Side
+        net.minecraftforge.fml.relauncher.SideOnly
+End  Processing: com/grillo78/appsmod/renderers/PrintedItemRenderer.java
+
+Start Processing: com/grillo78/appsmod/tab/AppsModTab.java
+FOUND CONSTR method com/grillo78/appsmod/tab/AppsModTab/AppsModTab (Ljava/lang/String;)V com/grillo78/appsmod/tab/AppsModTab
+Rename method net/minecraft/creativetab/CreativeTabs/getTabIconItem ()Lnet/minecraft/item/ItemStack;[310,324]::getTabIconItem->func_78016_d
+Import: com.grillo78.appsmod.init.ModBlocks
+Adding 2 imports
+        net.minecraft.creativetab.CreativeTabs
+        net.minecraft.item.ItemStack
+End  Processing: com/grillo78/appsmod/tab/AppsModTab.java
+
+Start Processing: com/grillo78/appsmod/tileentity/TileEntityPrintedBlock.java
+Rename method net/minecraft/tileentity/TileEntity/writeToNBT (Lnet/minecraft/nbt/NBTTagCompound;)Lnet/minecraft/nbt/NBTTagCompound;[378,388]::writeToNBT->func_189515_b
+Rename method net/minecraft/tileentity/TileEntity/writeToNBT (Lnet/minecraft/nbt/NBTTagCompound;)Lnet/minecraft/nbt/NBTTagCompound;[428,438]::writeToNBT->func_189515_b
+Rename method net/minecraft/nbt/NBTTagCompound/setString (Ljava/lang/String;Ljava/lang/String;)V[489,498]::setString->func_74778_a
+Rename method net/minecraft/tileentity/TileEntity/readFromNBT (Lnet/minecraft/nbt/NBTTagCompound;)V[577,588]::readFromNBT->func_145839_a
+Rename method net/minecraft/tileentity/TileEntity/readFromNBT (Lnet/minecraft/nbt/NBTTagCompound;)V[627,638]::readFromNBT->func_145839_a
+Rename method net/minecraft/nbt/NBTTagCompound/hasKey (Ljava/lang/String;)Z[667,673]::hasKey->func_74764_b
+Rename method net/minecraft/nbt/NBTTagCompound/getString (Ljava/lang/String;)Ljava/lang/String;[713,722]::getString->func_74779_i
+Rename method net/minecraft/tileentity/TileEntity/getUpdateTag ()Lnet/minecraft/nbt/NBTTagCompound;[784,796]::getUpdateTag->func_189517_E_
+Rename method net/minecraft/tileentity/TileEntity/writeToNBT (Lnet/minecraft/nbt/NBTTagCompound;)Lnet/minecraft/nbt/NBTTagCompound;[818,828]::writeToNBT->func_189515_b
+Rename field net/minecraft/tileentity/TileEntity/world[931,936]::world->field_145850_b
+Rename method net/minecraft/world/World/notifyBlockUpdate (Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/block/state/IBlockState;Lnet/minecraft/block/state/IBlockState;I)V[946,963]::notifyBlockUpdate->func_184138_a
+Rename field net/minecraft/tileentity/TileEntity/pos[965,968]::pos->field_174879_c
+Rename field net/minecraft/tileentity/TileEntity/world[986,991]::world->field_145850_b
+Rename method net/minecraft/world/IBlockAccess/getBlockState (Lnet/minecraft/util/math/BlockPos;)Lnet/minecraft/block/state/IBlockState;[1001,1014]::getBlockState->func_180495_p
+Rename field net/minecraft/tileentity/TileEntity/pos[1020,1023]::pos->field_174879_c
+Rename field net/minecraft/tileentity/TileEntity/world[1042,1047]::world->field_145850_b
+Rename method net/minecraft/world/IBlockAccess/getBlockState (Lnet/minecraft/util/math/BlockPos;)Lnet/minecraft/block/state/IBlockState;[1057,1070]::getBlockState->func_180495_p
+Rename field net/minecraft/tileentity/TileEntity/pos[1076,1079]::pos->field_174879_c
+Rename field net/minecraft/tileentity/TileEntity/world[1105,1110]::world->field_145850_b
+Rename method net/minecraft/world/World/scheduleBlockUpdate (Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/block/Block;II)V[1120,1139]::scheduleBlockUpdate->func_180497_b
+Rename field net/minecraft/tileentity/TileEntity/pos[1134,1137]::pos->field_174879_c
+Rename field net/minecraft/tileentity/TileEntity/blockType[1150,1159]::blockType->field_145854_h
+Rename method net/minecraft/tileentity/TileEntity/markDirty ()V[1181,1190]::markDirty->func_70296_d
+Import: net.minecraft.block.state.IBlockState
+Import: net.minecraft.nbt.NBTTagCompound
+Import: net.minecraft.tileentity.TileEntity
+Import: net.minecraft.util.math.BlockPos
+Import: net.minecraft.world.World
+End  Processing: com/grillo78/appsmod/tileentity/TileEntityPrintedBlock.java
+
+Start Processing: com/grillo78/appsmod/tileentity/TileEntityThreeDPrinterDevice.java
+New Key: class com/mrcrayfish/device/tileentity/TileEntityNetworkDevice
+Rename method net/minecraft/util/NonNullList/withSize (ILjava/lang/Object;)Lnet/minecraft/util/NonNullList;[1268,1276]::withSize->func_191197_a
+Rename field net/minecraft/item/ItemStack/EMPTY[1295,1300]::EMPTY->field_190927_a
+Rename method net/minecraft/inventory/IInventory/getSizeInventory ()I[1679,1695]::getSizeInventory->func_70302_i_
+Rename method net/minecraft/inventory/IInventory/isEmpty ()Z[1772,1779]::isEmpty->func_191420_l
+Rename method net/minecraft/item/ItemStack/isEmpty ()Z[1887,1894]::isEmpty->func_190926_b
+Rename method net/minecraft/inventory/IInventory/getStackInSlot (I)Lnet/minecraft/item/ItemStack;[2037,2051]::getStackInSlot->func_70301_a
+Rename method net/minecraft/inventory/IInventory/decrStackSize (II)Lnet/minecraft/item/ItemStack;[2144,2157]::decrStackSize->func_70298_a
+Rename method net/minecraft/inventory/ItemStackHelper/getAndSplit (Ljava/util/List;II)Lnet/minecraft/item/ItemStack;[2211,2222]::getAndSplit->func_188382_a
+Rename method net/minecraft/inventory/IInventory/removeStackFromSlot (I)Lnet/minecraft/item/ItemStack;[2305,2324]::removeStackFromSlot->func_70304_b
+Rename method net/minecraft/inventory/ItemStackHelper/getAndRemove (Ljava/util/List;I)Lnet/minecraft/item/ItemStack;[2357,2369]::getAndRemove->func_188383_a
+Rename method net/minecraft/inventory/IInventory/setInventorySlotContents (ILnet/minecraft/item/ItemStack;)V[2439,2463]::setInventorySlotContents->func_70299_a
+Rename method net/minecraft/item/ItemStack/isEmpty ()Z[2577,2584]::isEmpty->func_190926_b
+Rename method net/minecraft/item/ItemStack/isItemEqual (Lnet/minecraft/item/ItemStack;)Z[2602,2613]::isItemEqual->func_77969_a
+Rename method net/minecraft/item/ItemStack/areItemStackTagsEqual (Lnet/minecraft/item/ItemStack;Lnet/minecraft/item/ItemStack;)Z[2639,2660]::areItemStackTagsEqual->func_77970_a
+Rename method net/minecraft/item/ItemStack/getCount ()I[2747,2755]::getCount->func_190916_E
+Rename method net/minecraft/inventory/IInventory/getInventoryStackLimit ()I[2770,2792]::getInventoryStackLimit->func_70297_j_
+Rename method net/minecraft/item/ItemStack/setCount (I)V[2817,2825]::setCount->func_190920_e
+Rename method net/minecraft/inventory/IInventory/getInventoryStackLimit ()I[2836,2858]::getInventoryStackLimit->func_70297_j_
+Rename method net/minecraft/inventory/IInventory/getInventoryStackLimit ()I[2900,2922]::getInventoryStackLimit->func_70297_j_
+Rename method net/minecraft/inventory/IInventory/isUsableByPlayer (Lnet/minecraft/entity/player/EntityPlayer;)Z[2967,2983]::isUsableByPlayer->func_70300_a
+Rename field net/minecraft/tileentity/TileEntity/world[3015,3020]::world->field_145850_b
+Rename method net/minecraft/world/IBlockAccess/getTileEntity (Lnet/minecraft/util/math/BlockPos;)Lnet/minecraft/tileentity/TileEntity;[3030,3043]::getTileEntity->func_175625_s
+Rename field net/minecraft/tileentity/TileEntity/pos[3049,3052]::pos->field_174879_c
+Rename method net/minecraft/entity/Entity/getDistanceSq (DDD)D[3175,3188]::getDistanceSq->func_70092_e
+Rename field net/minecraft/tileentity/TileEntity/pos[3201,3204]::pos->field_174879_c
+Rename method net/minecraft/util/math/Vec3i/getX ()I[3216,3220]::getX->func_177958_n
+Rename field net/minecraft/tileentity/TileEntity/pos[3253,3256]::pos->field_174879_c
+Rename method net/minecraft/util/math/Vec3i/getY ()I[3268,3272]::getY->func_177956_o
+Rename field net/minecraft/tileentity/TileEntity/pos[3305,3308]::pos->field_174879_c
+Rename method net/minecraft/util/math/Vec3i/getZ ()I[3320,3324]::getZ->func_177952_p
+Rename method net/minecraft/inventory/IInventory/openInventory (Lnet/minecraft/entity/player/EntityPlayer;)V[3397,3410]::openInventory->func_174889_b
+Rename method net/minecraft/inventory/IInventory/closeInventory (Lnet/minecraft/entity/player/EntityPlayer;)V[3466,3480]::closeInventory->func_174886_c
+Rename method net/minecraft/inventory/IInventory/isItemValidForSlot (ILnet/minecraft/item/ItemStack;)Z[3542,3560]::isItemValidForSlot->func_94041_b
+Rename method net/minecraft/item/ItemStack/getItem ()Lnet/minecraft/item/Item;[3778,3785]::getItem->func_77973_b
+Rename method net/minecraft/inventory/IInventory/getField (I)I[3857,3865]::getField->func_174887_a_
+Rename method net/minecraft/inventory/IInventory/setField (II)V[4280,4288]::setField->func_174885_b
+Rename method net/minecraft/inventory/IInventory/getFieldCount ()I[4725,4738]::getFieldCount->func_174890_g
+Rename method net/minecraft/inventory/IInventory/clear ()V[4788,4793]::clear->func_174888_l
+Rename method net/minecraft/world/IWorldNameable/getName ()Ljava/lang/String;[4883,4890]::getName->func_70005_c_
+Rename method net/minecraft/inventory/ISidedInventory/getSlotsForFace (Lnet/minecraft/util/EnumFacing;)[I[5028,5043]::getSlotsForFace->func_180463_a
+Rename method net/minecraft/inventory/ISidedInventory/canInsertItem (ILnet/minecraft/item/ItemStack;Lnet/minecraft/util/EnumFacing;)Z[5150,5163]::canInsertItem->func_180462_a
+Rename method net/minecraft/inventory/ISidedInventory/canExtractItem (ILnet/minecraft/item/ItemStack;Lnet/minecraft/util/EnumFacing;)Z[5312,5326]::canExtractItem->func_180461_b
+Rename method net/minecraft/util/ITickable/update ()V[5465,5471]::update->func_73660_a
+Rename method net/minecraft/inventory/IInventory/getStackInSlot (I)Lnet/minecraft/item/ItemStack;[5489,5503]::getStackInSlot->func_70301_a
+Rename method net/minecraft/item/ItemStack/getItem ()Lnet/minecraft/item/Item;[5505,5512]::getItem->func_77973_b
+Rename method net/minecraft/inventory/IInventory/getStackInSlot (I)Lnet/minecraft/item/ItemStack;[5571,5585]::getStackInSlot->func_70301_a
+Rename method net/minecraft/item/ItemStack/getItemDamage ()I[5587,5600]::getItemDamage->func_77952_i
+Rename method net/minecraft/inventory/IInventory/getStackInSlot (I)Lnet/minecraft/item/ItemStack;[5617,5631]::getStackInSlot->func_70301_a
+Rename method net/minecraft/item/ItemStack/setItemDamage (I)V[5633,5646]::setItemDamage->func_77964_b
+Rename method net/minecraft/inventory/IInventory/getStackInSlot (I)Lnet/minecraft/item/ItemStack;[5646,5660]::getStackInSlot->func_70301_a
+Rename method net/minecraft/item/ItemStack/getItemDamage ()I[5662,5675]::getItemDamage->func_77952_i
+Rename method net/minecraft/inventory/IInventory/getStackInSlot (I)Lnet/minecraft/item/ItemStack;[5706,5720]::getStackInSlot->func_70301_a
+Rename method net/minecraft/item/ItemStack/shrink (I)V[5722,5728]::shrink->func_190918_g
+Rename method net/minecraft/nbt/NBTTagCompound/setString (Ljava/lang/String;Ljava/lang/String;)V[5884,5893]::setString->func_74778_a
+Rename method net/minecraft/item/ItemStack/setTagCompound (Lnet/minecraft/nbt/NBTTagCompound;)V[5995,6009]::setTagCompound->func_77982_d
+Rename method net/minecraft/inventory/IInventory/setInventorySlotContents (ILnet/minecraft/item/ItemStack;)V[6020,6044]::setInventorySlotContents->func_70299_a
+Rename method net/minecraft/tileentity/TileEntity/markDirty ()V[6139,6148]::markDirty->func_70296_d
+Rename method net/minecraft/tileentity/TileEntity/writeToNBT (Lnet/minecraft/nbt/NBTTagCompound;)Lnet/minecraft/nbt/NBTTagCompound;[6209,6219]::writeToNBT->func_189515_b
+Rename method net/minecraft/tileentity/TileEntity/writeToNBT (Lnet/minecraft/nbt/NBTTagCompound;)Lnet/minecraft/nbt/NBTTagCompound;[6259,6269]::writeToNBT->func_189515_b
+Rename method net/minecraft/nbt/NBTTagCompound/setString (Ljava/lang/String;Ljava/lang/String;)V[6326,6335]::setString->func_74778_a
+Rename method net/minecraft/tileentity/TileEntity/readFromNBT (Lnet/minecraft/nbt/NBTTagCompound;)V[6420,6431]::readFromNBT->func_145839_a
+Rename method net/minecraft/tileentity/TileEntity/readFromNBT (Lnet/minecraft/nbt/NBTTagCompound;)V[6470,6481]::readFromNBT->func_145839_a
+Rename method net/minecraft/nbt/NBTTagCompound/hasKey (Ljava/lang/String;)Z[6511,6517]::hasKey->func_74764_b
+Rename method net/minecraft/nbt/NBTTagCompound/getString (Ljava/lang/String;)Ljava/lang/String;[6563,6572]::getString->func_74779_i
+Import: java.io.File
+Import: java.io.FileNotFoundException
+Import: java.io.FileReader
+Adding 15 imports
+        com.google.gson.JsonElement
+        com.google.gson.JsonIOException
+        com.google.gson.JsonObject
+        com.google.gson.JsonParser
+        com.google.gson.JsonSyntaxException
+        com.grillo78.appsmod.init.ModBlocks
+        com.grillo78.appsmod.init.ModItems
+        com.mrcrayfish.device.tileentity.TileEntityNetworkDevice
+        net.minecraft.entity.player.EntityPlayer
+        net.minecraft.inventory.ISidedInventory
+        net.minecraft.inventory.ItemStackHelper
+        net.minecraft.item.ItemStack
+        net.minecraft.nbt.NBTTagCompound
+        net.minecraft.util.EnumFacing
+        net.minecraft.util.NonNullList
+End  Processing: com/grillo78/appsmod/tileentity/TileEntityThreeDPrinterDevice.java
+
+Start Processing: com/grillo78/appsmod/util/GUI_ID.java
+End  Processing: com/grillo78/appsmod/util/GUI_ID.java
+
+Start Processing: com/grillo78/appsmod/util/IHasModel.java
+End  Processing: com/grillo78/appsmod/util/IHasModel.java
+
+Start Processing: com/grillo78/appsmod/util/SoundPlayer.java
+FOUND CONSTR method com/grillo78/appsmod/util/SoundPlayer/SoundPlayer ()V com/grillo78/appsmod/util/SoundPlayer
+Import: java.io.File
+Import: java.io.PrintStream
+Import: java.util.Map
+Adding 5 imports
+        javazoom.jlgui.basicplayer.BasicController
+        javazoom.jlgui.basicplayer.BasicPlayer
+        javazoom.jlgui.basicplayer.BasicPlayerEvent
+        javazoom.jlgui.basicplayer.BasicPlayerException
+        javazoom.jlgui.basicplayer.BasicPlayerListener
+End  Processing: com/grillo78/appsmod/util/SoundPlayer.java
+
+Start Processing: com/grillo78/appsmod/util/TaskPrint.java
+FOUND CONSTR method com/grillo78/appsmod/util/TaskPrint/TaskPrint ()V com/grillo78/appsmod/util/TaskPrint
+FOUND CONSTR method com/grillo78/appsmod/util/TaskPrint/TaskPrint (Lnet/minecraft/util/math/BlockPos;Lcom/mrcrayfish/device/core/network/NetworkDevice;Ljava/lang/String;)V com/grillo78/appsmod/util/TaskPrint
+Rename method net/minecraft/nbt/NBTTagCompound/setLong (Ljava/lang/String;J)V[1001,1008]::setLong->func_74772_a
+Rename method net/minecraft/util/math/BlockPos/toLong ()J[1037,1043]::toLong->func_177986_g
+Rename method net/minecraft/nbt/NBTTagCompound/setUniqueId (Ljava/lang/String;Ljava/util/UUID;)V[1062,1073]::setUniqueId->func_186854_a
+Rename method net/minecraft/nbt/NBTTagCompound/setString (Ljava/lang/String;Ljava/lang/String;)V[1108,1117]::setString->func_74778_a
+Rename method net/minecraft/world/IBlockAccess/getTileEntity (Lnet/minecraft/util/math/BlockPos;)Lnet/minecraft/tileentity/TileEntity;[1278,1291]::getTileEntity->func_175625_s
+Rename method net/minecraft/util/math/BlockPos/fromLong (J)Lnet/minecraft/util/math/BlockPos;[1301,1309]::fromLong->func_177969_a
+Rename method net/minecraft/nbt/NBTTagCompound/getLong (Ljava/lang/String;)J[1319,1326]::getLong->func_74763_f
+Rename method net/minecraft/nbt/NBTTagCompound/getUniqueId (Ljava/lang/String;)Ljava/util/UUID;[1677,1688]::getUniqueId->func_186857_a
+Rename method net/minecraft/nbt/NBTTagCompound/getString (Ljava/lang/String;)Ljava/lang/String;[1906,1915]::getString->func_74779_i
+Import: java.util.UUID
+Adding 10 imports
+        com.grillo78.appsmod.tileentity.TileEntityThreeDPrinterDevice
+        com.mrcrayfish.device.api.task.Task
+        com.mrcrayfish.device.core.network.NetworkDevice
+        com.mrcrayfish.device.core.network.Router
+        com.mrcrayfish.device.tileentity.TileEntityNetworkDevice
+        net.minecraft.entity.player.EntityPlayer
+        net.minecraft.nbt.NBTTagCompound
+        net.minecraft.tileentity.TileEntity
+        net.minecraft.util.math.BlockPos
+        net.minecraft.world.World
+End  Processing: com/grillo78/appsmod/util/TaskPrint.java
+
