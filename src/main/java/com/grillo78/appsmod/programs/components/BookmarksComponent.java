@@ -55,22 +55,24 @@ public class BookmarksComponent extends Component{
 	    layout.addComponent(Bookmarks);
 	    removeBtn = new Button(left, top+43, Icons.CROSS);
 	    removeBtn.setClickListener((mouseX, mouseY, mouseButton) ->{
-	    	try {
-		    	JsonParser jp = new JsonParser();
-				JsonElement root = jp.parse(new FileReader(dir));
-				JsonObject rootobj = root.getAsJsonObject();
-				if (rootobj.get("bookmarks_names").getAsJsonArray().size() != 0) {
-					rootobj.get("bookmarks_names").getAsJsonArray().remove(Bookmarks.getSelectedIndex());
-					rootobj.get("bookmarks_URL").getAsJsonArray().remove(Bookmarks.getSelectedIndex());
-					try (Writer writer = new FileWriter(dir)) {
-					    Gson gson = new GsonBuilder().create();
-					    gson.toJson(root, writer);
+	    	if(Bookmarks.getSelectedIndex() != -1) {
+		    	try {
+			    	JsonParser jp = new JsonParser();
+					JsonElement root = jp.parse(new FileReader(dir));
+					JsonObject rootobj = root.getAsJsonObject();
+					if (rootobj.get("bookmarks_names").getAsJsonArray().size() != 0) {
+						rootobj.get("bookmarks_names").getAsJsonArray().remove(Bookmarks.getSelectedIndex());
+						rootobj.get("bookmarks_URL").getAsJsonArray().remove(Bookmarks.getSelectedIndex());
+						try (Writer writer = new FileWriter(dir)) {
+						    Gson gson = new GsonBuilder().create();
+						    gson.toJson(root, writer);
+						}
+						resfreshBookmarks();
 					}
-					resfreshBookmarks();
+				} catch (IOException ex) {
+				      ex.printStackTrace();
 				}
-			} catch (IOException ex) {
-			      ex.printStackTrace();
-			}
+	    	}
 	    });
 	    layout.addComponent(removeBtn);
 	    addBtn = new Button(left+16, top+43, Icons.PLUS);

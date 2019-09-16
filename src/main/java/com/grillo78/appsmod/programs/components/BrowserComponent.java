@@ -30,7 +30,7 @@ public class BrowserComponent extends Component{
 			switch (code)
 			{
 				case Keyboard.KEY_BACK:
-					browser.injectKeyTyped(Keyboard.getEventCharacter(), 0);
+					browser.injectKeyPressedByKeyCode(Keyboard.KEY_BACK, Keyboard.getEventCharacter(), 0);
 					break;
 				case Keyboard.KEY_TAB:
 					browser.injectKeyTyped(Keyboard.getEventCharacter(), 0);
