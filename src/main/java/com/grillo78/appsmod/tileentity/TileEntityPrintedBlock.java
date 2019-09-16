@@ -1,5 +1,6 @@
 package com.grillo78.appsmod.tileentity;
 
+import net.minecraft.block.state.IBlockState;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.math.BlockPos;
@@ -12,7 +13,9 @@ public class TileEntityPrintedBlock extends TileEntity{
 	@Override
 	public NBTTagCompound writeToNBT(NBTTagCompound compound) {
 		super.writeToNBT(compound);
-		compound.setString("model", model);
+		if(model != null) {
+			compound.setString("model", model);
+		}
 		return compound;
 	}
 	
@@ -31,16 +34,12 @@ public class TileEntityPrintedBlock extends TileEntity{
 	
 	public void setModel(String modelIn) {
 		model = modelIn;
-		World world = this.getWorld();
-		if(world != null) {
-			BlockPos pos = this.getPos();
-			 world.notifyBlockUpdate(pos, world.getBlockState(pos), world.getBlockState(pos), 3);
-			 world.scheduleBlockUpdate(pos, this.getBlockType(), 0, 0);
-			 this.markDirty();
-		}
+		this.world.notifyBlockUpdate(this.pos, this.world.getBlockState(this.pos), this.world.getBlockState(this.pos), 3);
+		this.world.scheduleBlockUpdate(pos, blockType, 0, 0);
+		this.markDirty();
 	}
-	
-	public String getModel() {
-		return model;
+	@Override
+	public boolean shouldRefresh(World world, BlockPos pos, IBlockState oldState, IBlockState newSate) {
+		return true;
 	}
 }

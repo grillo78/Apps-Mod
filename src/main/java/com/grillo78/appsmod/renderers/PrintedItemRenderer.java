@@ -19,6 +19,14 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 public class PrintedItemRenderer extends TileEntityItemStackRenderer{
 
 	private static PrintedBlockModel model = new PrintedBlockModel();
+	private JsonParser jp = new JsonParser();
+	private JsonArray elements;
+	private ModelRenderer[] modelRenderer;
+	private JsonObject actualElement;
+	private int width;
+	private int height;
+	private int depth;
+	private static ResourceLocation texture = new ResourceLocation("minecraft", "textures/blocks/concrete_white.png");
 	
 	public PrintedItemRenderer() {
 		MinecraftForge.EVENT_BUS.register(this);
@@ -28,24 +36,24 @@ public class PrintedItemRenderer extends TileEntityItemStackRenderer{
 	public void renderByItem(ItemStack stack) {
 		GlStateManager.pushMatrix();
 		
-		Minecraft.getMinecraft().renderEngine.bindTexture(new ResourceLocation("minecraft", "textures/blocks/iron_block.png"));
+		Minecraft.getMinecraft().renderEngine.bindTexture(texture);
 		renderModel(stack);
+		Minecraft.getMinecraft().renderEngine.deleteTexture(texture);
 		GlStateManager.popMatrix();
 		super.renderByItem(stack);
 	}
 	
-	public static void renderModel(ItemStack stack) {
-		JsonParser jp = new JsonParser();
+	public void renderModel(ItemStack stack) {
 		if(stack.hasTagCompound()) {
 			if(stack.getTagCompound().hasKey("model")) {
-				JsonArray elements = jp.parse(stack.getTagCompound().getString("model")).getAsJsonObject().get("elements").getAsJsonArray();
-				ModelRenderer[] modelRenderer = new ModelRenderer[elements.size()];
+				elements = jp.parse(stack.getTagCompound().getString("model")).getAsJsonObject().get("elements").getAsJsonArray();
+				modelRenderer = new ModelRenderer[elements.size()];
 				for(int i = 0; i < modelRenderer.length; i++) {
 					modelRenderer[i] = new ModelRenderer(model);
-					JsonObject actualElement = elements.get(i).getAsJsonObject();
-					int width = (int) ((actualElement.get("to").getAsJsonArray().get(0).getAsFloat())-(actualElement.get("from").getAsJsonArray().get(0).getAsFloat()));
-					int height = (int) ((actualElement.get("to").getAsJsonArray().get(1).getAsFloat())-(actualElement.get("from").getAsJsonArray().get(1).getAsFloat()));
-					int depth = (int) ((actualElement.get("to").getAsJsonArray().get(2).getAsFloat())-(actualElement.get("from").getAsJsonArray().get(2).getAsFloat()));
+					actualElement = elements.get(i).getAsJsonObject();
+					width = (int) ((actualElement.get("to").getAsJsonArray().get(0).getAsFloat())-(actualElement.get("from").getAsJsonArray().get(0).getAsFloat()));
+					height = (int) ((actualElement.get("to").getAsJsonArray().get(1).getAsFloat())-(actualElement.get("from").getAsJsonArray().get(1).getAsFloat()));
+					depth = (int) ((actualElement.get("to").getAsJsonArray().get(2).getAsFloat())-(actualElement.get("from").getAsJsonArray().get(2).getAsFloat()));
 					modelRenderer[i].addBox(actualElement.get("from").getAsJsonArray().get(0).getAsFloat(), actualElement.get("from").getAsJsonArray().get(1).getAsFloat(), actualElement.get("from").getAsJsonArray().get(2).getAsFloat(), width, height, depth);
 				}
 				for(int i=0; i < modelRenderer.length; i++) {

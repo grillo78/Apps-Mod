@@ -6,9 +6,7 @@ import java.io.FileReader;
 
 import javax.annotation.Nullable;
 
-import com.google.gson.JsonElement;
 import com.google.gson.JsonIOException;
-import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
 import com.google.gson.JsonSyntaxException;
 import com.grillo78.appsmod.AppsMod;
@@ -43,16 +41,8 @@ public class ApplicationPrintIt extends Application{
 		{
 			if(mouseButton == 0)
 			{
-				try {
-					JsonParser jp = new JsonParser();
-					JsonElement root = jp.parse(new FileReader(selectedFile));
-					JsonObject rootobj = root.getAsJsonObject();
-					PrintDialog dialog = new PrintDialog(rootobj.toString());
-					openDialog(dialog);
-				} catch (JsonIOException | JsonSyntaxException | FileNotFoundException e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
-				}
+				PrintDialog dialog = new PrintDialog(selectedFile);
+				openDialog(dialog);
 			}
 		});
 		printBtn.setEnabled(false);

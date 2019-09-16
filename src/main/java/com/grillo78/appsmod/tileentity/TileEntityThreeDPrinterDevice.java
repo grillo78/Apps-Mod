@@ -1,5 +1,14 @@
 package com.grillo78.appsmod.tileentity;
 
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+
+import com.google.gson.JsonElement;
+import com.google.gson.JsonIOException;
+import com.google.gson.JsonObject;
+import com.google.gson.JsonParser;
+import com.google.gson.JsonSyntaxException;
 import com.grillo78.appsmod.init.ModBlocks;
 import com.grillo78.appsmod.init.ModItems;
 import com.mrcrayfish.device.tileentity.TileEntityNetworkDevice;
@@ -31,10 +40,10 @@ public class TileEntityThreeDPrinterDevice extends TileEntityNetworkDevice.Color
     public boolean isHeating = false;
     public boolean isCooling = false;
     private String modelString;
-    private int actualTemperature = 100;
-    private int maxTemperature = 200;
+    private float actualTemperature = 20;
+    private float maxTemperature = 160;
     private int printTime;
-    private int totalPrintTime;
+    private int totalPrintTime = 50;
     
 	@Override
 	public int getSizeInventory() {
@@ -127,11 +136,11 @@ public class TileEntityThreeDPrinterDevice extends TileEntityNetworkDevice.Color
 		switch (id)
         {
             case 0:
-                return this.maxTemperature;
+                return (int) this.maxTemperature;
             case 1:
-                return this.actualTemperature;
+                return (int) this.actualTemperature;
             case 2:
-                return this.printTime;
+                return (int) this.printTime;
             case 3:
                 return this.totalPrintTime;
             default:
@@ -201,11 +210,16 @@ public class TileEntityThreeDPrinterDevice extends TileEntityNetworkDevice.Color
 	public void update() {
 		if (getStackInSlot(0).getItem()==ModItems.FILAMENT) {
 			if(isPrinting) {
-				if(getStackInSlot(0).getItemDamage()!=10) {
+				if(getStackInSlot(0).getItemDamage()!=1000) {
 					getStackInSlot(0).setItemDamage(getStackInSlot(0).getItemDamage()+1);
 				}
 				else {
 					getStackInSlot(0).shrink(1);
+				}
+				if (printTime != totalPrintTime) {
+					printTime++;
+				}
+				else {
 					NBTTagCompound nbt = new NBTTagCompound();
 					nbt.setString("model", modelString);
 					ItemStack stack = new ItemStack(ModBlocks.PRINTEDBLOCK);
@@ -213,6 +227,7 @@ public class TileEntityThreeDPrinterDevice extends TileEntityNetworkDevice.Color
 					setInventorySlotContents(1, stack);
 					
 					modelString = null;
+					printTime = 0;
 					isPrinting=false;
 				}
 				this.markDirty();
@@ -237,7 +252,7 @@ public class TileEntityThreeDPrinterDevice extends TileEntityNetworkDevice.Color
 		}
 	}
 	
-	public int getTotalPrintTime() {
+	public float getTotalPrintTime() {
 		return totalPrintTime;
 	}
 
@@ -245,21 +260,21 @@ public class TileEntityThreeDPrinterDevice extends TileEntityNetworkDevice.Color
 		this.totalPrintTime = totalPrintTime;
 	}
 
-	public int getPrintTime() {
-		return printTime;
-	}
-
-	public void setPrintTime(int printTime) {
-		this.printTime = printTime;
-	}
-
 	@Override
 	public String getDeviceName() {
-		return "PrusaCraft";
+		return "3D Printer";
 	}
 
-	public void print(String model) {
-		modelString = model;
+	public void print(String print) {
+		try {
+			JsonParser jp = new JsonParser();
+			JsonElement root = jp.parse(new FileReader(new File(print)));
+			JsonObject rootobj = root.getAsJsonObject();
+			modelString = rootobj.toString();
+		} catch (JsonIOException | JsonSyntaxException | FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		isPrinting = true;
 	}
 

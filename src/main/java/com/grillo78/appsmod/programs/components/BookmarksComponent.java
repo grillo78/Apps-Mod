@@ -5,7 +5,6 @@ import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.Writer;
-import java.net.URL;
 
 import org.apache.commons.io.FileUtils;
 import org.jsoup.Jsoup;
@@ -46,8 +45,7 @@ public class BookmarksComponent extends Component{
 		dir = new File("Bookmarks.json");
 		if (!dir.exists()) {
 			try {
-				FileUtils.copyURLToFile(new URL("https://raw.githubusercontent.com/grillo78/Apps-Mod/Downloadable-files/Bookmarks.json"), dir);
-				
+				FileUtils.writeStringToFile(dir, "{\"bookmarks_names\":[\"Google\",\"Youtube\"],\"bookmarks_URL\":[\"http://www.google.com\",\"http://www.youtube.com\"]}", "UTF-8");
 			} catch (IOException e) {
 				e.printStackTrace();
 			}

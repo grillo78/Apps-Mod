@@ -1,5 +1,7 @@
 package com.grillo78.appsmod.programs;
 
+import java.io.File;
+
 import com.grillo78.appsmod.tileentity.TileEntityThreeDPrinterDevice;
 import com.grillo78.appsmod.util.TaskPrint;
 import com.mrcrayfish.device.api.app.Dialog;
@@ -31,10 +33,10 @@ public class PrintDialog extends Dialog{
 	private ItemList<NetworkDevice> itemListPrinters;
 	private Button buttonPrint;
 	private Button buttonCancel;
-	private String modelString;
+	private File model;
 	
-	public PrintDialog(String model) {
-		modelString = model;
+	public PrintDialog(File model) {
+		this.model = model;
 	}
 	
 	@Override
@@ -102,7 +104,7 @@ public class PrintDialog extends Dialog{
 					NetworkDevice networkDevice = itemListPrinters.getSelectedItem();
 					if(networkDevice != null)
 					{
-						TaskPrint task = new TaskPrint(Laptop.getPos(), networkDevice, modelString);
+						TaskPrint task = new TaskPrint(Laptop.getPos(), networkDevice, model.getAbsolutePath());
 						TaskManager.sendTask(task);
 						this.close();
 					}
