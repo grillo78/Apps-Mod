@@ -29,7 +29,7 @@ repositories {
 	jcenter()
 }
 
-version = "1.7.0"
+version = "1.7.1"
 group = "com.grillo78.appsmod" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = "appsmod"
 
@@ -53,11 +53,13 @@ minecraft {
 
 shadowJar {
 	dependencies{
-		exclude 'mcef-1.12.2-0.9-api.jar'
+		exclude 'mcef-1.12.2-1.11-api.jar'
 		exclude(dependency('com.mrcrayfish:device-api:0.4.0-1.12.2'))
+		exclude(dependency('mezz.jei:jei_1.12.2:4.9.1.179'))
 	}
-	relocate 'org.apache', 'shadow.apache'
+	relocate 'org.apache.collections4', 'shadow.apache.collections4'
 	relocate 'org.slf4j', 'shadow.slf4j'
+	relocate 'org.json', 'shadow.json'
 	classifier '' // Replace the default JAR
 }
 
