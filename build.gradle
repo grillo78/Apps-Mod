@@ -13,12 +13,23 @@ apply plugin: 'java'
 apply plugin: 'com.github.johnrengelman.shadow'
 //Only edit below this line, the above code adds and enables the necessary things for Forge to be setup.
 repositories {
+	mavenCentral()
 	maven { url "https://mrcrayfish.com/maven" }
 	maven { url "http://maven.teamdev.com/repository/products" }
+	maven {
+        // location of the maven that hosts JEI files
+        name = "Progwml6 maven"
+        url = "http://dvs1.progwml6.com/files/maven"
+    }
+    maven {
+        // location of a maven mirror for JEI files, as a fallback
+        name = "ModMaven"
+        url = "modmaven.k-4u.nl"
+    }
 	jcenter()
 }
 
-version = "1.6.2"
+version = "1.7.1"
 group = "com.grillo78.appsmod" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = "appsmod"
 
@@ -42,10 +53,11 @@ minecraft {
 
 shadowJar {
 	dependencies{
-		exclude 'mcef-1.12.2-0.9-api.jar'
+		exclude 'mcef-1.12.2-1.11-api.jar'
 		exclude(dependency('com.mrcrayfish:device-api:0.4.0-1.12.2'))
+		exclude(dependency('mezz.jei:jei_1.12.2:4.9.1.179'))
 	}
-	relocate 'org.apache', 'shadow.apache'
+	relocate 'org.apache.collections4', 'shadow.apache.collections4'
 	relocate 'org.slf4j', 'shadow.slf4j'
 	relocate 'org.json', 'shadow.json'
 	classifier '' // Replace the default JAR
@@ -56,31 +68,8 @@ reobf {
 }
 
 dependencies {
-    // you may put jars on which you depend on in ./libss
-    // or you may define them like so..
-    //compile "some.group:artifact:version:classifier"
-    //compile "some.group:artifact:version"
-      
-    // real examples
-    //compile 'com.mod-buildcraft:buildcraft:6.0.8:dev'  // adds buildcraft to the dev env
-    //compile 'com.googlecode.efficient-java-matrix-libsrary:ejml:0.24' // adds ejml to the dev env
-
-    // the 'provided' configuration is for optional dependencies that exist at compile-time but might not at runtime.
-    //provided 'com.mod-buildcraft:buildcraft:6.0.8:dev'
-
-    // the deobf configurations:  'deobfCompile' and 'deobfProvided' are the same as the normal compile and provided,
-    // except that these dependencies get remapped to your current MCP mappings
-    //deobfCompile 'com.mod-buildcraft:buildcraft:6.0.8:dev'
-    //deobfProvided 'com.mod-buildcraft:buildcraft:6.0.8:dev'
-
-    // for more info...
-    // http://www.gradle.org/docs/current/userguide/artifact_dependencies_tutorial.html
-    // http://www.gradle.org/docs/current/userguide/dependency_management.html
+    runtime "mezz.jei:jei_1.12.2:4.9.1.179"
     compile 'org.jsoup:jsoup:1.11.3'
-	//compile 'com.google.apis:google-api-services-youtube:v3-rev206-1.25.0'
-	//compile ('net.dv8tion:JDA:3.8.3_460'){
-	//	exclude module: 'opus-java'
-	//}
 	compile fileTree(dir: "lib", includes: ['*.jar'])
 	compile 'com.mrcrayfish:device-api:0.4.0-1.12.2'
 

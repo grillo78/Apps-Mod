@@ -1,0 +1,127 @@
+Unsupposrted library path: C:\Users\Guillermo\Desktop\Mods minecraft\Modding\Apps-Mod\build\classes\api
+Unsupposrted library path: C:\Users\Guillermo\Desktop\Mods minecraft\Modding\Apps-Mod\build\resources\api
+Symbol range map extraction starting
+Processing 41 files
+startProcessing "com/grillo78/appsmod/AppsMod.java" md5: 098593fb74fa9e0af6b768dd3ed51d63
+endProcessing "com/grillo78/appsmod/AppsMod.java"
+
+startProcessing "com/grillo78/appsmod/Reference.java" md5: 25211d1683dac21e6d5f4df33dffc963
+endProcessing "com/grillo78/appsmod/Reference.java"
+
+startProcessing "com/grillo78/appsmod/blocks/PrintedBlock.java" md5: 6c743f9da03ade7a9dd9940cffb42b42
+endProcessing "com/grillo78/appsmod/blocks/PrintedBlock.java"
+
+startProcessing "com/grillo78/appsmod/blocks/ThreeDPrinterDeviceBlock.java" md5: f83e09322d1731c9f48e28d18d2c5d17
+endProcessing "com/grillo78/appsmod/blocks/ThreeDPrinterDeviceBlock.java"
+
+startProcessing "com/grillo78/appsmod/gui/ThreeDPrinterUI.java" md5: 611bbaa3f442f0234c6d5514dc9e6daf
+endProcessing "com/grillo78/appsmod/gui/ThreeDPrinterUI.java"
+
+startProcessing "com/grillo78/appsmod/handler/DiscordEventHandler.java" md5: 040a107f670a7ec14c495ba26d24172a
+endProcessing "com/grillo78/appsmod/handler/DiscordEventHandler.java"
+
+startProcessing "com/grillo78/appsmod/handler/PlayerEvents.java" md5: e1eb79941b8c44cf795493dc75bf9d31
+endProcessing "com/grillo78/appsmod/handler/PlayerEvents.java"
+
+startProcessing "com/grillo78/appsmod/handler/RegistryHandler.java" md5: 3838d7596f28bc70dffb931b60c6d0e5
+endProcessing "com/grillo78/appsmod/handler/RegistryHandler.java"
+
+startProcessing "com/grillo78/appsmod/init/ModBlocks.java" md5: c017bc566faa4d9d86ee66f7607a3359
+endProcessing "com/grillo78/appsmod/init/ModBlocks.java"
+
+startProcessing "com/grillo78/appsmod/init/ModItems.java" md5: cc9ca8c9d7fb9a9feab9d041a907bc39
+endProcessing "com/grillo78/appsmod/init/ModItems.java"
+
+startProcessing "com/grillo78/appsmod/inventory/ContainerThreeDPrinter.java" md5: 75bbee4f79e0c831b024e1f959dc821b
+endProcessing "com/grillo78/appsmod/inventory/ContainerThreeDPrinter.java"
+
+startProcessing "com/grillo78/appsmod/inventory/SlotPrinterFilament.java" md5: f6a20f022d2880b94d9ee231ed8120b7
+endProcessing "com/grillo78/appsmod/inventory/SlotPrinterFilament.java"
+
+startProcessing "com/grillo78/appsmod/items/FilamentItem.java" md5: 708ce5b7c1a4262c0eb789dae05eec82
+endProcessing "com/grillo78/appsmod/items/FilamentItem.java"
+
+startProcessing "com/grillo78/appsmod/items/ItemColoredDevicesCustom.java" md5: 04d224ff228b5e7aa2c76e5e29324544
+endProcessing "com/grillo78/appsmod/items/ItemColoredDevicesCustom.java"
+
+startProcessing "com/grillo78/appsmod/models/PrintedBlockModel.java" md5: 685b66f5923dd048edc2e25c90b899c3
+endProcessing "com/grillo78/appsmod/models/PrintedBlockModel.java"
+
+startProcessing "com/grillo78/appsmod/programs/ApplicationDiscord.java" md5: bf4d85cbff100aec49bbf3b0df2e5d80
+endProcessing "com/grillo78/appsmod/programs/ApplicationDiscord.java"
+
+startProcessing "com/grillo78/appsmod/programs/ApplicationMusicPlayer.java" md5: 451148e66f34b01b8354f80b808de08d
+endProcessing "com/grillo78/appsmod/programs/ApplicationMusicPlayer.java"
+
+startProcessing "com/grillo78/appsmod/programs/ApplicationPrintIt.java" md5: 49748370792e8c075a84ba9144e09912
+endProcessing "com/grillo78/appsmod/programs/ApplicationPrintIt.java"
+
+startProcessing "com/grillo78/appsmod/programs/ApplicationWeatherForecast.java" md5: 62b894fce5e92883004961fafbbe25a5
+endProcessing "com/grillo78/appsmod/programs/ApplicationWeatherForecast.java"
+
+startProcessing "com/grillo78/appsmod/programs/ApplicationWebBrowser.java" md5: f06ea73cd30e531124ddd5179eae499a
+endProcessing "com/grillo78/appsmod/programs/ApplicationWebBrowser.java"
+
+startProcessing "com/grillo78/appsmod/programs/PrintDialog.java" md5: e1b0df2c09e7a05f8691bab83bd42e5a
+endProcessing "com/grillo78/appsmod/programs/PrintDialog.java"
+
+startProcessing "com/grillo78/appsmod/programs/components/AddressBarComponent.java" md5: f3e75f17eb490fdd4c5c2b9c9e71f7bc
+endProcessing "com/grillo78/appsmod/programs/components/AddressBarComponent.java"
+
+startProcessing "com/grillo78/appsmod/programs/components/BookmarksComponent.java" md5: 5b1641d9e6eafc402f97e71fe8ab390a
+endProcessing "com/grillo78/appsmod/programs/components/BookmarksComponent.java"
+
+startProcessing "com/grillo78/appsmod/programs/components/BrowserComponent.java" md5: 768eb9e8f0efefeef5746382d9375b13
+endProcessing "com/grillo78/appsmod/programs/components/BrowserComponent.java"
+
+startProcessing "com/grillo78/appsmod/programs/components/LabelComponent.java" md5: 15626483c4dc5d9d902c43b74078cb8a
+endProcessing "com/grillo78/appsmod/programs/components/LabelComponent.java"
+
+startProcessing "com/grillo78/appsmod/programs/components/MessagesBox.java" md5: 5fce08f6aaf5011afec1088ddf594de3
+endProcessing "com/grillo78/appsmod/programs/components/MessagesBox.java"
+
+startProcessing "com/grillo78/appsmod/programs/components/MusicProgressBar.java" md5: fe2274c22618a4d7e521c1feb422c66e
+endProcessing "com/grillo78/appsmod/programs/components/MusicProgressBar.java"
+
+startProcessing "com/grillo78/appsmod/programs/components/WeatherForecastComponent.java" md5: f543b598fbae9331d2b600eba208340a
+endProcessing "com/grillo78/appsmod/programs/components/WeatherForecastComponent.java"
+
+startProcessing "com/grillo78/appsmod/proxy/ClientProxy.java" md5: 066e05c1323d7b04dd16c5c18f254337
+endProcessing "com/grillo78/appsmod/proxy/ClientProxy.java"
+
+startProcessing "com/grillo78/appsmod/proxy/CommonProxy.java" md5: 4595be5ebe985f1f74298277a8b8642d
+endProcessing "com/grillo78/appsmod/proxy/CommonProxy.java"
+
+startProcessing "com/grillo78/appsmod/renderers/IconsListRenderer.java" md5: ac5acb4fd9232245ad3fc8f9a4dce11c
+endProcessing "com/grillo78/appsmod/renderers/IconsListRenderer.java"
+
+startProcessing "com/grillo78/appsmod/renderers/MessageListRenderer.java" md5: 0aa4c4c4917c65ba9704a334f8b352e8
+endProcessing "com/grillo78/appsmod/renderers/MessageListRenderer.java"
+
+startProcessing "com/grillo78/appsmod/renderers/PrintedBlockRenderer.java" md5: 64f1a32714097595ee7d603c988b0e77
+endProcessing "com/grillo78/appsmod/renderers/PrintedBlockRenderer.java"
+
+startProcessing "com/grillo78/appsmod/renderers/PrintedItemRenderer.java" md5: 7ebcea4b39b12b160c5f2fdf5049505b
+endProcessing "com/grillo78/appsmod/renderers/PrintedItemRenderer.java"
+
+startProcessing "com/grillo78/appsmod/tab/AppsModTab.java" md5: bbd73a115d9afb0e654e126ad8f38b6d
+endProcessing "com/grillo78/appsmod/tab/AppsModTab.java"
+
+startProcessing "com/grillo78/appsmod/tileentity/TileEntityPrintedBlock.java" md5: 6e0888f8d68d3352e71ecdf7c0e8d880
+endProcessing "com/grillo78/appsmod/tileentity/TileEntityPrintedBlock.java"
+
+startProcessing "com/grillo78/appsmod/tileentity/TileEntityThreeDPrinterDevice.java" md5: 174b7ffe60ae9edea14c90812789f350
+endProcessing "com/grillo78/appsmod/tileentity/TileEntityThreeDPrinterDevice.java"
+
+startProcessing "com/grillo78/appsmod/util/GUI_ID.java" md5: 92e406ea80a784592b6a959d357fe6b6
+endProcessing "com/grillo78/appsmod/util/GUI_ID.java"
+
+startProcessing "com/grillo78/appsmod/util/IHasModel.java" md5: cf590a6e5ae420f4de69b9784dcb7c0d
+endProcessing "com/grillo78/appsmod/util/IHasModel.java"
+
+startProcessing "com/grillo78/appsmod/util/SoundPlayer.java" md5: cf6415500a87deea491d03a16c874ae6
+endProcessing "com/grillo78/appsmod/util/SoundPlayer.java"
+
+startProcessing "com/grillo78/appsmod/util/TaskPrint.java" md5: cb1f22be51afe609dd8a6ed4a685e108
+endProcessing "com/grillo78/appsmod/util/TaskPrint.java"
+

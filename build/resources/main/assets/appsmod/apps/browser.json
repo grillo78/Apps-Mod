@@ -1,0 +1,10 @@
+{
+    "name": "Chromium",
+    "author": "Grillo78",
+    "description": "",
+    "version": "1.0",
+    "icon": "appsmod:textures/app/icon/browser.png",
+    "screenshots": [
+    	"appsmod:textures/app/screenshot/browser_screenshot_1.png"
+    ]
+}

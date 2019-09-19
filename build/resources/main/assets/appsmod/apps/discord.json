@@ -1,0 +1,12 @@
+{
+    "name": "Discord",
+    "author": "Grillo78",
+    "description": "",
+    "version": "1.0",
+    "icon": "appsmod:textures/app/icon/discord.png",
+    "screenshots": [
+    	"appsmod:textures/app/screenshot/discord_screenshot_1.png",
+    	"appsmod:textures/app/screenshot/discord_screenshot_2.png",
+    	"appsmod:textures/app/screenshot/discord_screenshot_3.png"
+    ]
+}
