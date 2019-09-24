@@ -118,7 +118,7 @@ Class Start: com.grillo78.appsmod.AppsMod
 Class End  : com.grillo78.appsmod.AppsMod
 endProcessing "com/grillo78/appsmod/AppsMod.java"
 
-startProcessing "com/grillo78/appsmod/Reference.java" md5: 25211d1683dac21e6d5f4df33dffc963
+startProcessing "com/grillo78/appsmod/Reference.java" md5: 75a5383b8b5a8d458e5568c77d1b6689
 @|com/grillo78/appsmod/Reference.java|8|28|com.grillo78.appsmod|package|com.grillo78.appsmod|(file)
 Class Start: com.grillo78.appsmod.Reference
    @|com/grillo78/appsmod/Reference.java|46|55|Reference|class|com.grillo78.appsmod.Reference|false
