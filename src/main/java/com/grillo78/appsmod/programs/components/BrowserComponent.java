@@ -11,15 +11,15 @@ import net.montoyo.mcef.api.IBrowser;
 
 public class BrowserComponent extends Component{
 
-	public static IBrowser browser;
-	public static int width;
-	public static int height;
+	public  IBrowser browser;
+	public int width;
+	public int height;
 	
 	public BrowserComponent(int left, int top, IBrowser browserIn, int width, int height) {
 		super(left, top);
-		BrowserComponent.browser = browserIn;
-		BrowserComponent.width = width;
-		BrowserComponent.height = height;
+		browser = browserIn;
+		this.width = width;
+		this.height = height;
 		browser.resize(width*4, height*4);
 		Keyboard.enableRepeatEvents(true);
 	}
@@ -51,7 +51,7 @@ public class BrowserComponent extends Component{
 	@Override
 	protected void handleMouseClick(int mouseX, int mouseY, int mouseButton) {
 		super.handleMouseClick(mouseX, mouseY, mouseButton);
-		if (((mouseX >= xPosition) && (mouseY>=yPosition))&&((mouseX <= xPosition+BrowserComponent.width)&&(mouseY <= yPosition+BrowserComponent.height))) {
+		if (((mouseX >= xPosition) && (mouseY>=yPosition))&&((mouseX <= xPosition+this.width)&&(mouseY <= yPosition+this.height))) {
 			browser.injectMouseButton(4*(mouseX-xPosition), 4*(mouseY-yPosition), 0 ,mouseButton+1, true, 1);
 			this.setEnabled(true);
 		}
@@ -60,7 +60,7 @@ public class BrowserComponent extends Component{
 	@Override
 	protected void handleMouseRelease(int mouseX, int mouseY, int mouseButton) {
 		super.handleMouseRelease(mouseX, mouseY, mouseButton);
-		if (((mouseX >= xPosition) && (mouseY>=yPosition))&&((mouseX <= xPosition+BrowserComponent.width)&&(mouseY <= yPosition+BrowserComponent.height))) {
+		if (((mouseX >= xPosition) && (mouseY>=yPosition))&&((mouseX <= xPosition+this.width)&&(mouseY <= yPosition+this.height))) {
 			browser.injectMouseButton(4*(mouseX-xPosition), 4*(mouseY-yPosition), 0 ,mouseButton+1, false, 1);
 			this.setEnabled(true);
 		}
@@ -81,7 +81,7 @@ public class BrowserComponent extends Component{
 		GlStateManager.disableDepth();
 	    GlStateManager.enableTexture2D();
 	    GlStateManager.color(1.0f, 1.0f, 1.0f, 1.0f);
-        browser.draw(xPosition, yPosition + BrowserComponent.height, xPosition + BrowserComponent.width, yPosition);
+        browser.draw(xPosition, yPosition + this.height, xPosition + this.width, yPosition);
         GlStateManager.enableDepth();
 		super.render(laptop, mc, x, y, mouseX, mouseY, windowActive, partialTicks);
 	}

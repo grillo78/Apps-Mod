@@ -9,7 +9,7 @@ import net.minecraft.nbt.NBTTagCompound;
 
 public class ApplicationWebBrowser extends Application {
 
-	private static LabelComponent labelComp;
+	private LabelComponent labelComp;
 	@Override
 	public void init(NBTTagCompound nbt) {
 		this.setDefaultWidth(362);
@@ -22,7 +22,7 @@ public class ApplicationWebBrowser extends Application {
 	@Override
 	public void onClose() {
 		super.onClose();
-		LabelComponent.browser.close();
+		labelComp.browser.close();
 	}
 
 	@Override
